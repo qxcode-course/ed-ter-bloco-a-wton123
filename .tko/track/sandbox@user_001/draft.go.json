@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_14-08-20",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"faltando 7 dias\")\n    var n int;\n    fmt.Println(\"wellington digite 1 para verdadeiro e 2 para falso:\")\n    fmt.Println(\"estar ansioso?\")\n    fmt.Scan(&n)\n    if n == 1{\n        fmt.Println(\"fique tranquilo nn e so vc\")\n    }else{\n        fmt.Println(\"isso meu garoto\")\n    }\n    fmt.Println(\"qxcode\")\n}\n",
+            "lines": "15"
+        }
+    ]
+}
