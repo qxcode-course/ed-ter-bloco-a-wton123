@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_17-25-33",
+            "content": "@@ -144,15 +144,8 @@\n tln(\n-%22%252.f%22,\n math\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-15_17-26-29",
+            "content": "@@ -130,17 +130,29 @@\n / 2%0A\n-    f := \n+%0A%09fmt.Println(%22%252.f%22,\n math\n@@ -193,37 +193,8 @@\n  c))\n-%0A%09%0A    fmt.Printf(%22%25.2f%5Cn%22, f\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-15_17-28-06",
+            "content": "@@ -74,10 +74,8 @@\n 64%0A%09\n-//\n fmt.\n@@ -108,33 +108,8 @@\n &c)%0A\n-    fmt.Scan(&a, &b, &c)%0A\n %09p :\n@@ -214,21 +214,4 @@\n )%0A%7D%0A\n-%0A%0A%0A%0A%0A%0A%09%0A%0A%09%0A%09%0A%0A%09%0A%7D\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_17-41-52",
+            "content": "@@ -70,16 +70,18 @@\n loat64%0A%09\n+//\n fmt.Scan\n@@ -110,18 +110,16 @@\n &c)%0A    \n-//\n fmt.Scan\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_17-42-45",
+            "content": "@@ -106,16 +106,40 @@\n , &c)%0A  \n+  //fmt.Scan(&a, &b, &c)\n %0A%09p := (\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_17-43-05",
+            "content": "@@ -5,17 +5,16 @@\n age main\n-%7B\n %0A%0Aimport\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_17-43-57",
+            "content": "@@ -216,17 +216,16 @@\n  f)%0A%7D%0A%0A%0A\n-%7D\n %0A%0A%0A%0A%09%0A%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_17-44-07",
+            "content": "@@ -5,16 +5,17 @@\n age main\n+%7B\n %0A%0Aimport\n@@ -214,10 +214,26 @@\n %22, f)%0A%7D%0A\n-%09\n %0A\n+%0A%7D%0A%0A%0A%0A%09%0A%0A%09%0A%09%0A%0A%09%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-15_17-45-12",
+            "content": "@@ -78,17 +78,29 @@\n fmt.Scan\n-(\n+f(%22%25f %25f %25f%22,\n  &a, &b,\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-15_17-45-28",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c float64\n\tfmt.Scan( &a, &b, &c)\n  \n\tp := (a + b + c) / 2\n    f := math.Sqrt(p * (p - a) * (p - b) * (p - c))\n\t\n    fmt.Printf(\"%.2f\\n\", f)\n}\n\t\n",
+            "lines": "17"
+        }
+    ]
+}
