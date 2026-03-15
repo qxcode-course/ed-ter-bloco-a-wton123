@@ -19,7 +19,8 @@ expanded:
 - ed@revisão
 - ed@main-quest
 tasks:
-  ed@pintando: '{self:1, rate:100, study:30, concept:1, debug:1}'
+  ed@pintando: '{self:1, rate:100, study:30, friend:nao, concept:1, debug:1}'
+  ed@mumia: '{self:1, rate:100, study:40, friend:nao, concept:1, debug:1}'
 flags:
   painel: 0
   quests: 0
@@ -28,4 +29,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pintando
+selected: ed@mumia
