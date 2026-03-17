@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_22-28-31",
+            "content": "@@ -41,249 +41,28 @@\n     \n-var h , p , f int64%0A    var d int %0A    fmt.Scanf(%22%25d %25d %25d %25d%22, &h ,&p , &f, &d)%0A    if h %3C p && d %3C 0 %7B%0A         fmt.Println(%22S%22)%0A       %0A    %7Delse if h %3E p && d %3E 0%7B%0A        fmt.Println(%22S%22)%0A    %7Delse%7B%0A         fmt.Println(%22N%22)%0A    %7D%0A    %0A%7D%0A%0A \n+fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_23-02-22",
+            "content": "@@ -234,126 +234,8 @@\n S%22)%0A\n-    %7Delse if h %3C p && d %3E 0 %7B%0A         fmt.Println(%22N%22)%0A       %0A    %7Delse if h %3E p && d %3C 0%7B%0A        fmt.Println(%22N%22)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-16_23-04-33",
+            "content": "@@ -122,40 +122,8 @@\n &d)%0A\n-    if d %3C 0 %7B  //horaerio %0A    \n     \n@@ -138,24 +138,15 @@\n  && \n-f %3C p%7B%0A         \n+d %3C 0 %7B\n %0A   \n@@ -180,21 +180,8 @@\n    %0A\n-        %7D %0A%0A%0A\n     \n@@ -226,24 +226,24 @@\n rintln(%22S%22)%0A\n-\n     %7Delse %7B%0A\n@@ -240,16 +240,133 @@\n   %7Delse \n+if h %3C p && d %3E 0 %7B%0A         fmt.Println(%22N%22)%0A       %0A    %7Delse if h %3E p && d %3C 0%7B%0A        fmt.Println(%22N%22)%0A    %7Delse\n %7B%0A      \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-16_23-39-50",
+            "content": "@@ -230,54 +230,9 @@\n    %7D\n-else%7B%0A             fmt.Println(%22N%22)%0A%0A        %7D\n+ \n %0A%0A%0A \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-16_23-41-07",
+            "content": "@@ -234,26 +234,8 @@\n else\n- if h %3E p && f %3C p\n %7B%0A  \n@@ -262,58 +262,13 @@\n ln(%22\n-S\n+N\n %22)%0A%0A\n-        %7Delse%7B%0A             fmt.Println(%22N%22)%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_23-46-19",
+            "content": "@@ -285,72 +285,8 @@\n %22)%0A%0A\n-        %7Delse if h %3E p && f %3E h %7B%0A             fmt.Println(%22S%22)%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_23-50-26",
+            "content": "@@ -411,21 +411,16 @@\n    %7Delse\n-%7B%0A   \n  if h %3E \n@@ -470,27 +470,11 @@\n lse \n-if h %3C p && f %3E p\n %7B%0A\n+ \n     \n@@ -486,33 +486,33 @@\n mt.Println(%22\n-S\n+N\n %22)%0A    %7D\n else %7B%0A     \n@@ -503,48 +503,13 @@\n    %7D\n-else %7B%0A         fmt.Println(%22N%22)%0A    %7D%0A%7D\n+%0A    \n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-16_23-57-41",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,45 +37,83 @@\n ) %7B%0A\n-%09\n+    \n var h\n+ \n , p\n+ \n , f\n-, d int%0A%0A%09fmt.Scan(&h, \n+ int64%0A    var d int %0A    fmt.Scanf(%22%25d %25d %25d %25d%22, &h ,\n &p\n+ \n , &f\n@@ -122,177 +122,388 @@\n &d)%0A\n-%0A%09pos := f%0A%0A%09for %7B%0A%09%09pos = pos + d%0A%0A%09%09if pos %3E 15 %7B%0A%09%09%09pos = 0%0A%09%09%7D%0A%0A%09%09if pos %3C 0 %7B%0A%09%09%09pos = 15%0A%09%09%7D%0A%0A%09%09if pos == h %7B%0A%09%09%09fmt.Println(%22S%22)%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09if pos == p %7B%0A%09%09%09\n+    if d %3C 0 %7B  //horaerio %0A        if h %3C p && f %3C p%7B%0A         %0A         fmt.Println(%22S%22)%0A       %0A        %7Delse if h %3E p && f %3C p%7B%0A             fmt.Println(%22S%22)%0A%0A        %7Delse if h %3E p && f %3E h %7B%0A             fmt.Println(%22S%22)%0A        %7Delse%7B%0A             fmt.Println(%22N%22)%0A        %7D%0A%0A%0A    %7Delse%7B%0A    if h %3E p && d %3E 0%7B%0A        fmt.Println(%22S%22)%0A    %7Delse if h %3C p && f %3E p%7B%0A        \n fmt.\n@@ -515,26 +515,56 @@\n ln(%22\n-N%22)%0A%09%09%09break%0A%09%09\n+S%22)%0A    %7Delse %7B%0A         fmt.Println(%22N%22)%0A    \n %7D%0A\n-%09\n %7D%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_00-27-26",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int\n\n\tfmt.Scan(&h, &p, &f, &d)\n\n\tpos := f\n\n\tfor {\n\t\tpos = pos + d\n\n\t\tif pos > 15 {\n\t\t\tpos = 0\n\t\t}\n\n\t\tif pos < 0 {\n\t\t\tpos = 15\n\t\t}\n\n\t\tif pos == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\n\t\tif pos == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\t}\n}\n\n ",
+            "lines": "35"
+        }
+    ]
+}

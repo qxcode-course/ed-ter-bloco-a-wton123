@@ -1,0 +1,7 @@
+2026-03-17 00:27:26, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:35
+2026-03-17 00:27:27, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-17 00:27:43, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 00:28:40, SELF, v:1, k:ed@fuga, self:1, rate:100, study:90, friend:nao, refactor:1
+2026-03-17 00:30:11, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-17 00:30:13, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-17 00:30:18, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:5
