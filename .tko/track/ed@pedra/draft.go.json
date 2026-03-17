@@ -2,8 +2,63 @@
     "patches": [
         {
             "label": "2026-03-17_00-30-18",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -37,123 +37,8 @@\n ) %7B%0A\n-    var n int%0A    fmt.Scan(&n)%0A    for i := 0 ; i %3C n ; i++ %7B%0A        var a, b int %0A        fmt.Scan(&a ,&b)%0A    %7D%0A\n     \n",
             "lines": "5"
+        },
+        {
+            "label": "2026-03-17_00-45-25",
+            "content": "@@ -150,76 +150,14 @@\n     \n+%7D%0A\n     \n-if a %3E b %7B%0A            fmt.Println(a - b)%0A        %7D%0A    %7D%0A    //\n fmt.\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-17_00-47-31",
+            "content": "@@ -68,45 +68,8 @@\n &n)%0A\n-    var ant ,p int %0A    var ind = 1 %0A\n     \n@@ -112,17 +112,16 @@\n ar a, b \n- \n int %0A   \n@@ -159,19 +159,8 @@\n f a \n-%3C 10 %7C%7C 10 \n %3E b \n@@ -177,68 +177,26 @@\n     \n-continue %0A        %7D%0A        if a %3C b %7B%0A            p = \n+fmt.Println(\n a - b\n+)\n %0A   \n@@ -205,140 +205,14 @@\n    %7D\n-else%7B%0A            p = b - a%0A        %7D%0A        if p %3C ant%7B%0A            ant = p%0A            ind = i%0A        %7D%0A    %7D%0A    fmt.Print(ind)\n+%0A    %7D\n %0A   \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-17_01-20-29",
+            "content": "@@ -246,17 +246,8 @@\n   %7D%0A\n-        %0A\n     \n@@ -334,58 +334,8 @@\n   %7D%0A\n-        if(i == 1)%7B%0A            ant = p%0A        %7D%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-17_01-30-18",
+            "content": "@@ -98,17 +98,16 @@\n r ind = \n--\n 1 %0A    f\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_01-31-26",
+            "content": "@@ -356,17 +356,17 @@\n if(i == \n-0\n+1\n )%7B%0A     \n@@ -470,72 +470,8 @@\n   %7D%0A\n-    if ind == -1 %7B%0A        fmt.Print(%22sem ganhador%22)%0A    %7Delse%7B%0A\n     \n@@ -485,22 +485,16 @@\n nt(ind)%0A\n-    %7D%0A\n     //fm\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_01-35-08",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -64,17 +64,16 @@\n can(&n)%0A\n-%0A\n     var \n@@ -79,15 +79,16 @@\n  ant\n-,\n  \n+,\n p int\n+ \n %0A   \n@@ -100,17 +100,17 @@\n ind = -1\n-%0A\n+ \n %0A    for\n@@ -120,15 +120,17 @@\n := 0\n+ \n ; i %3C n\n+ \n ; i+\n@@ -150,19 +150,21 @@\n ar a, b \n+ \n int\n+ \n %0A       \n@@ -179,15 +179,14 @@\n n(&a\n-,\n  \n+,\n &b)%0A\n-%0A\n     \n@@ -206,14 +206,14 @@\n  %7C%7C \n-b %3C 10\n+10 %3E b\n  %7B%0A \n@@ -231,16 +231,17 @@\n continue\n+ \n %0A       \n@@ -235,32 +235,40 @@\n inue %0A        %7D%0A\n+        \n %0A        if a %3C \n@@ -291,13 +291,13 @@\n p = \n-b - a\n+a - b\n %0A   \n@@ -298,30 +298,28 @@\n  b%0A        %7D\n- \n else\n- \n %7B%0A          \n@@ -316,37 +316,37 @@\n             p = \n-a - b\n+b - a\n %0A        %7D%0A%0A    \n@@ -336,25 +336,24 @@\n a%0A        %7D%0A\n-%0A\n         if i\n@@ -346,35 +346,32 @@\n %7D%0A        if\n- ind\n+(i\n  == \n--1 \n+0)\n %7B%0A          \n@@ -384,35 +384,25 @@\n = p%0A        \n-    ind = i\n+%7D\n %0A        %7D e\n@@ -398,23 +398,16 @@\n         \n-%7D else \n if p %3C a\n@@ -408,17 +408,16 @@\n  p %3C ant\n- \n %7B%0A      \n@@ -466,17 +466,16 @@\n %7D%0A    %7D%0A\n-%0A\n     if i\n@@ -528,20 +528,14 @@\n    %7D\n- \n else\n- \n %7B%0A\n-    \n     \n@@ -555,9 +555,38 @@\n )%0A    %7D%0A\n-%7D\n+    //fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_01-37-51",
+            "content": "@@ -516,18 +516,16 @@\n mt.Print\n-ln\n (%22sem ga\n@@ -567,10 +567,8 @@\n rint\n-ln\n (ind\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-17_01-38-58",
+            "content": "@@ -19,16 +19,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -65,16 +65,17 @@\n can(&n)%0A\n+%0A\n     var \n@@ -81,16 +81,15 @@\n  ant\n- \n ,\n+ \n p int\n- \n %0A   \n@@ -101,17 +101,17 @@\n ind = -1\n- \n+%0A\n %0A    for\n@@ -121,17 +121,15 @@\n := 0\n- \n ; i %3C n\n- \n ; i+\n@@ -153,13 +153,11 @@\n , b \n- \n int\n- \n %0A   \n@@ -176,14 +176,15 @@\n n(&a\n- \n ,\n+ \n &b)%0A\n+%0A\n     \n@@ -204,14 +204,14 @@\n  %7C%7C \n-10 %3E b\n+b %3C 10\n  %7B%0A \n@@ -229,17 +229,16 @@\n continue\n- \n %0A       \n@@ -240,24 +240,16 @@\n       %7D%0A\n-        \n %0A       \n@@ -280,13 +280,13 @@\n p = \n-a - b\n+b - a\n %0A   \n@@ -287,28 +287,30 @@\n  a%0A        %7D\n+ \n else\n+ \n %7B%0A          \n@@ -307,37 +307,37 @@\n             p = \n-b - a\n+a - b\n %0A        %7D%0A     \n@@ -323,32 +323,33 @@\n a - b%0A        %7D%0A\n+%0A\n         if(i == \n@@ -346,16 +346,19 @@\n   if\n-(i\n+ ind\n  == \n-0)\n+-1 \n %7B%0A  \n@@ -379,25 +379,35 @@\n = p%0A        \n-%7D\n+    ind = i\n %0A        if \n@@ -403,16 +403,23 @@\n         \n+%7D else \n if p %3C a\n@@ -420,16 +420,17 @@\n  p %3C ant\n+ \n %7B%0A      \n@@ -475,24 +475,25 @@\n     %7D%0A    %7D%0A\n+%0A\n     if ind =\n@@ -544,14 +544,20 @@\n    %7D\n+ \n else\n+ \n %7B%0A\n+    \n     \n@@ -583,34 +583,5 @@\n   %7D%0A\n-    //fmt.Println(%22qxcode%22)%0A%7D%0A\n+%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-17_01-39-35",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -64,17 +64,16 @@\n can(&n)%0A\n-%0A\n     var \n@@ -79,15 +79,16 @@\n  ant\n-,\n  \n+,\n p int\n+ \n %0A   \n@@ -100,17 +100,17 @@\n ind = -1\n-%0A\n+ \n %0A    for\n@@ -120,15 +120,17 @@\n := 0\n+ \n ; i %3C n\n+ \n ; i+\n@@ -150,19 +150,21 @@\n ar a, b \n+ \n int\n+ \n %0A       \n@@ -179,15 +179,14 @@\n n(&a\n-,\n  \n+,\n &b)%0A\n-%0A\n     \n@@ -206,14 +206,14 @@\n  %7C%7C \n-b %3C 10\n+10 %3E b\n  %7B%0A \n@@ -231,16 +231,17 @@\n continue\n+ \n %0A       \n@@ -235,32 +235,40 @@\n inue %0A        %7D%0A\n+        \n %0A        if a %3C \n@@ -291,13 +291,13 @@\n p = \n-b - a\n+a - b\n %0A   \n@@ -298,30 +298,28 @@\n  b%0A        %7D\n- \n else\n- \n %7B%0A          \n@@ -316,37 +316,37 @@\n             p = \n-a - b\n+b - a\n %0A        %7D%0A%0A    \n@@ -336,25 +336,24 @@\n a%0A        %7D%0A\n-%0A\n         if i\n@@ -346,35 +346,32 @@\n %7D%0A        if\n- ind\n+(i\n  == \n--1 \n+0)\n %7B%0A          \n@@ -384,35 +384,25 @@\n = p%0A        \n-    ind = i\n+%7D\n %0A        %7D e\n@@ -398,23 +398,16 @@\n         \n-%7D else \n if p %3C a\n@@ -408,17 +408,16 @@\n  p %3C ant\n- \n %7B%0A      \n@@ -466,17 +466,16 @@\n %7D%0A    %7D%0A\n-%0A\n     if i\n@@ -502,16 +502,18 @@\n mt.Print\n+ln\n (%22sem ga\n@@ -530,24 +530,18 @@\n    %7D\n- \n else\n- \n %7B%0A    \n-    \n fmt.\n@@ -545,16 +545,18 @@\n mt.Print\n+ln\n (ind)%0A  \n@@ -559,9 +559,38 @@\n )%0A    %7D%0A\n-%7D\n+    //fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_01-43-07",
+            "content": "@@ -516,18 +516,16 @@\n mt.Print\n-ln\n (%22sem ga\n@@ -567,10 +567,8 @@\n rint\n-ln\n (ind\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-17_01-43-24",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    var ant, p int\n    var ind = -1\n\n    for i := 0; i < n; i++ {\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        if a < b {\n            p = b - a\n        } else {\n            p = a - b\n        }\n\n        if ind == -1 {\n            ant = p\n            ind = i\n        } else if p < ant {\n            ant = p\n            ind = i\n        }\n    }\n\n    if ind == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(ind)\n    }\n}",
+            "lines": "39"
         }
     ]
 }
