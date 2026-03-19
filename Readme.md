@@ -11,7 +11,7 @@ matricula: "578784"
 - Se for a primeira configuração
   - Instale git, python, ide(vscode), compiladores
   - Configure sua chave git ssh
-  - Configure o pipx
+  - Configure o pipx 
     - `pipx ensurepath`
     - Reinicie o terminal
   - Instale o tko
@@ -68,7 +68,7 @@ tko open tasks
 - Clique no + para `stage all changes`, ou seja, marcar tudo pra ser salvo.
 - Escreva a mensagem no campo do commit e clique em `Commit` para salvar a versão na máquina virtual.
 - Clique em `Sync Changes` para enviar pro site.
-
+ 
 ## Resolvendo Conflitos
 
 - **Antes de começar a trabalhar**, atualize o repositório:

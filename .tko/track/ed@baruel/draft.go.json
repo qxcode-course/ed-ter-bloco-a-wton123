@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_17-04-19",
+            "content": "@@ -41,138 +41,35 @@\n     \n-%0A   %0A    n := make(map%5Bstring%5Dint)%0A     //fmt.Scan(&n)%0A     for i := range n %7B%0A            fmt.Scan(n%5Bi%5D)%0A     %7D%0A    fmt.Println(n\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-19_17-32-17",
+            "content": "@@ -45,20 +45,8 @@\n %0A   \n- var qtd int\n %0A   \n@@ -72,24 +72,27 @@\n ng%5Dint)%0A    \n+ //\n fmt.Scan(&qt\n@@ -93,13 +93,12 @@\n an(&\n-qtd\n+n\n )%0A\n+ \n     \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-19_17-33-56",
+            "content": "@@ -107,22 +107,8 @@\n td)%0A\n-    var i int%0A\n     \n@@ -117,26 +117,18 @@\n r i \n+:\n = \n-0; i %3C qtd ; i++\n+range n\n  %7B%0A \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-19_17-35-05",
+            "content": "@@ -72,19 +72,22 @@\n ake(map%5B\n+str\n in\n-t\n+g\n %5Dint)%0A  \n@@ -164,64 +164,22 @@\n     \n-var v int%0A            fmt.Scan(&v)%0A            n%5Bi%5D = v \n+fmt.Scan(n%5Bi%5D)\n %0A   \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-19_17-37-17",
+            "content": "@@ -53,34 +53,13 @@\n  qtd\n-, q\n  int%0A\n-     fmt.Scan(&q)%0A\n     \n@@ -81,20 +81,16 @@\n nt%5Dint)%0A\n-   %0A\n     fmt.\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-19_17-41-29",
+            "content": "@@ -79,95 +79,8 @@\n &q)%0A\n-    vf := make(map%5Bint%5Dint)%0A     for i := 0 ; i %3C q ; i++%7B%0A           vf%5Bi%5D = i%0A     %7D%0A\n     \n@@ -266,13 +266,8 @@\n tln(\n-vf , \n n)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-19_17-44-18",
+            "content": "@@ -158,12 +158,8 @@\n  = i\n- + 1\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-19_17-44-39",
+            "content": "@@ -57,24 +57,25 @@\n , q int%0A    \n+ \n fmt.Scan(&q)\n@@ -341,18 +341,8 @@\n   %7D%0A\n-     for %0A\n     \n@@ -361,13 +361,8 @@\n vf ,\n-%22/n%22,\n  n)%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-19_17-46-41",
+            "content": "@@ -371,9 +371,9 @@\n f ,%22\n-%5C\n+/\n n%22, \n@@ -377,9 +377,8 @@\n %22, n)%0A%7D%0A\n-%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_17-46-52",
+            "content": "@@ -359,16 +359,18 @@\n mt.Print\n+ln\n (vf ,%22%5Cn\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_17-47-10",
+            "content": "@@ -363,20 +363,19 @@\n rint\n-f\n (vf\n-,\n  \n+,\n %22%5Cn%22\n- \n ,\n+ \n n)%0A%7D\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_17-47-44",
+            "content": "@@ -337,24 +337,28 @@\n      %7D%0A     \n+for \n %0A    fmt.Pri\n@@ -363,22 +363,22 @@\n rint\n-ln\n+f\n (vf\n- \n ,\n+ \n %22%5Cn%22\n-,\n  \n+,\n n)%0A%7D%0A\n+%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_17-48-36",
+            "content": "@@ -367,13 +367,14 @@\n f ,%22%5Cn%22,\n+ \n n)%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_17-48-51",
+            "content": "@@ -360,19 +360,16 @@\n intln(vf\n-%5Bi%5D\n  ,%22%5Cn%22,n\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_17-49-50",
+            "content": "@@ -365,9 +365,9 @@\n (vf%5B\n-4\n+i\n %5D ,%22\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_17-50-13",
+            "content": "@@ -360,16 +360,19 @@\n intln(vf\n+%5B4%5D\n  ,%22%5Cn%22,n\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_17-50-19",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,16 +33,20 @@\n ain() %7B%0A\n+    \n %0A    var\n@@ -50,18 +50,14 @@\n var \n-total\n+qtd\n , q\n-td\n  int\n@@ -75,251 +75,40 @@\n an(&\n-total) // total de figurinhas do %C3%A1lbum (1 at%C3%A9 N)%0A    fmt.Scan(&qtd)   // quantidade de figurinhas que ele possui%0A%0A    contador := make(map%5Bint%5Dint) // map: figurinha -%3E quantidade de vezes que apareceu%0A%0A    // %F0%9F%94%B9 Lendo as figurinhas e contando%0A\n+q)%0A    vf := make(map%5Bint%5Dint)%0A \n     \n@@ -121,23 +121,22 @@\n := 0\n+ \n ; i %3C q\n-td\n+ \n ; i++\n- \n %7B%0A  \n@@ -145,497 +145,95 @@\n     \n-var v int%0A        fmt.Scan(&v)%0A        contador%5Bv%5D++ // aumenta 1 na contagem da figurinha v%0A\n+   vf%5Bi%5D = i + 1%0A \n     %7D%0A\n-%0A\n     \n-// %F0%9F%94%B9 Descobrir repetidas%0A    repetidas := %5B%5Dint%7B%7D // slice pra guardar as repetidas%0A%0A    for fig, qtd := range contador %7B\n+n := make(map%5Bint%5Dint)\n %0A   \n- \n+%0A\n     \n-if qtd %3E 1 %7B%0A            // se apareceu mais de 1 vez, adiciona (qtd - 1) vezes%0A            for i := 0; i %3C qtd-1; i++ %7B%0A                repetidas = append(repetidas, fig)%0A            %7D%0A        %7D%0A    %7D%0A%0A    // %F0%9F%94%B9 Descobrir faltando%0A    faltando := %5B%5Dint%7B%7D%0A\n+fmt.Scan(&qtd)%0A    var i int\n %0A   \n@@ -243,24 +243,21 @@\n r i \n-:\n = \n-1\n+0\n ; i %3C\n-= total\n+ qtd \n ; i+\n@@ -272,653 +272,108 @@\n     \n-if contador%5Bi%5D == 0 %7B%0A            // se nunca apareceu, t%C3%A1 faltando%0A            faltando = append(faltando, i)%0A        %7D%0A    %7D%0A%0A    // %F0%9F%94%B9 Sa%C3%ADda repetidas%0A    if len(repetidas) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i, v := range repetidas %7B%0A            if i %3E 0 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(v)%0A        %7D%0A        fmt.Println()%0A\n+    var v int%0A            fmt.Scan(&v)%0A            n%5Bi%5D = v %0A \n     %7D%0A\n-%0A\n     \n-// %F0%9F%94%B9 Sa%C3%ADda faltando%0A    if len(faltando) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i, v := range faltando %7B%0A            if i %3E 0 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(v)%0A        %7D%0A        fmt.Println()%0A    \n+ %0A    fmt.Println(vf ,%22%5Cn%22,n)%0A\n %7D%0A\n-%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_18-23-30",
+            "content": "@@ -79,16 +79,58 @@\n (&total)\n+ // total de figurinhas do %C3%A1lbum (1 at%C3%A9 N)\n %0A    fmt\n@@ -146,232 +146,534 @@\n d)  \n+ \n-%0A%0A    contador := make(map%5Bint%5Dint) %0A    %0A    for i := 0; i %3C qtd; i++ %7B%0A        var v int%0A        fmt.Scan(&v)%0A        contador%5Bv%5D++ %0A    %7D%0A%0A    repetidas := %5B%5Dint%7B%7D%0A    for fig, qtd := range contador %7B%0A        if qtd %3E 1 %7B\n+// quantidade de figurinhas que ele possui%0A%0A    contador := make(map%5Bint%5Dint) // map: figurinha -%3E quantidade de vezes que apareceu%0A%0A    // %F0%9F%94%B9 Lendo as figurinhas e contando%0A    for i := 0; i %3C qtd; i++ %7B%0A        var v int%0A        fmt.Scan(&v)%0A        contador%5Bv%5D++ // aumenta 1 na contagem da figurinha v%0A    %7D%0A%0A    // %F0%9F%94%B9 Descobrir repetidas%0A    repetidas := %5B%5Dint%7B%7D // slice pra guardar as repetidas%0A%0A    for fig, qtd := range contador %7B%0A        if qtd %3E 1 %7B%0A            // se apareceu mais de 1 vez, adiciona (qtd - 1) vezes\n %0A   \n@@ -791,24 +791,48 @@\n %7D%0A    %7D%0A%0A   \n+ // %F0%9F%94%B9 Descobrir faltando\n %0A    faltand\n@@ -920,16 +920,50 @@\n         \n+ // se nunca apareceu, t%C3%A1 faltando\n %0A       \n@@ -1010,32 +1010,53 @@\n     %7D%0A    %7D%0A%0A   \n+ // %F0%9F%94%B9 Sa%C3%ADda repetidas\n %0A    if len(repe\n@@ -1280,16 +1280,36 @@\n   %7D%0A%0A   \n+ // %F0%9F%94%B9 Sa%C3%ADda faltando\n %0A    if \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-19_18-46-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n    var total, qtd int\n    fmt.Scan(&total)\n    fmt.Scan(&qtd)  \n\n    contador := make(map[int]int) \n    \n    for i := 0; i < qtd; i++ {\n        var v int\n        fmt.Scan(&v)\n        contador[v]++ \n    }\n\n    repetidas := []int{}\n    for fig, qtd := range contador {\n        if qtd > 1 {\n            for i := 0; i < qtd-1; i++ {\n                repetidas = append(repetidas, fig)\n            }\n        }\n    }\n\n   \n    faltando := []int{}\n\n    for i := 1; i <= total; i++ {\n        if contador[i] == 0 {\n           \n            faltando = append(faltando, i)\n        }\n    }\n\n   \n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, v := range repetidas {\n            if i > 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Print(v)\n        }\n        fmt.Println()\n    }\n\n   \n    if len(faltando) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, v := range faltando {\n            if i > 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Print(v)\n        }\n        fmt.Println()\n    }\n}",
+            "lines": "63"
+        }
+    ]
+}
