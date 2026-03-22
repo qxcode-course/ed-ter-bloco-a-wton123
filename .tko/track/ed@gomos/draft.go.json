@@ -27,7 +27,12 @@
         },
         {
             "label": "2026-03-19_19-12-25",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n    var q int\n    var d string\n\n    fmt.Scan(&q, &d)\n\n   \n    x := make([]int, q)\n    y := make([]int, q)\n\n\n    for i := 0; i < q; i++ {\n        fmt.Scan(&x[i], &y[i])\n    }\n\n    \n    antX := x[0]\n    antY := y[0]\n\n    \n    if d == \"L\" {\n        x[0]--\n    } else if d == \"R\" {\n        x[0]++\n    } else if d == \"U\" {\n        y[0]-- \n    } else if d == \"D\" {\n        y[0]++ \n    }\n\n  \n    for i := 1; i < q; i++ {\n\n       \n        tempX := x[i]\n        tempY := y[i]\n\n        \n        x[i] = antX\n        y[i] = antY\n\n        \n        antX = tempX\n        antY = tempY\n    }\n\n  \n    for i := 0; i < q; i++ {\n        fmt.Println(x[i, y[] , )\n    }\n}",
+            "content": "@@ -671,15 +671,16 @@\n (x%5Bi\n-%5D\n , y%5B\n-i\n %5D\n+ , \n )%0A  \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-22_23-55-36",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n    var q int\n    var d string\n\n    fmt.Scan(&q, &d)\n\n   \n    x := make([]int, q)\n    y := make([]int, q)\n\n\n    for i := 0; i < q; i++ {\n        fmt.Scan(&x[i], &y[i])\n    }\n\n    \n    antX := x[0]\n    antY := y[0]\n\n    \n    if d == \"L\" {\n        x[0]--\n    } else if d == \"R\" {\n        x[0]++\n    } else if d == \"U\" {\n        y[0]-- \n    } else if d == \"D\" {\n        y[0]++ \n    }\n\n  \n    for i := 1; i < q; i++ {\n\n       \n        tempX := x[i]\n        tempY := y[i]\n\n        \n        x[i] = antX\n        y[i] = antY\n\n        \n        antX = tempX\n        antY = tempY\n    }\n\n  \n    for i := 0; i < q; i++ {\n        fmt.Println(x[i], y[i])\n    }\n}",
             "lines": "56"
         }
     ]

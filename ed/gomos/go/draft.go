@@ -51,6 +51,6 @@ func main() {
 
   
     for i := 0; i < q; i++ {
-        fmt.Println(x[i, y[] , )
+        fmt.Println(x[i], y[i])
     }
 }
