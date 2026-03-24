@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_13-32-18",
+            "content": "@@ -28,141 +28,16 @@\n unc \n-acharmatar(v%5B%5D int, n int)%7B%0Ai := 0 %0A    for  i %3C n%7B%0A        if v%5Bi%5D %3E 0 %7B%0A             %0A        %7D%0A    %7D%0A%7D%0Afunc main() %7B%0A    n := make\n+main() %7B\n %0A   \n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-24_14-01-20",
+            "content": "@@ -23,10 +23,8 @@\n mt%22%0A\n-/*\n func\n@@ -52,16 +52,16 @@\n n int)%7B%0A\n+\n i := 0 %0A\n@@ -133,11 +133,8 @@\n  %7D%0A%7D\n- */\n %0Afun\n@@ -152,190 +152,48 @@\n     \n-t := 0%0A    a := 0%0A    n := make(map%5Bint%5D int)%0A    %0A    fmt.Scan(&t)%0A    for i := 0 ; i %3C t ; t++%7B%0A        n%5Bi%5D = i + 1%0A    %7D%0A     fmt.Scan(&a)%0A    //acharmatar(n, t)%0A    fmt.Println(n\n+n := make%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-24_14-09-57",
+            "content": "@@ -246,17 +246,17 @@\n i %3C t ; \n-i\n+t\n ++%7B%0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-12-27",
+            "content": "@@ -19,16 +19,18 @@\n t %22fmt%22%0A\n+/*\n func ach\n@@ -132,16 +132,18 @@\n     %7D%0A%7D \n+*/\n %0Afunc ma\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-12-50",
+            "content": "@@ -296,16 +296,18 @@\n &a)%0A    \n+//\n acharmat\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-12-56",
+            "content": "@@ -189,16 +189,17 @@\n map%5Bint%5D\n+ \n int)%0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-13-45",
+            "content": "@@ -307,18 +307,16 @@\n rmatar(n\n-%5B%5D\n , t)%0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-13-57",
+            "content": "@@ -40,21 +40,14 @@\n ar(v\n- map%5Bint%5D\n+%5B%5D \n int\n- \n , n \n@@ -307,16 +307,18 @@\n rmatar(n\n+%5B%5D\n , t)%0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-16-26",
+            "content": "@@ -133,20 +133,8 @@\n   %7D%0A\n-        i++%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-16-44",
+            "content": "@@ -59,17 +59,16 @@\n n int)%7B%0A\n-%0A\n i := 0 %0A\n@@ -122,16 +122,8 @@\n     \n-v%5Bi%5D = 1\n %0A   \n@@ -352,10 +352,7 @@\n ln(n\n-, a\n )%0A%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-24_14-18-56",
+            "content": "@@ -57,15 +57,8 @@\n , n \n-int, a \n int)\n@@ -65,17 +65,17 @@\n %7B%0A%0Ai := \n-a\n+0\n  %0A    fo\n@@ -126,18 +126,17 @@\n  v%5Bi%5D = \n-0%0A\n+1\n %0A       \n@@ -338,19 +338,16 @@\n tar(n, t\n-, a\n )%0A    fm\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-24_14-20-53",
+            "content": "@@ -95,38 +95,8 @@\n  n%7B%0A\n-        v%5Bi + 1%5D = 0%0A        %0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-24_14-23-58",
+            "content": "@@ -108,24 +108,32 @@\n %5Bi + 1%5D = 0%0A\n+        \n %0A        if \n@@ -159,10 +159,8 @@\n     \n-//\n  v%5Bi\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-24_14-24-19",
+            "content": "@@ -116,25 +116,8 @@\n = 0%0A\n-        a = i + 2\n %0A   \n@@ -143,24 +143,26 @@\n             \n+//\n  v%5Bi%5D = 0%0A%0A \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-24_14-26-00",
+            "content": "@@ -142,10 +142,8 @@\n     \n-/*\n if v\n@@ -188,10 +188,8 @@\n    %7D\n-*/\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-24_14-26-29",
+            "content": "package main\nimport \"fmt\"\nfunc acharmatar(v map[int]int , n int, a int){\n\ni := a \n    for  i < n{\n        v[i + 1] = 0\n        a = i + 2\n        /*if v[i] > 0 {\n             v[i] = 0\n\n        }*/\n        i++\n    }\n} \nfunc main() {\n    t := 0\n    a := 0\n    n := make(map[int]int)\n    \n    fmt.Scan(&t)\n    for i := 0 ; i < t ; i++{\n        n[i] = i + 1\n    }\n     fmt.Scan(&a)\n    acharmatar(n, t, a)\n    fmt.Println(n, a)\n}",
+            "lines": "28"
+        }
+    ]
+}
