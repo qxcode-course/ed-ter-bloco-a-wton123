@@ -2,8 +2,58 @@
     "patches": [
         {
             "label": "2026-03-24_13-24-06",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n}\n",
+            "content": "@@ -37,26 +37,6 @@\n ) %7B%0A\n-%09fmt.Print(%22dgfdg%22)%0A\n %7D%0A\n",
             "lines": "4"
+        },
+        {
+            "label": "2026-03-29_20-30-40",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -38,495 +38,25 @@\n  %7B%0A%09\n-var N int%0A%09fmt.Scan(&N)%0A%0A%09fila := make(%5B%5Dint, N)%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09var M int%0A%09fmt.Scan(&M)%0A%0A%09// Usando map como conjunto%0A%09saidas := make(map%5Bint%5Dbool)%0A%09for i := 0; i %3C M; i++ %7B%0A%09%09var x int%0A%09%09fmt.Scan(&x)%0A%09%09saidas%5Bx%5D = true%0A%09%7D%0A%0A%09// Filtrando resultado%0A%09resultado := make(%5B%5Dint, 0)%0A%09for _, pessoa := range fila %7B%0A%09%09if !saidas%5Bpessoa%5D %7B%0A%09%09%09resultado = append(resultado, pessoa)%0A%09%09%7D%0A%09%7D%0A%0A%09// Imprimindo%0A%09for _, v := range resultado %7B%0A%09%09fmt.Printf(%22%25d %22, v)%0A%09%7D\n+fmt.Print(%22dgfdg%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-30_17-15-35",
+            "content": "@@ -519,10 +519,9 @@\n rint\n-ln\n+f\n (%22%25d\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-16-15",
+            "content": "@@ -515,17 +515,18 @@\n mt.Print\n-f\n+ln\n (%22%25d %22, \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-16-49",
+            "content": "@@ -529,13 +529,8 @@\n %22, v\n-,%22/n%22\n )%0A%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-17-11",
+            "content": "@@ -531,9 +531,9 @@\n  v,%22\n-%5C\n+/\n n%22)%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-17-24",
+            "content": "@@ -526,15 +526,19 @@\n %25d %22, v,\n+%22%5Cn%22\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-17-55",
+            "content": "@@ -458,22 +458,37 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09// Imprimindo%0A\n %09for \n-i\n+_\n , v := r\n@@ -508,20 +508,8 @@\n o %7B%0A\n-%09if i %3E 0 %7B%0A\n %09%09fm\n@@ -519,45 +519,22 @@\n rint\n+f\n (%22\n- %22)%0A%09%7D%0A%09fmt.Print(v)%0A%7D%0Afmt.Println()\n+%25d %22, v,)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-30_17-18-51",
+            "content": "@@ -537,12 +537,8 @@\n nt(v\n-,%22 %22\n )%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-19-30",
+            "content": "@@ -533,16 +533,20 @@\n .Print(v\n+,%22 %22\n )%0A%7D%0Afmt.\n@@ -553,15 +553,12 @@\n Println(\n-%22 %22\n )%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-20-03",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar N int\n\tfmt.Scan(&N)\n\n\tfila := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar M int\n\tfmt.Scan(&M)\n\n\t// Usando map como conjunto\n\tsaidas := make(map[int]bool)\n\tfor i := 0; i < M; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tsaidas[x] = true\n\t}\n\n\t// Filtrando resultado\n\tresultado := make([]int, 0)\n\tfor _, pessoa := range fila {\n\t\tif !saidas[pessoa] {\n\t\t\tresultado = append(resultado, pessoa)\n\t\t}\n\t}\n\n\tfor i, v := range resultado {\n\tif i > 0 {\n\t\tfmt.Print(\" \")\n\t}\n\tfmt.Print(v)\n}\nfmt.Println(\" \")\n}\n",
+            "lines": "42"
         }
     ]
 }

@@ -77,8 +77,23 @@
         },
         {
             "label": "2026-03-24_14-26-29",
-            "content": "package main\nimport \"fmt\"\nfunc acharmatar(v map[int]int , n int, a int){\n\ni := a \n    for  i < n{\n        v[i + 1] = 0\n        a = i + 2\n        /*if v[i] > 0 {\n             v[i] = 0\n\n        }*/\n        i++\n    }\n} \nfunc main() {\n    t := 0\n    a := 0\n    n := make(map[int]int)\n    \n    fmt.Scan(&t)\n    for i := 0 ; i < t ; i++{\n        n[i] = i + 1\n    }\n     fmt.Scan(&a)\n    acharmatar(n, t, a)\n    fmt.Println(n, a)\n}",
+            "content": "@@ -10,315 +10,301 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func \n-printFila(fila %5B\n+acharmatar(v map%5Bint\n %5Dint\n+ \n , \n-pos\n+n\n  int\n-) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i, v := range fila %7B%0A%09%09if i == pos %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0A%0Afunc main() %7B%0A%09var N, E int%0A%09fmt.Scan(&N, &E)%0A%0A%09// Criando a fila de 1 at%C3%A9 N%0A%09fila := make(%5B%5Dint, N)%0A%09\n+, a int)%7B%0A%0Ai := a %0A    for  i %3C n%7B%0A        v%5Bi + 1%5D = 0%0A        a = i + 2%0A        /*if v%5Bi%5D %3E 0 %7B%0A             v%5Bi%5D = 0%0A%0A        %7D*/%0A        i++%0A    %7D%0A%7D %0Afunc main() %7B%0A    t := 0%0A    a := 0%0A    n := make(map%5Bint%5Dint)%0A    %0A    fmt.Scan(&t)%0A    \n for \n@@ -313,457 +313,112 @@\n := 0\n+ \n ; i %3C \n-N\n+t \n ; i++\n- \n %7B%0A\n-%09%09fila%5Bi%5D = i + 1%0A%09%7D%0A%0A%09// Ajustando %C3%ADndice inicial (E come%C3%A7a em 1)%0A%09pos := (E - 1) %25 len(fila)%0A%0A%09for len(fila) %3E 0 %7B%0A%09%09printFila(fila, pos)%0A%0A%09%09if len(fila) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09// posi%C3%A7%C3%A3o de quem vai morrer (pr%C3%B3ximo)%0A%09%09morte := (pos + 1) %25 len(fila)%0A%0A%09%09// removendo elemento%0A%09%09fila = append(fila%5B:morte%5D, fila%5Bmorte+1:%5D...)%0A%0A%09%09// ajustar pos%0A%09%09if morte %3E pos %7B%0A%09%09%09pos = (pos + 1) %25 len(fila)%0A%09%09%7D else %7B%0A%09%09%09pos = pos %25 len(fila)%0A%09%09%7D%0A%09%7D\n+        n%5Bi%5D = i + 1%0A    %7D%0A     fmt.Scan(&a)%0A    acharmatar(n, t, a)%0A    fmt.Println(n, a)\n %0A%7D\n",
             "lines": "28"
+        },
+        {
+            "label": "2026-03-30_17-03-52",
+            "content": "@@ -209,12 +209,11 @@\n n(%22%5D\n-b\n %22)%0A\n+\n %7D%0A%0Af\n@@ -258,16 +258,46 @@\n N, &E)%0A%0A\n+%09// Criando a fila de 1 at%C3%A9 N%0A\n %09fila :=\n@@ -360,16 +360,61 @@\n + 1%0A%09%7D%0A%0A\n+%09// Ajustando %C3%ADndice inicial (E come%C3%A7a em 1)%0A\n %09pos := \n@@ -476,17 +476,16 @@\n ila, pos\n- \n )%0A%0A%09%09if \n@@ -515,16 +515,58 @@\n ak%0A%09%09%7D%0A%0A\n+%09%09// posi%C3%A7%C3%A3o de quem vai morrer (pr%C3%B3ximo)%0A\n %09%09morte \n@@ -591,16 +591,40 @@\n (fila)%0A%0A\n+%09%09// removendo elemento%0A\n %09%09fila =\n@@ -665,16 +665,33 @@\n :%5D...)%0A%0A\n+%09%09// ajustar pos%0A\n %09%09if mor\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-30_17-12-41",
+            "content": "@@ -205,16 +205,17 @@\n intln(%22%5D\n+b\n %22)%0A%7D%0A%0Afu\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_17-13-19",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc printFila(fila []int, pos int) {\n\tfmt.Print(\"[ \")\n\tfor i, v := range fila {\n\t\tif i == pos {\n\t\t\tfmt.Printf(\"%d> \", v)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", v)\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar N, E int\n\tfmt.Scan(&N, &E)\n\n\tfila := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tfila[i] = i + 1\n\t}\n\n\tpos := (E - 1) % len(fila)\n\n\tfor len(fila) > 0 {\n\t\tprintFila(fila, pos )\n\n\t\tif len(fila) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\tmorte := (pos + 1) % len(fila)\n\n\t\tfila = append(fila[:morte], fila[morte+1:]...)\n\n\t\tif morte > pos {\n\t\t\tpos = (pos + 1) % len(fila)\n\t\t} else {\n\t\t\tpos = pos % len(fila)\n\t\t}\n\t}\n}",
+            "lines": "47"
         }
     ]
 }
