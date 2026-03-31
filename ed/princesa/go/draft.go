@@ -3,45 +3,57 @@ package main
 import (
 	"fmt"
 )
-
-func printFila(fila []int, pos int) {
-	fmt.Print("[ ")
-	for i, v := range fila {
-		if i == pos {
-			fmt.Printf("%d> ", v)
-		} else {
-			fmt.Printf("%d ", v)
+func proximoVivo(j []int, pos int) int {
+	n := len(j)
+	for {
+		pos = (pos + 1) % n
+		if j[pos] != 0 {
+			return pos
 		}
+	}
+}
+
+func printFila(jogadores []int, esp int) {
+	fmt.Print("[ ")
+	for i , v := range jogadores{
+		 if jogadores[i] == 0{
+				continue
+		 }
+		 if i == esp {
+			v = jogadores[i]
+			fmt.Print(v ,"> ")
+		 }
+		 if i != esp{
+			fmt.Print(v ," ")
+		 }
+		
+		
 	}
 	fmt.Println("]")
 }
 
 func main() {
-	var N, E int
-	fmt.Scan(&N, &E)
+	var n , e int 
+	fmt.Scan(&n , &e)
+	jogadores := make([]int, n)
+	for i := 0 ; i < n ; i++{
+		jogadores[i] = i + 1
+	}
+    pos := e - 1
 
-	fila := make([]int, N)
-	for i := 0; i < N; i++ {
-		fila[i] = i + 1
+	vivos := n
+
+	for vivos > 1 {
+		printFila(jogadores, pos)
+		
+		morre := proximoVivo(jogadores, pos)
+
+		jogadores[morre] = 0
+		vivos--
+
+		pos = proximoVivo(jogadores, morre)
 	}
 
-	pos := (E - 1) % len(fila)
-
-	for len(fila) > 0 {
-		printFila(fila, pos )
-
-		if len(fila) == 1 {
-			break
-		}
-
-		morte := (pos + 1) % len(fila)
-
-		fila = append(fila[:morte], fila[morte+1:]...)
-
-		if morte > pos {
-			pos = (pos + 1) % len(fila)
-		} else {
-			pos = pos % len(fila)
-		}
-	}
+	printFila(jogadores, pos)
+	
 }

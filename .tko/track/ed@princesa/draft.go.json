@@ -92,8 +92,123 @@
         },
         {
             "label": "2026-03-30_17-13-19",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc printFila(fila []int, pos int) {\n\tfmt.Print(\"[ \")\n\tfor i, v := range fila {\n\t\tif i == pos {\n\t\t\tfmt.Printf(\"%d> \", v)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", v)\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar N, E int\n\tfmt.Scan(&N, &E)\n\n\tfila := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tfila[i] = i + 1\n\t}\n\n\tpos := (E - 1) % len(fila)\n\n\tfor len(fila) > 0 {\n\t\tprintFila(fila, pos )\n\n\t\tif len(fila) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\tmorte := (pos + 1) % len(fila)\n\n\t\tfila = append(fila[:morte], fila[morte+1:]...)\n\n\t\tif morte > pos {\n\t\t\tpos = (pos + 1) % len(fila)\n\t\t} else {\n\t\t\tpos = pos % len(fila)\n\t\t}\n\t}\n}",
+            "content": "@@ -177,17 +177,16 @@\n ntf(%22%25d \n-1\n %22, v)%0A%09%09\n",
             "lines": "47"
+        },
+        {
+            "label": "2026-03-31_13-16-18",
+            "content": "@@ -65,16 +65,159 @@\n int) %7B%0A%09\n+fmt.Print(%22%5B %22)%0A%09for i, v := range fila %7B%0A%09%09if i == pos %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d 1%22, v)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)\n %0A%7D%0A%0Afunc\n@@ -235,18 +235,16 @@\n var \n-n , e\n+N, E\n  int\n- \n %0A%09fm\n@@ -255,26 +255,21 @@\n an(&\n-n , &e)%0A%09jogadores\n+N, &E)%0A%0A%09fila\n  := \n@@ -280,17 +280,17 @@\n (%5B%5Dint, \n-n\n+N\n )%0A%09for i\n@@ -298,35 +298,29 @@\n := 0\n- \n ; i %3C \n-n \n+N\n ; i++\n+ \n %7B%0A%09%09\n-jogadores\n+fila\n %5Bi%5D \n@@ -334,25 +334,294 @@\n %0A%09%7D%0A\n-%09println(jogadores)\n+%0A%09pos := (E - 1) %25 len(fila)%0A%0A%09for len(fila) %3E 0 %7B%0A%09%09printFila(fila, pos )%0A%0A%09%09if len(fila) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09morte := (pos + 1) %25 len(fila)%0A%0A%09%09fila = append(fila%5B:morte%5D, fila%5Bmorte+1:%5D...)%0A%0A%09%09if morte %3E pos %7B%0A%09%09%09pos = (pos + 1) %25 len(fila)%0A%09%09%7D else %7B%0A%09%09%09pos = pos %25 len(fila)%0A%09%09%7D%0A%09%7D\n %0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-31_17-39-30",
+            "content": "@@ -222,10 +222,7 @@\n ores\n-%5B1%5D\n )%0A%7D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-31_17-40-39",
+            "content": "@@ -205,17 +205,15 @@\n %09%7D%0A%09\n-fmt.P\n+p\n rint\n+ln\n (jog\n@@ -218,11 +218,14 @@\n ogadores\n+%5B1%5D\n )%0A%7D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-31_17-41-08",
+            "content": "@@ -41,25 +41,20 @@\n intFila(\n-jogadores\n+fila\n  %5B%5Dint, \n@@ -69,175 +69,8 @@\n  %7B%0A%09\n-fmt.Print(%22%5B%22)%0A%09for i , v := range jogadores%7B%0A%09%09 if jogadores%5Bi%5D == 0%7B%0A%0A%09%09 %7D%0A%09%09 if jogadores%5Bi%5D != 0 %7B%0A%09%09%09v = jogadores%5Bi%5D%0A%09%09%09fmt.Print(v ,%22%3E%22)%0A%09%09 %7D%0A%09%7D%0A%09fmt.Print(%22%5D%22)\n %0A%7D%0A%0A\n@@ -201,35 +201,11 @@\n + 1%0A\n+\n %09%7D%0A\n-%09printFila(jogadores,e)%0A\n %09fmt\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-31_17-48-24",
+            "content": "@@ -218,28 +218,8 @@\n %3E%22)%0A\n-%09%09%09jogadores%5Bi%5D = 0%0A\n %09%09 %7D\n@@ -397,10 +397,30 @@\n res,e)%0A%09\n+fmt.Print(jogadores)\n %0A%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-31_17-49-40",
+            "content": "@@ -232,19 +232,14 @@\n es%5Bi\n- + 1\n %5D = 0%0A\n-%0A\n %09%09 %7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-50-39",
+            "content": "@@ -221,27 +221,8 @@\n %0A%09%09%09\n-break%0A%09%09%09%0A%0A%09%09 %7D%0A%09%09 \n joga\n@@ -237,16 +237,22 @@\n + 1%5D = 0\n+%0A%0A%09%09 %7D\n %0A%09%7D%0A%09fmt\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-31_18-00-45",
+            "content": "@@ -82,17 +82,16 @@\n Print(%22%5B\n- \n %22)%0A%09for \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-00-55",
+            "content": "@@ -58,19 +58,19 @@\n  %5B%5Dint, \n-esp\n+pos\n  int) %7B%0A\n@@ -171,14 +171,12 @@\n %5Bi%5D \n-== esp\n+!= 0\n  %7B%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-03-01",
+            "content": "@@ -220,16 +220,21 @@\n %22%3E%22)%0A%09%09%09\n+break\n %0A%09%09%09%0A%0A%09%09\n@@ -238,16 +238,37 @@\n %0A%09%09 %7D%0A%09%09\n+ jogadores%5Bi + 1%5D = 0\n %0A%09%7D%0A%09fmt\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-03-38",
+            "content": "@@ -223,53 +223,14 @@\n )%0A%09%09\n- %7D%0A%09%09 if jogadores%5Bi%5D != esp%7B%0A%09%09%09fmt.Print(v)\n+%09%0A%09%09%09%0A\n %0A%09%09 \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-05-27",
+            "content": "@@ -267,13 +267,8 @@\n nt(v\n- ,%22 %22\n )%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-05-36",
+            "content": "@@ -214,17 +214,16 @@\n nt(v ,%22%3E\n- \n %22)%0A%09%09 %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-05-42",
+            "content": "@@ -282,54 +282,8 @@\n %7D%0A%09%09\n-jogadores%5Bi + 1%5D = 0 %0A%09%09esp = jogadores%5Bi + 2%5D\n %0A%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-08-04",
+            "content": "@@ -276,16 +276,65 @@\n %22)%0A%09%09 %7D%0A\n+%09%09jogadores%5Bi + 1%5D = 0 %0A%09%09esp = jogadores%5Bi + 2%5D%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_18-47-26",
+            "content": "@@ -457,31 +457,7 @@\n ,e)%0A\n-%09printFila(jogadores,e)%0A\n %09%0A%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-31_18-47-46",
+            "content": "@@ -280,92 +280,8 @@\n %09 %7D%0A\n-%09%09jogadores%5Bi + 1%5D =(0)%25 len(jogadores)%0A%09%09esp = (jogadores%5Bi + 2%5D) %25 len(jogadores)%0A\n %09%7D%0A%09\n@@ -453,11 +453,35 @@\n ores,e)%0A\n+%09printFila(jogadores,e)%0A\n %09%0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_18-58-33",
+            "content": "@@ -282,10 +282,8 @@\n %7D%0A%09%09\n-//\n joga\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_18-58-44",
+            "content": "@@ -28,133 +28,8 @@\n t%22%0A)\n-%0Afunc proximoVivo(j %5B%5Dint, pos int) int %7B%0A%09n := len(j)%0A%09for %7B%0A%09%09pos = (pos + 1) %25 n%0A%09%09if j%5Bpos%5D != 0 %7B%0A%09%09%09return pos%0A%09%09%7D%0A%09%7D%0A%7D\n %0A%0Afu\n@@ -146,21 +146,9 @@\n  0%7B%0A\n-%09%09%09%09continue\n %0A\n+\n %09%09 %7D\n@@ -278,19 +278,99 @@\n %0A%09%09 %7D%0A%09%09\n-%0A%09%09\n+//jogadores%5Bi + 1%5D =(0)%25 len(jogadores)%0A%09%09esp = (jogadores%5Bi + 2%5D) %25 len(jogadores)\n %0A%09%7D%0A%09fmt\n@@ -519,278 +519,30 @@\n %0A%09%7D%0A\n-    pos := e - 1%0A%0A%09vivos := n%0A%0A%09for vivos %3E 1 %7B%0A%09%09printFila(jogadores, pos)%0A%0A%09%09// achar quem morre%0A%09%09morre := proximoVivo(jogadores, pos)%0A%0A%09%09// mata%0A%09%09jogadores%5Bmorre%5D = 0%0A%09%09vivos--%0A%0A%09%09// pr%C3%B3xima espada%0A%09%09pos = proximoVivo(jogadores, morre)%0A%09%7D%0A%0A%09printFila(jogadores, pos\n+%09printFila(jogadores,e\n )%0A%09%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_19-25-36",
+            "content": "@@ -649,16 +649,38 @@\n , pos)%0A%0A\n+%09%09// achar quem morre%0A\n %09%09morre \n@@ -713,16 +713,23 @@\n pos)%0A%0A%09%09\n+// mata\n %0A%09%09jogad\n@@ -757,16 +757,33 @@\n os--%0A%0A%09%09\n+// pr%C3%B3xima espada\n %0A%09%09pos =\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-03-31_19-27-35",
+            "content": "@@ -291,17 +291,28 @@\n %7D%0A%09%09 if \n-i\n+jogadores%5Bi%5D\n  == esp \n@@ -366,17 +366,28 @@\n %7D%0A%09%09 if \n-i\n+jogadores%5Bi%5D\n  != esp%7B\n@@ -648,18 +648,16 @@\n s, pos)%0A\n-%09%09\n %0A%09%09morre\n@@ -689,16 +689,19 @@\n , pos)%0A%0A\n+%09%09%0A\n %09%09jogado\n@@ -726,16 +726,19 @@\n ivos--%0A%0A\n+%09%09%0A\n %09%09pos = \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-31_19-31-03",
+            "content": "@@ -414,10 +414,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-31_19-31-21",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc proximoVivo(j []int, pos int) int {\n\tn := len(j)\n\tfor {\n\t\tpos = (pos + 1) % n\n\t\tif j[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc printFila(jogadores []int, esp int) {\n\tfmt.Print(\"[ \")\n\tfor i , v := range jogadores{\n\t\t if jogadores[i] == 0{\n\t\t\t\tcontinue\n\t\t }\n\t\t if i == esp {\n\t\t\tv = jogadores[i]\n\t\t\tfmt.Print(v ,\"> \")\n\t\t }\n\t\t if i != esp{\n\t\t\tfmt.Print(v ,\" \")\n\t\t }\n\t\t\n\t\t\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n , e int \n\tfmt.Scan(&n , &e)\n\tjogadores := make([]int, n)\n\tfor i := 0 ; i < n ; i++{\n\t\tjogadores[i] = i + 1\n\t}\n    pos := e - 1\n\n\tvivos := n\n\n\tfor vivos > 1 {\n\t\tprintFila(jogadores, pos)\n\t\t\n\t\tmorre := proximoVivo(jogadores, pos)\n\n\t\tjogadores[morre] = 0\n\t\tvivos--\n\n\t\tpos = proximoVivo(jogadores, morre)\n\t}\n\n\tprintFila(jogadores, pos)\n\t\n}",
+            "lines": "59"
         }
     ]
 }
