@@ -14,6 +14,8 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
+	/*- **occurr**: Faça uma contagem de quantas vezes cada nível de stress aparece e retorne essa contagem ordenado pelo nível de stress.
+- **times** Uma ou mais pessoas de mesmo stress seguidas formam um time. Gere um vetor compactado indicando o nível de stress e quantas pessoas tem em cada time?*/
 	_ = vet
 	return nil
 }
