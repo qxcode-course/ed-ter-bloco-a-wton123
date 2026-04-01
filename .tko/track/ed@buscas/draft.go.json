@@ -1,0 +1,134 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_00-35-41",
+            "content": "@@ -23,338 +23,8 @@\n mt%22%0A\n-func matchingStrings(strings %5B%5Dstring, queries %5B%5Dstring) %5B%5Dint %7B%0A    freq := make(map%5Bstring%5Dint)%0A%0A    // contar ocorr%C3%AAncias%0A    for _, s := range strings %7B%0A        freq%5Bs%5D++%0A    %7D%0A%0A    // responder consultas%0A    var result %5B%5Dint%0A    for _, q := range queries %7B%0A        result = append(result, freq%5Bq%5D)%0A    %7D%0A%0A    return result%0A%7D%0A\n func\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-01_00-40-15",
+            "content": "@@ -349,18 +349,16 @@\n esult%0A%7D%0A\n-%0A%0A\n func mai\n@@ -367,101 +367,8 @@\n ) %7B%0A\n-    var n1, n2 int%0A    vet1 := make(map%5Bint%5D , int)%0A    vet2 := make(map%5Bint%5D , int)%0A    for%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-01_00-43-48",
+            "content": "@@ -397,38 +397,35 @@\n et1 := make(map%5B\n-Str\n in\n-g\n+t\n %5D , int)%0A    vet\n@@ -438,22 +438,19 @@\n ake(map%5B\n-Str\n in\n-g\n+t\n %5D , int)\n@@ -459,165 +459,10 @@\n    f\n-mt.Scan(&n1)%0A    for i := 0 ; i %3C n1 ; i++%7B%0A        fmt.Scan(&vet1%5Bi%5D)%0A    %7D%0A    fmt.Scan(&n1)%0A    for i := 0 ; i %3C n2; i++%7B%0A        fmt.Scan(&vet2%5Bi%5D)%0A    %7D\n+or\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-01_00-48-56",
+            "content": "@@ -404,32 +404,34 @@\n make(map%5BString%5D\n+ ,\n  int)%0A    vet2 :\n@@ -448,16 +448,18 @@\n %5BString%5D\n+ ,\n  int)%0A  \n@@ -527,16 +527,19 @@\n an(&vet1\n+%5Bi%5D\n )%0A    %7D%0A\n@@ -582,24 +582,24 @@\n  %3C n2; i++%7B%0A\n-\n         fmt.\n@@ -608,16 +608,19 @@\n an(&vet2\n+%5Bi%5D\n )%0A    %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-49-57",
+            "content": "@@ -397,33 +397,33 @@\n et1 := make(map%5B\n-s\n+S\n tring%5D int)%0A    \n@@ -435,25 +435,25 @@\n := make(map%5B\n-s\n+S\n tring%5D int)%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-50-23",
+            "content": "@@ -24,27 +24,31 @@\n t%22%0Afunc \n-cacapalavra\n+matchingStrings\n (strings\n@@ -409,30 +409,27 @@\n map%5Bstring%5D \n-str\n in\n-g\n+t\n )%0A    vet2 :\n@@ -447,22 +447,19 @@\n string%5D \n-str\n in\n-g\n+t\n )%0A    fm\n@@ -617,34 +617,35 @@\n     \n-cacapalavra(vet1 , vet2 , \n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-52-10",
+            "content": "@@ -635,19 +635,15 @@\n vet1\n-%5B%5D\n  , vet2\n-%5B%5D\n  , )\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-52-42",
+            "content": "@@ -635,15 +635,19 @@\n vet1\n+%5B%5D\n  , vet2\n+%5B%5D\n  , )\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-53-09",
+            "content": "@@ -387,46 +387,78 @@\n %0A   \n-var\n  vet1 \n-%5B%5D\n+:= make(map%5Bstring%5D \n string\n+)\n %0A   \n-var\n  vet2 \n-%5B%5D\n+:= make(map%5Bstring%5D \n string\n+)\n %0A   \n@@ -638,12 +638,15 @@\n 1 , vet2\n+ , \n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-54-47",
+            "content": "@@ -612,28 +612,6 @@\n t2)%0A\n-    print(vet1, vet2)%0A\n %7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-01_00-55-17",
+            "content": "@@ -612,20 +612,16 @@\n t2)%0A    \n-fmt.\n print(ve\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-01_00-55-25",
+            "content": "@@ -620,9 +620,9 @@\n fmt.\n-P\n+p\n rint\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-01_00-55-32",
+            "content": "@@ -493,19 +493,16 @@\n an(&vet1\n-%5Bi%5D\n )%0A    %7D%0A\n@@ -575,11 +575,8 @@\n vet2\n-%5Bi%5D\n )%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-01_00-57-25",
+            "content": "@@ -519,17 +519,17 @@\n .Scan(&n\n-2\n+1\n )%0A    fo\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-01_00-58-48",
+            "content": "@@ -622,130 +622,28 @@\n     \n-result := cacapalavra(vet1, vet2)%0A%0A%09// imprimir resultado%0A%09for _, v := range result %7B%0A%09%09fmt.Print(v, %22 %22)%0A%09%7D%0A%09fmt.Println(\n+fmt.Print(vet1, vet2\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-01_00-59-27",
+            "content": "@@ -387,49 +387,46 @@\n %0A   \n-   fmt.Scan(&n1)%0A   vet1 := make(\n+var vet1 %5B%5Dstring%0A   var vet2 \n %5B%5Dstring\n , n1\n@@ -425,19 +425,26 @@\n ring\n-, n1)\n %0A  \n-%0A\n   \n+fmt.Scan(&n1)\n %0A   \n@@ -500,24 +500,24 @@\n 1%5Bi%5D)%0A    %7D%0A\n+\n     fmt.Scan\n@@ -526,39 +526,8 @@\n n2)%0A\n-    vet2 := make(%5B%5Dstring, n2)%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-01_01-01-10",
+            "content": "@@ -755,95 +755,8 @@\n  %22)%0A\n-        if len(result) == n2 %7C%7C n1 == len(result) %7B%0A            fmt.Print(v)%0A        %7D%0A\n %09%7D%0A%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-01_01-05-16",
+            "content": "@@ -780,16 +780,36 @@\n ) == n2 \n+%7C%7C n1 == len(result)\n  %7B%0A     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-01_01-05-41",
+            "content": "@@ -782,9 +782,9 @@\n == n\n-3\n+2\n   %7B%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-01_01-05-48",
+            "content": "@@ -778,17 +778,17 @@\n lt) == n\n-1\n+3\n   %7B%0A    \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-01_01-05-56",
+            "content": "@@ -812,26 +812,8 @@\n (v)%0A\n-            break%0A\n     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-01_01-06-23",
+            "content": "@@ -782,30 +782,10 @@\n == n\n-2 %7C%7C n1 == len(result)\n+1 \n  %7B%0A \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_01-07-12",
+            "content": "@@ -759,16 +759,102 @@\n         \n+if len(result) == n2 %7C%7C n1 == len(result) %7B%0A            fmt.Print(v)%0A            break\n %0A       \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_01-07-32",
+            "content": "@@ -771,16 +771,17 @@\n      %7D%0A%09\n+%7D\n %0A%09fmt.Pr\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-01_01-08-05",
+            "content": "@@ -708,17 +708,17 @@\n do%0A%09for \n-i\n+_\n , v := r\n@@ -735,31 +735,10 @@\n t %7B%0A\n-    if i %3E 0 %7B%0A        \n+%09%09\n fmt.\n@@ -743,16 +743,19 @@\n t.Print(\n+v, \n %22 %22)%0A   \n@@ -759,27 +759,21 @@\n     \n-%7D%0A\n     \n-fmt.Print(v)%0A\n+%0A        \n %7D%0A%09%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-01_01-09-46",
+            "content": "package main\nimport \"fmt\"\nfunc cacapalavra(strings []string, queries []string) []int {\n    freq := make(map[string]int)\n\n    // contar ocorr\u00eancias\n    for _, s := range strings {\n        freq[s]++\n    }\n\n    // responder consultas\n    var result []int\n    for _, q := range queries {\n        result = append(result, freq[q])\n    }\n\n    return result\n}\n\n\nfunc main() {\n    var n1, n2 int\n      fmt.Scan(&n1)\n   vet1 := make([]string, n1)\n  \n  \n    for i := 0 ; i < n1 ; i++{\n        fmt.Scan(&vet1[i])\n    }\n    fmt.Scan(&n2)\n    vet2 := make([]string, n2)\n    for i := 0 ; i < n2; i++{\n        fmt.Scan(&vet2[i])\n    }\n    cacapalavra(vet1 , vet2)\n    result := cacapalavra(vet1, vet2)\n\n\t// imprimir resultado\n\tfor i, v := range result {\n    if i > 0 {\n        fmt.Print(\" \")\n    }\n    fmt.Print(v)\n}\n\t\n\tfmt.Println()\n}\n",
+            "lines": "47"
+        }
+    ]
+}
