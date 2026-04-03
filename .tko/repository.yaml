@@ -16,10 +16,11 @@ sources:
   tasks: null
 expanded:
 - ed@rec
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go

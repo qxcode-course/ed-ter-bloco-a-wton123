@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_18-53-16",
+            "content": "@@ -55,246 +55,8 @@\n t %7B%0A\n-%09if a == 0%7B%0A%09%09return b%0A%09%7Delse if b == 0%7B%0A%09%09return a%0A%09%7D%0A%09return mdc(b, a%25b)%0A%09//Escreva A na forma do resto do quociente (A = B%E2%8B%85Q + R), ou seja R = A %25 B.%0A   // Encontre o MDC(B,R) usando o Algoritmo Euclidiano, j%C3%A1 que MDC(A,B) = MDC(B,R)%0A%0A\n %09ret\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-03_19-12-34",
+            "content": "@@ -376,22 +376,6 @@\n b))%0A\n-%09fmt.Print(%22d%22)%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-03_19-16-15",
+            "content": "@@ -373,11 +373,25 @@\n a, b))%0A%09\n+fmt.Print(%22d%22)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-03_19-49-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif a == 0{\n\t\treturn b\n\t}else if b == 0{\n\t\treturn a\n\t}\n\treturn mdc(b, a%b)\n\t//Escreva A na forma do resto do quociente (A = B\u22c5Q + R), ou seja R = A % B.\n   // Encontre o MDC(B,R) usando o Algoritmo Euclidiano, j\u00e1 que MDC(A,B) = MDC(B,R)\n\n\treturn 0\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n\t\n}\n",
+            "lines": "25"
+        }
+    ]
+}
