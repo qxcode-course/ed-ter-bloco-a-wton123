@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_17-56-47",
+            "content": "@@ -23,165 +23,21 @@\n mt%22%0A\n-%0Afunc dividir(n1 int)%7B%0A    if(n1 == 1 %7C%7C n1 == 0)%7B%0A        return%0A    %7D%0A    return dividir(n1)%0A%7D%0Afunc main() %7B%0A    var n int %0A    fmt.Scan(&n)%0A    dividir(n)\n+func main() %7B\n %0A   \n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-03_18-05-43",
+            "content": "@@ -84,17 +84,16 @@\n   return\n- \n %0A    %7D%0A \n@@ -118,36 +118,8 @@\n n1)%0A\n-    fmt.println(n1, n1 %25 2)%0A\n %7D%0Afu\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-03_18-06-53",
+            "content": "@@ -92,24 +92,31 @@\n  %0A    %7D%0A    \n+return \n dividir(n1)%0A\n@@ -119,25 +119,25 @@\n n1)%0A    fmt.\n-P\n+p\n rintln(n1, n\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_18-12-50",
+            "content": "@@ -110,11 +110,8 @@\n r(n1\n-/ 2\n )%0A  \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_18-13-13",
+            "content": "@@ -206,10 +206,38 @@\n (n)%0A    \n+fmt.Println(%22Hello, World!%22)\n %0A%7D\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_18-13-25",
+            "content": "@@ -103,34 +103,18 @@\n  div\n- := n1 / 2%0A    dividir(div\n+idir(n1/ 2\n )%0A  \n@@ -131,16 +131,14 @@\n tln(\n-div, div\n+n1, n1\n  %25 2\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-03_18-14-44",
+            "content": "@@ -49,16 +49,26 @@\n %0A    if(\n+n1 == 1 %7C%7C\n  n1 == 0\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-03_18-14-58",
+            "content": "@@ -46,26 +46,8 @@\n t)%7B%0A\n-    var resto int%0A\n     \n@@ -86,82 +86,8 @@\n   %7D%0A\n-    if(n1 %25 2 == 0)%7B%0A        resto = 0%0A    %7Delse%7B%0A        resto = 1%0A    %7D%0A\n     \n@@ -142,13 +142,15 @@\n iv, \n-resto\n+div %25 2\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-03_18-18-41",
+            "content": "@@ -46,16 +46,29 @@\n t)%7B%0A    \n+var resto int\n %0A    if(\n@@ -108,23 +108,77 @@\n     \n-resto := n1 %25 2\n+if(n1 %25 2 == 0)%7B%0A        resto = 0%0A    %7Delse%7B%0A        resto = 1%0A    %7D\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-03_18-20-18",
+            "content": "package main\nimport \"fmt\"\n\nfunc dividir(n1 int){\n    \n    if( n1 == 0){\n        return \n    }\n    resto := n1 % 2\n    div := n1 / 2\n    dividir(div)\n    fmt.Println(div, resto)\n}\nfunc main() {\n    var n int \n    fmt.Scan(&n)\n    dividir(n)\n    \n}",
+            "lines": "19"
+        }
+    ]
+}
