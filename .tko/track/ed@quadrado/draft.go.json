@@ -1,0 +1,204 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-05_17-57-01",
+            "content": "@@ -23,99 +23,21 @@\n mt%22%0A\n-%0Afunc imprimi()%7B%0A%0A%7D%0A%0Afunc raizquadadra()%7B%0A%0A%7D%0Afunc main() %7B%0A    var n int %0A    fmt.Scan(&n)%0A\n+func main() %7B\n %0A   \n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-05_18-07-53",
+            "content": "@@ -37,96 +37,11 @@\n imi(\n-n int)%7B%0A  fmt.Print(n ,%22%5E%22,2, %22 = %22)%0A  fmt.Print(n-1 ,%22%5E%22,n, %22+%22, n,%22%5E%22, n-1,%22+ 1 = ?%22 )\n+)%7B%0A\n %0A%7D%0A%0A\n@@ -119,16 +119,34 @@\n     \n-imprimi(n\n+fmt.Println(%22Hello, World!%22\n )%0A%7D\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-05_18-14-17",
+            "content": "@@ -99,11 +99,9 @@\n n, %22\n- + \n++\n %22, n\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-14-38",
+            "content": "@@ -113,17 +113,16 @@\n %22, n-1,%22\n- \n + 1 = ?%22\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-14-48",
+            "content": "@@ -108,9 +108,9 @@\n  n,%22\n-*\n+%5E\n %22, n\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-15-09",
+            "content": "@@ -87,25 +87,25 @@\n nt(n-1 ,%22%5E%22,\n-2\n+n\n , %22 + %22, n,%22\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-16-28",
+            "content": "@@ -101,17 +101,17 @@\n  %22 + %22, \n-2\n+n\n ,%22*%22, n-\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-17-02",
+            "content": "@@ -85,10 +85,8 @@\n rint\n-ln\n (n-1\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-17-33",
+            "content": "@@ -152,52 +152,11 @@\n dra(\n-n int)int%7B%0A    raiz := n * n%0A    return raiz\n+)%7B%0A\n %0A%7D%0Af\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-22-28",
+            "content": "@@ -68,17 +68,32 @@\n 2, %22 = %22\n-,\n+)%0A  fmt.Println(\n n-1 ,%22%5E%22\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-05_18-23-34",
+            "content": "@@ -24,101 +24,29 @@\n t%22%0A%0A\n-%0A  %0A%0A%0Afunc raizquadadra\n+func imprimi\n (n int)\n-int\n %7B%0A\n-    if n == 0%7B%0A        return 0%0A    %7D%0A    raiz := n * n%0A  \n   fm\n@@ -111,41 +111,78 @@\n 1 = \n+?\n %22 \n-, raiz )%0A    raizquadadra(\n+)%0A%7D%0A%0Afunc raizquadadra(n int)int%7B%0A    raiz := n * n%0A    return \n raiz\n-)\n %0A%7D%0Af\n@@ -231,25 +231,20 @@\n n)%0A%0A    \n-raizquadadra\n+imprimi\n (n)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-05_18-27-13",
+            "content": "@@ -213,29 +213,16 @@\n a(raiz)%0A\n-    return 0%0A\n %7D%0Afunc m\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-05_18-27-28",
+            "content": "@@ -211,18 +211,16 @@\n dra(raiz\n--1\n )%0A    re\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-05_18-29-49",
+            "content": "@@ -128,10 +128,8 @@\n rint\n-ln\n (n ,\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-05_18-29-59",
+            "content": "@@ -68,9 +68,9 @@\n f n \n-%3C\n+=\n = 0%7B\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-05_18-30-24",
+            "content": "@@ -24,29 +24,101 @@\n t%22%0A%0A\n-func imprimi(n int)%7B%0A\n+%0A  %0A%0A%0Afunc raizquadadra(n int)int%7B%0A    if n %3C= 0%7B%0A        return 0%0A    %7D%0A    raiz := n * n%0A  \n   fm\n@@ -124,16 +124,18 @@\n mt.Print\n+ln\n (n ,%22%5E%22,\n@@ -146,24 +146,9 @@\n  = %22\n-)%0A  fmt.Println(\n+,\n n-1 \n@@ -185,75 +185,43 @@\n 1 = \n-?\n %22 \n-)%0A%7D%0A%0Afunc raizquadadra(n int)int%7B%0A    raiz := n * n%0A    raiz = 2\n+, raiz )%0A    raizquadadra(raiz-1)\n %0A   \n@@ -228,20 +228,17 @@\n  return \n-raiz\n+0\n %0A%7D%0Afunc \n@@ -283,23 +283,8 @@\n n)%0A%0A\n-    imprimi(n)%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-05_18-32-25",
+            "content": "@@ -167,159 +167,34 @@\n     \n-if n %3C 1%7B%0A        return 0%0A    %7D%0A    raiz := n * n%0A    raiz = 2%0A    raizquadadra(raiz - 1)%0A    println(n+1, %22%5E2 = %22, n-1,%22%5E2 + 2*%22,n-1,%22 + 1 =%22, raiz )\n+raiz := n * n%0A    raiz = 2\n %0A   \n@@ -206,21 +206,16 @@\n rn raiz%0A\n-    %0A\n %7D%0Afunc m\n@@ -254,20 +254,16 @@\n can(&n)%0A\n-    \n %0A    imp\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-05_18-40-11",
+            "content": "@@ -24,193 +24,8 @@\n t%22%0A%0A\n-%0Afun%C3%A7%C3%A3o(n):%0A    se n == 1:%0A        imprime base%0A        retorna 1%0A%0A    imprime %22n%C2%B2 = ... = ?%22%0A%0A    resultado = fun%C3%A7%C3%A3o(n-1)%0A%0A    calcula n%C2%B2%0A%0A    imprime resultado final%0A%0A    retorna n%C2%B2%0A%0A\n func\n@@ -172,47 +172,13 @@\n f n \n-==\n+%3C\n  1%7B%0A\n-        fmt.Println(%221%5E2 =%22 ,n) %0A\n     \n@@ -388,14 +388,13 @@\n &n)%0A\n+\n     %0A\n-%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-05_18-42-44",
+            "content": "@@ -21,22 +21,85 @@\n %22fmt%22%0A%0A%0A\n+fun%C3%A7%C3%A3o(n):%0A    se n == 1:%0A        imprime base%0A        retorna 1%0A\n %0A   \n-//\n  imprime\n@@ -118,18 +118,16 @@\n  ?%22%0A%0A   \n-//\n  resulta\n@@ -147,18 +147,16 @@\n -1)%0A%0A   \n-//\n  calcula\n@@ -163,18 +163,16 @@\n  n%C2%B2%0A%0A   \n-//\n  imprime\n@@ -196,10 +196,8 @@\n %0A   \n-//\n  ret\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-05_18-43-32",
+            "content": "@@ -150,16 +150,124 @@\n rna n%C2%B2%0A%0A\n+func imprimi(n int)%7B%0A  fmt.Print(n ,%22%5E%22,2, %22 = %22)%0A  fmt.Println(n-1 ,%22%5E%22,2, %22 + %22, 2,%22*%22, n-1,%22 + 1 = ?%22 )%0A%7D\n %0A%0Afunc r\n@@ -557,16 +557,27 @@\n    %0A%0A   \n+ imprimi(n)\n %0A    rai\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_18-44-02",
+            "content": "@@ -256,67 +256,8 @@\n   %7D%0A\n-    println(n+1, %22%5E2 = %22, n-1,%22%5E2 + 2*%22,n-1,%22 + 1 = ?%22,  )%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-05_18-44-53",
+            "content": "@@ -320,14 +320,37 @@\n    r\n-esu\n+aiz\n  :=\n+ n * n%0A    raiz = 2%0A   \n  rai\n@@ -369,34 +369,16 @@\n iz - 1)%0A\n-    raiz := n * n%0A\n     prin\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-05_18-48-22",
+            "content": "@@ -310,24 +310,32 @@\n = ?%22,  )%0A   \n+ resu :=\n  raizquadadr\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-05_18-48-38",
+            "content": "@@ -315,26 +315,8 @@\n   )%0A\n-    raiz := n * n%0A\n     \n@@ -342,16 +342,29 @@\n  1)%0A    \n+raiz := n * n\n %0A    pri\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-05_18-48-55",
+            "content": "@@ -248,24 +248,16 @@\n urn \n-1\n+0\n %0A    %7D%0A\n-    if %0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-05_18-53-06",
+            "content": "@@ -252,24 +252,27 @@\n 1%0A    %7D%0A    \n+if \n %0A    println\n@@ -319,17 +319,16 @@\n  ?%22,  )%0A\n-%0A\n     raiz\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-53-53",
+            "content": "@@ -435,25 +435,28 @@\n %0A    return \n-1\n+raiz\n %0A    %0A%7D%0Afunc\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_18-54-11",
+            "content": "@@ -253,37 +253,33 @@\n %0A    %7D%0A    %0A    \n-fmt.P\n+p\n rintln(n+1, %22%5E2 \n@@ -367,29 +367,25 @@\n 1)%0A    %0A    \n-fmt.P\n+p\n rintln(n+1, \n@@ -428,16 +428,29 @@\n  raiz )%0A\n+    return 1%0A\n     %0A%7D%0Af\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_18-55-20",
+            "content": "@@ -440,24 +440,16 @@\n z )%0A    \n-return 1\n %0A%7D%0Afunc \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-56-19",
+            "content": "@@ -321,24 +321,37 @@\n ?%22,  )%0A%0A    \n+raiz := n * n\n %0A    raizqua\n@@ -356,17 +356,20 @@\n uadadra(\n-n\n+raiz\n  - 1)%0A  \n@@ -429,21 +429,21 @@\n + 1 =%22, \n-n * n\n+raiz \n )%0A    re\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-57-03",
+            "content": "@@ -266,32 +266,34 @@\n    fmt.Println(n\n++1\n , %22%5E2 = %22, n-1,%22\n@@ -372,16 +372,18 @@\n rintln(n\n++1\n , %22%5E2 = \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-57-23",
+            "content": "@@ -267,32 +267,33 @@\n   fmt.Println(n,\n+ \n %22%5E2 = %22, n-1,%22%5E2\n@@ -371,16 +371,17 @@\n intln(n,\n+ \n %22%5E2 = %22,\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-57-38",
+            "content": "@@ -268,33 +268,32 @@\n  fmt.Println(n,%22\n- \n %5E2 = %22, n-1,%22%5E2 \n@@ -371,17 +371,16 @@\n ntln(n,%22\n- \n %5E2 = %22, \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-58-26",
+            "content": "@@ -376,12 +376,10 @@\n (n,%22\n+ \n %5E\n-%22,%22\n 2 = \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_18-58-54",
+            "content": "@@ -353,19 +353,16 @@\n 1)%0A    %0A\n-  %0A\n     fmt.\n@@ -370,52 +370,58 @@\n rint\n-f(%22%25d%5E2 = %25d%5E2 + 2*%25d\n+ln(n,%22%5E%22,%222 = %22, n-1,%22%5E2 + 2*%22,n-1,%22\n  + 1 =\n+%22,\n  n * n\n-%22,n,n-1,n-1\n )%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-05_19-02-30",
+            "content": "@@ -397,18 +397,21 @@\n d + 1 = \n-%25d\n+n * n\n %22,n,n-1,\n@@ -417,12 +417,8 @@\n ,n-1\n-,n*n\n )%0A  \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_19-03-11",
+            "content": "@@ -260,16 +260,17 @@\n     %0A   \n+ \n fmt.Prin\n@@ -270,37 +270,50 @@\n mt.Print\n-f(%22%25d%5E2 = %25d%5E2 + 2*%25d\n+ln(n,%22 %5E2 = %22, n-1,%22%5E2 + 2*%22,n-1,%22\n  + 1 = ?\n@@ -314,25 +314,18 @@\n  1 = ?%22,\n-n,n-1,n-1\n+  \n )%0A%0A    %0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_19-03-40",
+            "content": "@@ -302,10 +302,8 @@\n  = ?\n-%5Cn\n %22,n,\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_19-04-19",
+            "content": "@@ -394,18 +394,16 @@\n + 1 = %25d\n-%5Cn\n %22,n,n-1,\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-05_19-04-32",
+            "content": "package main\nimport \"fmt\"\n\n\n\n   // imprime \"n\u00b2 = ... = ?\"\n\n   // resultado = fun\u00e7\u00e3o(n-1)\n\n   // calcula n\u00b2\n\n   // imprime resultado final\n\n   // retorna n\u00b2\n\n\n\nfunc raizquadadra(n int)int{\n    if n == 1{\n        fmt.Println(\"1^2 =\" ,n) \n        return 1\n    }\n    \n   fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\",n,n-1,n-1)\n\n    \n    raizquadadra(n - 1)\n    \n  \n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\",n,n-1,n-1,n*n)\n    return 1\n}\nfunc main() {\n    var n int \n    fmt.Scan(&n)\n    \n\n   \n    raizquadadra(n)\n}",
+            "lines": "40"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-05_17-24-49",
+            "content": "@@ -138,117 +138,36 @@\n  %7B%0A%09\n-x1 , div1 := x, div%0A%09if x1 %25 div1 == 0%7B%0A%09return false;%0A%09%7Delse%7B%0A        eh_primo(x1,div1 + 1)%0A%09%09return true%0A%09%7D\n+_, _ = x, div%0A%09return false;\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-05_17-30-09",
+            "content": "@@ -201,45 +201,8 @@\n se%7B%0A\n-%09%09if div1 %3E 100 %7B%0A%09%09%09return true%0A%09%09%7D%0A\n     \n@@ -229,16 +229,27 @@\n  + 1)%0A%09%09\n+return true\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-05_17-31-10",
+            "content": "@@ -266,27 +266,16 @@\n  + 1)%0A%09%09\n-return true\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-05_17-33-09",
+            "content": "@@ -24,24 +24,8 @@\n mt%22%0A\n-import %22math%22 %0A%0A\n %0A// \n@@ -210,18 +210,14 @@\n div1\n-*div1 %3E x1\n+ %3E 100\n  %7B%0A%09\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-05_17-38-13",
+            "content": "@@ -20,16 +20,29 @@\n t %22fmt%22%0A\n+import %22math%22\n  %0A%0A%0A// x\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_17-38-22",
+            "content": "@@ -179,19 +179,8 @@\n == 0\n- %7C%7C x1 == 1\n %7B%0A%09r\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_17-38-47",
+            "content": "@@ -161,39 +161,8 @@\n div%0A\n-%09if  x1 == 2%7B%0A%09return true;%0A%09%7D%0A\n %09if \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_17-40-03",
+            "content": "package main\n\nimport \"fmt\"\n \n\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int, div int) bool {\n\tx1 , div1 := x, div\n\tif  x1 == 2{\n\treturn true;\n\t}\n\tif x1 % div1 == 0 || x1 == 1{\n\treturn false;\n\t}else{\n\t\tif div1*div1 > x1 {\n\t\t\treturn true\n\t\t}\n        eh_primo(x1,div1 + 1)\n\t\treturn true\n\t}\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tif eh_primo(x, 2) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "33"
+        }
+    ]
+}
