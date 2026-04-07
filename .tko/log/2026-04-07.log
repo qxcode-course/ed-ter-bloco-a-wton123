@@ -41,3 +41,35 @@
 2026-04-07 01:35:22, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:54
 2026-04-07 01:42:40, MOVE, v:1, k:ed@queimada, mode:BACK
 2026-04-07 01:43:12, SELF, v:1, k:ed@queimada, self:1, rate:100, study:30, concept:1, refactor:1
+2026-04-07 01:45:55, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-07 01:45:57, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-04-07 01:45:58, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0
+2026-04-07 01:53:35, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:93
+2026-04-07 01:57:11, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:94
+2026-04-07 01:57:51, EXEC, v:1, k:ed@treinando, mode:FULL, rate:0, size:93
+2026-04-07 02:00:12, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:93
+2026-04-07 02:00:48, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:101
+2026-04-07 02:01:25, EXEC, v:1, k:ed@treinando, mode:FULL, rate:16, size:101
+2026-04-07 02:01:54, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:102
+2026-04-07 02:02:26, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:110
+2026-04-07 02:02:36, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:110
+2026-04-07 02:03:07, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:110
+2026-04-07 02:08:47, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:118
+2026-04-07 02:08:48, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33
+2026-04-07 02:09:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:120
+2026-04-07 02:11:24, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:123
+2026-04-07 02:11:55, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:113
+2026-04-07 02:12:23, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:114
+2026-04-07 02:14:18, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:114
+2026-04-07 02:15:17, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66, size:123
+2026-04-07 02:15:30, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66
+2026-04-07 02:15:31, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66
+2026-04-07 02:17:25, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:121
+2026-04-07 02:17:44, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:121
+2026-04-07 02:18:13, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:122
+2026-04-07 02:25:06, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:125
+2026-04-07 02:25:35, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:121
+2026-04-07 02:25:37, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
+2026-04-07 02:25:38, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
+2026-04-07 02:26:01, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-07 02:26:37, SELF, v:1, k:ed@treinando, self:1, rate:100, study:45, concept:1, problem:1, debug:1, refactor:1
