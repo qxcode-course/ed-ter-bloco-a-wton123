@@ -73,3 +73,20 @@
 2026-04-07 02:25:38, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
 2026-04-07 02:26:01, MOVE, v:1, k:ed@treinando, mode:BACK
 2026-04-07 02:26:37, SELF, v:1, k:ed@treinando, self:1, rate:100, study:45, concept:1, problem:1, debug:1, refactor:1
+2026-04-07 02:29:48, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-07 02:29:49, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 02:29:51, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:49
+2026-04-07 02:29:53, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-07 02:32:09, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80, size:52
+2026-04-07 02:37:04, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80, size:53
+2026-04-07 02:37:29, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80, size:56
+2026-04-07 02:37:31, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80
+2026-04-07 02:37:57, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:56
+2026-04-07 02:38:03, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:56
+2026-04-07 02:38:04, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-07 02:52:21, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20
+2026-04-07 02:54:29, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:58
+2026-04-07 02:54:51, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:56
+2026-04-07 02:55:02, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:58
+2026-04-07 02:55:29, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 02:56:33, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:30, concept:1, refactor:1
