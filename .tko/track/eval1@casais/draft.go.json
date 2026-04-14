@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-34-45",
+            "content": "@@ -41,169 +41,35 @@\n     \n-var a int%0A    fmt.Scan(&a)%0A    vet := make(%5B%5Dint, a)%0A    for i := range vet%7B%0A        var t int%0A        fmt.Scan(&t)%0A        vet%5Bi%5D = t%0A%0A    %7D%0A    fmt.Println(vet\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_14-41-58",
+            "content": "@@ -22,55 +22,8 @@\n fmt%22\n-%0A%0Afunc casal(vet%5B%5D int)%7B%0A    fmt.Println(vet)%0A%7D\n %0Afun\n@@ -187,22 +187,23 @@\n     \n-casal(vet)%0A    \n+fmt.Println(vet)\n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-14_14-44-18",
+            "content": "@@ -44,150 +44,10 @@\n  int\n- , a int)%7B%0A    var qdt int  %0A    semninguem :=  make(%5B%5Dint, a)%0A    for i := range vet%7B%0A        if semninguem%5Bi%5D %3C 0 %7B%0A        %0A        %7D%0A    %7D\n+)%7B\n %0A   \n@@ -64,21 +64,16 @@\n ln(vet)%0A\n-    %0A\n %7D%0Afunc m\n@@ -243,12 +243,8 @@\n (vet\n- , a\n )%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-14_14-50-21",
+            "content": "package main\nimport \"fmt\"\n\nfunc casal(vet[] int , a int){\n    var qdt int  \n    semninguem :=  make([]int, a)\n    for i := range vet{\n        if semninguem[i] < 0 {\n        \n        }\n    }\n    fmt.Println(vet)\n    \n}\nfunc main() {\n    var a int\n    fmt.Scan(&a)\n    vet := make([]int, a)\n    for i := range vet{\n        var t int\n        fmt.Scan(&t)\n        vet[i] = t\n\n    }\n    casal(vet , a)\n    \n}\n",
+            "lines": "27"
+        }
+    ]
+}
