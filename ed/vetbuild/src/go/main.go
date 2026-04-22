@@ -151,11 +151,37 @@ func (v *Vector)Erase(index int) error  {
 		return false
   }    
   
-  func Slice(start int, end int) *Vector {
+  func (v *Vector)Slice(start int, end int) *Vector {
   /*   ' Retorna um novo vetor que é uma fatia do vetor original do índice start até o índice end (exclusivo).
  ' O método deve lidar com índices negativos e índices que excedem o tamanho do vetor de forma circular
 ' Ele não deve criar um novo bloco de memória para os elementos, mas sim compartilhar a mesma memória do vetor original*/
+n := v.size
 
+if start < 0 {
+    start = n + start
+}
+if end < 0 {
+    end = n + end
+}
+
+if start < 0 {
+    start = 0
+}
+if end > n {
+    end = n
+}
+
+if start > end {
+    return &Vector{data: []int{}, size: 0, capacity: 0}
+}
+
+novo := &Vector{
+    data: v.data[start:end],
+    size: end - start,
+    capacity: v.capacity - start,
+}
+
+return novo
   }
 
 
@@ -251,7 +277,7 @@ func main() {
 			 start, _ := strconv.Atoi(parts[1])
 			 end, _ := strconv.Atoi(parts[2])
 			 slice := v.Slice(start, end)
-			 fmt.Println(slice)
+			 fmt.Printf("[%s]\n", Join(slice.data[:slice.size], ", "))
 		default:
 			fmt.Println("fail: comando invalido")
 		}
