@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-01_14-12-53",
+            "content": "@@ -56,564 +56,8 @@\n %0A)%0A%0A\n-type Set struct %7B%0A%0A%09data %5B%5Dint                          %0A%09size int                          %0A%09capacity int  %0A%7D%0A%0Afunc NewSet(capacity int) *Set %7B%0A%09return &Set%7B%0A%09%09%09data: make(%5B%5Dint, capacity),%0A%09%09%09size: 0 ,%0A%09%09%09capacity: capacity,%0A%09%7D%09%0A%7D%0Afunc (s *Set )reserve(newCapacity int) void %7B%0A%09if s.capacity == 0 %7B%0A%09%09s.capacity = 1%0A%09%7D%0A%09s2 := make(%5B%5Dint, newCapacity)%0A%09for i := 0; i %3C s.size ; i++%7B%0A%09%09s2%5Bi%5D = s.data%5Bi%5D%0A%09%7D%0A%09    s.data = s2%0A%09%09s.capacity = newCapacity %0A%09%0A%7D%0Afunc (s *Set)insert(value int, index int) error %7B%0A%09if s.capacity %3C index %7B%0A%09%09s.reserve(index)%0A%09%7D%0A%7D %0A\n func\n@@ -376,16 +376,18 @@\n it%22:%0A%09%09%09\n+//\n  value, \n@@ -417,20 +417,21 @@\n %5B1%5D)%0A%09%09%09\n+//\n  v \n-:\n = NewSet\n@@ -442,18 +442,8 @@\n ue)%0A\n-%09%09%09 _ = v%0A\n %09%09ca\n@@ -458,16 +458,18 @@\n rt%22:%0A%09%09%09\n+//\n  for _, \n@@ -497,16 +497,18 @@\n :%5D %7B%0A%09%09%09\n+//\n  %09value,\n@@ -539,17 +539,10 @@\n %0A%09%09%09\n-%09v = %0A%09%09%09\n+//\n  %7D%0A%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-01_14-45-01",
+            "content": "@@ -1100,23 +1100,11 @@\n %09%09%09v\n-.insert(value.)\n+ = \n %0A%09%09%09\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-01_14-46-39",
+            "content": "@@ -323,16 +323,21 @@\n ity int)\n+ void\n  %7B%0A%09if s\n@@ -508,11 +508,8 @@\n ty %0A\n-%09%09%0A\n %09%0A%7D%0A\n@@ -1051,17 +1051,16 @@\n parts%5B1:\n-2\n %5D %7B%0A%09%09%09 \n@@ -1099,43 +1099,11 @@\n %09%09%09%09\n-index, _ := strconv.atoi(part)%0A%09%09%09%09\n+v.i\n nser\n@@ -1109,23 +1109,17 @@\n rt(value\n-, index\n+.\n )%0A%09%09%09 %7D%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-01_14-49-26",
+            "content": "@@ -1133,11 +1133,8 @@\n %09%09%09%09\n-v.i\n nser\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_14-49-45",
+            "content": "@@ -607,17 +607,8 @@\n %0A%09%7D%0A\n-%09s.size %0A\n %7D %0Af\n@@ -1133,15 +1133,10 @@\n %09%09%09%09\n-err := \n+v.\n inse\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_14-51-05",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0A%0At\n@@ -1033,19 +1033,52 @@\n %09%09%09 \n+for _, part := range parts%5B1:2%5D %7B\n %0A%09%09%09 %09\n-index\n+value\n , _ \n@@ -1101,29 +1101,19 @@\n part\n-s%5B1%5D)%0A%09%09        value\n+)%0A%09%09%09%09index\n , _ \n@@ -1123,25 +1123,25 @@\n strconv.\n-A\n+a\n toi(part\n s%5B2%5D)%0A%09%09\n@@ -1136,12 +1136,8 @@\n part\n-s%5B2%5D\n )%0A%09%09\n@@ -1166,20 +1166,21 @@\n  index)%0A\n-\n %09%09%09 \n+%7D\n %0A%09%09case \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-01_14-53-00",
+            "content": "@@ -627,20 +627,8 @@\n ze %0A\n-%09return nil%0A\n %7D %0Af\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-01_14-53-17",
+            "content": "@@ -615,16 +615,22 @@\n ex)%0A%09%7D%0A%09\n+s.size\n  %0A%09retur\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-01_14-53-29",
+            "content": "@@ -1168,54 +1168,8 @@\n ex)%0A\n-%09%09%09%09if err != nil%7B%0A%09%09%09%09%09fmt.Printf(err)%0A%09%09%09%09%7D%0A\n %09%09%09 \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-01_14-54-42",
+            "content": "@@ -49,17 +49,16 @@\n trings%22%0A\n-%09\n %09%22strcon\n@@ -615,23 +615,29 @@\n ex)%0A%09%7D%0A%09\n-s.size \n+ %0A%09return nil\n %0A%7D %0Afunc\n@@ -1050,51 +1050,19 @@\n %09%09%09 \n-for _, part := range parts%5B1:%5D %7B\n %0A%09%09%09 %09\n-value\n+index\n , _ \n@@ -1085,19 +1085,29 @@\n part\n-)%0A%09%09%09%09index\n+s%5B1%5D)%0A%09%09        value\n , _ \n@@ -1121,17 +1121,17 @@\n onv.\n-a\n+A\n toi(part\n )%0A%09%09\n@@ -1130,15 +1130,18 @@\n part\n+s%5B2%5D\n )%0A%09%09%09%09\n- \n err \n@@ -1197,18 +1197,17 @@\n mt.Print\n-ln\n+f\n (err)%0A%09%09\n@@ -1214,17 +1214,16 @@\n %09%09%7D%0A%09%09%09 \n-%7D\n %0A%09%09case \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-05-01_14-56-41",
+            "content": "@@ -620,18 +620,15 @@\n %09%7D%0A%09\n-return nil\n+s.size \n %0A%7D %0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-01_14-56-56",
+            "content": "@@ -1142,17 +1142,20 @@\n nv.atoi(\n-2\n+part\n )%0A%09%09%09%09 e\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-01_14-57-14",
+            "content": "@@ -1073,17 +1073,16 @@\n parts%5B1:\n-2\n %5D %7B%0A%09%09%09 \n@@ -1138,28 +1138,25 @@\n trconv.atoi(\n-part\n+2\n )%0A%09%09%09%09 err :\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-01_14-57-44",
+            "content": "@@ -1073,16 +1073,17 @@\n parts%5B1:\n+2\n %5D %7B%0A%09%09%09 \n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-01_14-57-55",
+            "content": "@@ -311,17 +311,17 @@\n s *Set )\n-R\n+r\n eserve(n\n@@ -573,209 +573,55 @@\n  %7B%0A%09\n- if 0 %3E= index && index %3E= s.size%7B%0A%09%09return fmt.Errorf(%22vector is empty%22)%0A%09%7D%0A%09if s.capacity == s.size %7B%0A%09%09if s.capacity == 0%7B%0A%09%09%09s.Reserve(1)%0A%09%09%7Delse%7B%0A%09%09%09s.Reserve(s.capacity * 2\n+if s.capacity %3C index %7B%0A%09%09s.reserve(index\n )%0A\n-%09\n %09%7D%0A%09\n-%09return nil%0A%7D%0A  \n retu\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-01_15-01-06",
+            "content": "@@ -593,17 +593,17 @@\n & index \n-%3C\n+%3E\n = s.size\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-01_15-02-52",
+            "content": "@@ -759,52 +759,20 @@\n %7D%0A%09%09\n-%0A%0A%09%7D%0A    s.data%5Bindex%5D = value%0A    s.size++%0A\n+return nil%0A%7D\n %0A  r\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-01_15-03-53",
+            "content": "@@ -893,16 +893,18 @@\n tdin)%0A%0A%09\n+//\n  v := Ne\n@@ -1293,28 +1293,24 @@\n nv.Atoi(part\n-s%5B1%5D\n )%0A%09%09%09%09index,\n@@ -1323,25 +1323,25 @@\n strconv.\n-A\n+a\n toi(part\n s%5B2%5D)%0A%09%09\n@@ -1336,12 +1336,8 @@\n part\n-s%5B2%5D\n )%0A%09%09\n@@ -1346,18 +1346,16 @@\n  err := \n-v.\n insert(v\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-01_15-07-22",
+            "content": "@@ -580,25 +580,26 @@\n  0 %3E\n+=\n  index \n-%7C%7C\n+&&\n  index %3C\n  s.s\n@@ -594,16 +594,17 @@\n  index %3C\n+=\n  s.size%7B\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-01_15-11-21",
+            "content": "@@ -1263,21 +1263,8 @@\n %5D %7B%0A\n-%09%09%09%09_ = part%0A\n %09%09%09 \n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-01_15-13-57",
+            "content": "@@ -178,262 +178,8 @@\n   %0A%7D\n-%0Afunc Join(slice %5B%5Dint, sep string) string %7B%0A%09if len(slice) == 0 %7B%0A%09%09return %22%22%0A%09%7D%0A%09var result strings.Builder%0A%09fmt.Fprintf(&result, %22%25d%22, slice%5B0%5D)%0A%09for _, value := range slice%5B1:%5D %7B%0A%09%09fmt.Fprintf(&result, %22%25s%25d%22, sep, value)%0A%09%7D%0A%09return result.String()%0A%7D\n %0A%0Afu\n@@ -1458,61 +1458,8 @@\n w%22:%0A\n-%09%09%09fmt.Printf(%22%5B%25s%5D%5Cn%22, Join(v.data%5B:v.size%5D, %22, %22))%0A\n %09%09ca\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-05-01_15-15-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\t\"strconv\"\n)\n\ntype Set struct {\n\n\tdata []int                          \n\tsize int                          \n\tcapacity int  \n}\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tvar result strings.Builder\n\tfmt.Fprintf(&result, \"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tfmt.Fprintf(&result, \"%s%d\", sep, value)\n\t}\n\treturn result.String()\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\t\tdata: make([]int, capacity),\n\t\t\tsize: 0 ,\n\t\t\tcapacity: capacity,\n\t}\t\n}\nfunc (s *Set )Reserve(newCapacity int) {\n\tif s.capacity == 0 {\n\t\ts.capacity = 1\n\t}\n\ts2 := make([]int, newCapacity)\n\tfor i := 0; i < s.size ; i++{\n\t\ts2[i] = s.data[i]\n\t}\n\t    s.data = s2\n\t\ts.capacity = newCapacity \n\t\t\n\t\n}\nfunc (s *Set)insert(value int, index int) error {\n\t if 0 > index || index < s.size{\n\t\treturn fmt.Errorf(\"vector is empty\")\n\t}\n\tif s.capacity == s.size {\n\t\tif s.capacity == 0{\n\t\t\ts.Reserve(1)\n\t\t}else{\n\t\t\ts.Reserve(s.capacity * 2)\n\t\t}\n\t\t\n\n\t}\n    s.data[index] = value\n    s.size++\n\n  return nil\n} \nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\t v := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t value, _ := strconv.Atoi(parts[1])\n\t\t\t v := NewSet(value)\n\t\t\t _ = v\n\t\tcase \"insert\":\n\t\t\t for _, part := range parts[1:] {\n\t\t\t\t_ = part\n\t\t\t \tvalue, _ := strconv.Atoi(parts[1])\n\t\t\t\tindex, _ := strconv.Atoi(parts[2])\n\t\t\t\t err := v.insert(value, index)\n\t\t\t\tif err != nil{\n\t\t\t\t\tfmt.Println(err)\n\t\t\t\t}\n\t\t\t }\n\t\tcase \"show\":\n\t\t\tfmt.Printf(\"[%s]\\n\", Join(v.data[:v.size], \", \"))\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "110"
+        }
+    ]
+}

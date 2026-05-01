@@ -253,7 +253,7 @@ func main() {
 		case "clear":
 			 v.Clear()
 		case "capacity":
-			// fmt.Println(v.Capacity())
+			 //fmt.Println(v.Capacity())
 		case "get":
 			 index, _ := strconv.Atoi(parts[1])
 			 value, err := v.At(index)
