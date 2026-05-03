@@ -14,6 +14,25 @@ type Set struct {
 	size int                          
 	capacity int  
 }
+
+func (s *Set) binarySearch(value int) int {
+    left, right := 0, s.size-1
+
+    for left <= right {
+        mid := (left + right) / 2
+
+        if s.data[mid] == value {
+            return mid
+        } else if s.data[mid] < value {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+
+    return -1
+}
+
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -33,37 +52,79 @@ func NewSet(capacity int) *Set {
 			capacity: capacity,
 	}	
 }
-func (s *Set )Reserve(newCapacity int) {
-	if s.capacity == 0 {
-		s.capacity = 1
-	}
-	s2 := make([]int, newCapacity)
-	for i := 0; i < s.size ; i++{
-		s2[i] = s.data[i]
-	}
-	    s.data = s2
-		s.capacity = newCapacity 
-		
-	
-}
-func (s *Set)insert(value int, index int) error {
-	 if 0 > index || index < s.size{
-		return fmt.Errorf("vector is empty")
-	}
-	if s.capacity == s.size {
-		if s.capacity == 0{
-			s.Reserve(1)
-		}else{
-			s.Reserve(s.capacity * 2)
-		}
-		
+func (s *Set) reserve(newCapacity int) {
+    newData := make([]int, newCapacity)
 
-	}
+    for i := 0; i < s.size; i++ {
+        newData[i] = s.data[i]
+    }
+
+    s.data = newData
+    s.capacity = newCapacity
+}
+
+func (s *Set) insert(value int, index int) error {
+    if index < 0 || index > s.size {
+        return fmt.Errorf("index out of range")
+    }
+
+    if s.size == s.capacity {
+        if s.capacity == 0 {
+            s.reserve(1)
+        } else {
+            s.reserve(s.capacity * 2)
+        }
+    }
+
+    for i := s.size; i > index; i-- {
+        s.data[i] = s.data[i-1]
+    }
+
     s.data[index] = value
     s.size++
 
-  return nil
-} 
+    return nil
+}
+func (s *Set) Insert(value int) {
+    if s.binarySearch(value) != -1 {
+        return
+    }
+
+    index := 0
+    for index < s.size && s.data[index] < value {
+        index++
+    }
+
+    _ = s.insert(value, index)
+}
+func (s *Set) erase(index int) error {
+    if index < 0 || index >= s.size {
+        return fmt.Errorf("index out of range")
+    }
+
+    for i := index; i < s.size-1; i++ {
+        s.data[i] = s.data[i+1]
+    }
+
+    s.size--
+    return nil
+}
+
+func (s *Set) Erase(value int) bool {
+    index := s.binarySearch(value)
+    if index == -1 {
+        return false
+    }
+
+    _ = s.erase(index)
+    return true
+}
+
+
+func (s *Set) Contains(value int) bool {
+    return s.binarySearch(value) != -1
+}
+
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -84,24 +145,39 @@ func main() {
 			return
 		case "init":
 			 value, _ := strconv.Atoi(parts[1])
-			 v := NewSet(value)
-			 _ = v
+			 v = NewSet(value)
 		case "insert":
-			 for _, part := range parts[1:] {
-				_ = part
-			 	value, _ := strconv.Atoi(parts[1])
-				index, _ := strconv.Atoi(parts[2])
-				 err := v.insert(value, index)
-				if err != nil{
-					fmt.Println(err)
-				}
-			 }
+		if len(parts) < 2 {
+			continue
+		}
+
+		for _, part := range parts[1:] {
+			value, _ := strconv.Atoi(part)
+			v.Insert(value)
+		}
 		case "show":
 			fmt.Printf("[%s]\n", Join(v.data[:v.size], ", "))
 		case "erase":
-		    value, _ := strconv.Atoi(parts[1])
+		if len(parts) < 2 {
+			continue
+		}
+
+		value, _ := strconv.Atoi(parts[1])
+		if !v.Erase(value) {
+			fmt.Println("value not found")
+		}
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
+		if len(parts) < 2 {
+			continue
+		}
+
+		value, _ := strconv.Atoi(parts[1])
+
+		if v.Contains(value) {
+			fmt.Println("true")
+		} else {
+			fmt.Println("false")
+		}
 		case "clear":
 		default:
 			fmt.Println("fail: comando invalido")
