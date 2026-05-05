@@ -51,32 +51,42 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyUp() {
-	if e.line != e.lines.Back()  {
-		
-		if  e.line.Value.Size() == 0 {
+	if e.line != e.lines.root.Next()  {
+	
+		if   e.line.Prev().Value.Size() == 0 {
 			e.line = e.line.Prev()
-			e.cursor = e.line.prev.Value.Back()
+			e.cursor = e.line.Value.Front()
 			
 		}else{
 			
 			e.line = e.line.Prev()
-			e.cursor = e.line.prev.Value.Back()
+			e.cursor = e.line.Value.Back()
 		}
 		return
-	}else { 
-		e.line = e.line.Prev()      
-		e.cursor = e.line.prev.Value.Back()
 	}
 }
 
 func (e *Editor) KeyDown() {
+	if e.line != e.lines.root.Prev()  {
+		
+		if   e.line.Next().Value.Size() == 0 {
+			e.line = e.line.Next()
+			e.cursor = e.line.Value.Front()
+			
+		}else{
+			
+			e.line = e.line.Next()
+			e.cursor = e.line.Value.Front()
+		}
+		return
+	}
 }
 
 func (e *Editor) KeyBackspace() {
 }
 
 func (e *Editor) KeyDelete() {
-	//e.cursor.Erase(e.cursor, e.line.Value)
+	
 }
 
 func main() {

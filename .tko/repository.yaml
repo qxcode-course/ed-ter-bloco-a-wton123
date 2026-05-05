@@ -22,10 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@list
-- ed@rec
-- ed@basic
 flags:
   inbox: all
   panel: graph
@@ -34,4 +31,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@editorint
-selected_index: 53
+selected_index: 14
