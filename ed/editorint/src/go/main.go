@@ -65,7 +65,7 @@ func (e *Editor) KeyUp() {
 		return
 	}else { 
 		e.line = e.line.Prev()      
-		e.cursor = e.line.Prev().Value.Back()
+		e.cursor = e.line.prev.Value.Back()
 	}
 }
 
