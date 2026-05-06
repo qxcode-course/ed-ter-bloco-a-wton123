@@ -20,15 +20,16 @@ func (e *Editor) InsertChar(r rune) {
 }
 
 func (e *Editor) KeyLeft() {
-	if e.cursor != e.line.Value.Front() { // Se o cursor não está no início da linha
-		e.cursor = e.cursor.Prev() // Move o cursor para a esquerda
-		return
-	}
-	// Estamos no início da linha
-	if e.line != e.lines.Front() { // Se não está na primeira linha
-		e.line = e.line.Prev()        // Move para a linha anterior
-		e.cursor = e.line.Value.End() // Move o cursor para o final da linha
-	}
+
+    if e.cursor != e.line.Value.Front() {
+        e.cursor = e.cursor.Prev()
+        return
+    }
+
+    if e.line.Prev() != nil {
+        e.line = e.line.Prev()
+        e.cursor = e.line.Value.Back()
+    }
 }
 
 func (e *Editor) KeyEnter() {
@@ -39,15 +40,16 @@ func (e *Editor) KeyEnter() {
 }
 
 func (e *Editor) KeyRight() {
-	if e.cursor != e.line.Value.Back() { // Se o cursor não está no início da linha
-		e.cursor = e.cursor.Next() // Move o cursor para a direita
-		return
-	}
-	//Estamos no início da linha
-	if e.line != e.lines.Back() { // Se não está na primeira linha
-		e.line = e.line.Next()        // Move para a linha anterior
-		e.cursor = e.line.Value.Front() // Move o cursor para o final da linha
-	}
+
+    if e.cursor != e.line.Value.Back() {
+        e.cursor = e.cursor.Next()
+        return
+    }
+
+    if e.line.Next() != nil {
+        e.line = e.line.Next()
+        e.cursor = e.line.Value.Front()
+    }
 }
 
 func (e *Editor) KeyUp() {
@@ -55,7 +57,7 @@ func (e *Editor) KeyUp() {
 	
 		if   e.line.Prev().Value.Size() == 0 {
 			e.line = e.line.Prev()
-			e.cursor = e.line.Value.Front()
+			e.cursor = e.line.Value.Back()
 			
 		}else{
 			
@@ -71,23 +73,91 @@ func (e *Editor) KeyDown() {
 		
 		if   e.line.Next().Value.Size() == 0 {
 			e.line = e.line.Next()
-			e.cursor = e.line.Value.Front()
+			e.cursor = e.line.Value.Back()
 			
 		}else{
 			
 			e.line = e.line.Next()
-			e.cursor = e.line.Value.Front()
+			e.cursor = e.line.Value.Back()
 		}
 		return
 	}
 }
 
-func (e *Editor) KeyBackspace() {
+func (e *Editor) juntarLinhas() {
+
+    atual := e.line
+    anterior := atual.Prev()
+
+    if anterior == nil {
+        return
+    }
+
+    // move todos os caracteres da linha atual para a anterior
+    for n := atual.Value.Front(); n != atual.Value.End(); n = n.Next() {
+        anterior.Value.PushBack(n.Value)
+    }
+
+    // remove linha atual
+    e.lines.Erase(atual)
+
+    // atualiza estado
+    e.line = anterior
+    e.cursor = anterior.Value.Back()
 }
 
-func (e *Editor) KeyDelete() {
-	
+func (e *Editor) KeyBackspace() {
+
+    chars := e.line.Value
+
+    // CASO 1: não está no início da linha → apaga caractere anterior
+    if e.cursor != chars.Front() {
+
+        prev := e.cursor.Prev()
+
+        chars.Erase(e.cursor)
+
+        e.cursor = prev
+        return
+    }
+
+    // CASO 2: início da linha → junta linhas
+    if e.line.Prev() != nil {
+        e.juntarLinhas()
+    }
 }
+
+
+
+func (e *Editor) KeyDelete() {
+
+    chars := e.line.Value
+
+    // CASO 1: tem próximo caractere
+    if e.cursor != chars.Back() {
+
+        next := e.cursor.Next()
+
+        chars.Erase(e.cursor)
+
+        e.cursor = next
+        return
+    }
+
+    // CASO 2: fim da linha → junta com próxima
+    if e.line.Next() != nil {
+
+        linhaAtual := e.line.Next()
+
+        for n := linhaAtual.Value.Front(); n != linhaAtual.Value.End(); n = n.Next() {
+            e.line.Value.PushBack(n.Value)
+        }
+
+        e.lines.Erase(linhaAtual)
+    }
+}
+
+
 
 func main() {
 	// Texto inicial e posição do cursor
