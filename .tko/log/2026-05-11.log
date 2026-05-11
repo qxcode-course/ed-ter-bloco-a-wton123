@@ -57,3 +57,5 @@
 2026-05-11 20:02:31, MOVE, v:1, k:ed@lista_d2, mode:PICK
 2026-05-11 20:02:33, MOVE, v:1, k:ed@lista_d2, mode:BACK
 2026-05-11 20:02:57, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:130, concept:1, refactor:1
+2026-05-11 20:02:54, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-11 20:01:43, MOVE, v:1, k:ed@lista_d2, mode:EDIT
