@@ -19,11 +19,11 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@rec
 - ed@map_set
+- ed@list
 - ed@vector
 - ed@backtrack
+- ed@rec
 flags:
   inbox: all
   panel: graph
