@@ -2,8 +2,58 @@
     "patches": [
         {
             "label": "2026-05-19_00-33-53",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\treturn \"\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\treturn nil\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "content": "@@ -144,90 +144,8 @@\n g %7B%0A\n-%09values := %5B%5Dstring%7B%7D%0A%09for it := l.Front(); it == l.End() ; l.root.Next()%7B%0A%0A%09%09%0A%09%7D%0A\n %09ret\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-05-19_19-34-37",
+            "content": "@@ -219,80 +219,11 @@\n ()%7B%0A\n+%0A\n %09%09\n-if it == sword %7B%0A%09%09%09values = append(values, %22%3E%22+fmt.Sprint(it.Value))%0A\n %0A%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-19_19-35-01",
+            "content": "@@ -291,121 +291,21 @@\n e))%0A\n-%09    %7Delse%7B%0A%09%09%09values = append(values, %22%3E%22+fmt.Sprint(it.Value))%0A%09%09%7D%0A%09return %22%5B%22 + strings.Join(values, %22 %22) + %22%5D\n+%0A%09%7D%0A%09return %22\n %22%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-19_19-37-03",
+            "content": "@@ -325,16 +325,20 @@\n (values,\n+ %22%3E%22\n +fmt.Spr\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-19_19-37-13",
+            "content": "@@ -164,24 +164,25 @@\n ing%7B%7D%0A%09for i\n+t\n  := l.Front(\n@@ -185,16 +185,17 @@\n ont(); i\n+t\n  == l.En\n@@ -217,24 +217,25 @@\n xt()%7B%0A%09%09if i\n+t\n  == sword %7B%0A\n@@ -269,32 +269,33 @@\n %22%3E%22+fmt.Sprint(i\n+t\n .Value))%0A%09    %7De\n@@ -338,16 +338,17 @@\n Sprint(i\n+t\n .Value))\n@@ -498,66 +498,16 @@\n %5D %7B%0A\n-%09i = i.Next()%0A%09if i == i.End()%7B%0A%09%09i = i.Next()%0A%09%7D%0A\n %09return \n i%0A%7D%0A\n@@ -502,17 +502,19 @@\n %09return \n-i\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-19_19-40-56",
+            "content": "@@ -348,19 +348,16 @@\n ))%0A%09%09%7D%0A%09\n-%0A%7D%0A\n return %22\n@@ -395,16 +395,17 @@\n + %22%5D%22%0A%7D%0A\n+%0A\n // move \n@@ -491,22 +491,20 @@\n nt%5D %7B%0A%09i\n-t\n  = i\n-t\n .Next()%0A\n@@ -512,15 +512,13 @@\n if i\n-t\n  == i\n-t\n .End\n@@ -528,14 +528,12 @@\n %0A%09%09i\n-t\n  = i\n-t\n .Nex\n@@ -548,17 +548,16 @@\n return i\n-t\n %0A%7D%0A%0Afunc\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-19_19-42-19",
+            "content": "@@ -321,16 +321,17 @@\n (values,\n++\n fmt.Spri\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-19_19-44-23",
+            "content": "@@ -516,24 +516,24 @@\n f it == \n-l\n+it\n .End()\n- \n %7B%0A%09%09it =\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-19_19-45-08",
+            "content": "@@ -202,13 +202,14 @@\n ) ; \n-i = l\n+l.root\n .Nex\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-19_19-45-54",
+            "content": "@@ -168,17 +168,16 @@\n %7D%0A%09for i\n-t\n  := l.Fr\n@@ -184,17 +184,16 @@\n ont(); i\n-t\n  == l.En\n@@ -199,22 +199,20 @@\n nd() ; i\n-t\n  = \n-it\n+l\n .Next()%7B\n@@ -214,25 +214,24 @@\n xt()%7B%0A%09%09if i\n-t\n  == sword %7B%0A\n@@ -265,33 +265,32 @@\n %22%3E%22+fmt.Sprint(i\n-t\n .Value))%0A%09    %7De\n@@ -332,17 +332,16 @@\n Sprint(i\n-t\n .Value))\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-19_19-47-07",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvalues := []string{}\n\tfor it := l.Front(); it == l.End() ; it = it.Next(){\n\t\tif it == sword {\n\t\t\tvalues = append(values, \">\"+fmt.Sprint(it.Value))\n\t    }else{\n\t\t\tvalues = append(values,fmt.Sprint(it.Value))\n\t\t}\n\t\n}\nreturn \"[\" + strings.Join(values, \" \") + \"]\"\n}\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tit = it.Next()\n\tif it == l.End() {\n\t\tit = it.Next()\n\t}\n\treturn it\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "48"
         }
     ]
 }

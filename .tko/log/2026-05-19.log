@@ -42,3 +42,30 @@
 2026-05-19 13:18:18, MOVE, v:1, k:ed@prin_list1, mode:PICK
 2026-05-19 13:18:19, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
 2026-05-19 13:19:43, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-19 19:22:59, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:27:49, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:34:36, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-19 19:34:37, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:177, fail:COMP
+2026-05-19 19:34:38, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:34:39, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:01, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:178, fail:COMP
+2026-05-19 19:35:02, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:02, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:03, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:03, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:03, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:35:04, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:34:59, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:37:03, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:179, fail:COMP
+2026-05-19 19:37:13, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:179, fail:COMP
+2026-05-19 19:40:30, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:40:56, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:183, fail:COMP
+2026-05-19 19:42:19, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:184, fail:COMP
+2026-05-19 19:44:23, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:184, fail:COMP
+2026-05-19 19:45:08, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0, size:184
+2026-05-19 19:45:22, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-05-19 19:45:02, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:45:20, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:45:54, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:184, fail:COMP
+2026-05-19 19:47:07, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0, size:184
+2026-05-19 19:47:26, MOVE, v:1, k:ed@prin_list1, mode:BACK
