@@ -207,7 +207,12 @@
         },
         {
             "label": "2026-03-31_19-31-21",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc proximoVivo(j []int, pos int) int {\n\tn := len(j)\n\tfor {\n\t\tpos = (pos + 1) % n\n\t\tif j[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc printFila(jogadores []int, esp int) {\n\tfmt.Print(\"[ \")\n\tfor i , v := range jogadores{\n\t\t if jogadores[i] == 0{\n\t\t\t\tcontinue\n\t\t }\n\t\t if i == esp {\n\t\t\tv = jogadores[i]\n\t\t\tfmt.Print(v ,\"> \")\n\t\t }\n\t\t if i != esp{\n\t\t\tfmt.Print(v ,\" \")\n\t\t }\n\t\t\n\t\t\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n , e int \n\tfmt.Scan(&n , &e)\n\tjogadores := make([]int, n)\n\tfor i := 0 ; i < n ; i++{\n\t\tjogadores[i] = i + 1\n\t}\n    pos := e - 1\n\n\tvivos := n\n\n\tfor vivos > 1 {\n\t\tprintFila(jogadores, pos)\n\t\t\n\t\tmorre := proximoVivo(jogadores, pos)\n\n\t\tjogadores[morre] = 0\n\t\tvivos--\n\n\t\tpos = proximoVivo(jogadores, morre)\n\t}\n\n\tprintFila(jogadores, pos)\n\t\n}",
+            "content": "@@ -777,9 +777,8 @@\n pos)%0A%09%0A%7D\n-%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-19_13-12-37",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc proximoVivo(j []int, pos int) int {\n\tn := len(j)\n\tfor {\n\t\tpos = (pos + 1) % n\n\t\tif j[pos] != 0 {\n\t\t\treturn pos\n\t\t}\n\t}\n}\n\nfunc printFila(jogadores []int, esp int) {\n\tfmt.Print(\"[ \")\n\tfor i , v := range jogadores{\n\t\t if jogadores[i] == 0{\n\t\t\t\tcontinue\n\t\t }\n\t\t if i == esp {\n\t\t\tv = jogadores[i]\n\t\t\tfmt.Print(v ,\"> \")\n\t\t }\n\t\t if i != esp{\n\t\t\tfmt.Print(v ,\" \")\n\t\t }\n\t\t\n\t\t\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n , e int \n\tfmt.Scan(&n , &e)\n\tjogadores := make([]int, n)\n\tfor i := 0 ; i < n ; i++{\n\t\tjogadores[i] = i + 1\n\t}\n    pos := e - 1\n\n\tvivos := n\n\n\tfor vivos > 1 {\n\t\tprintFila(jogadores, pos)\n\t\t\n\t\tmorre := proximoVivo(jogadores, pos)\n\n\t\tjogadores[morre] = 0\n\t\tvivos--\n\n\t\tpos = proximoVivo(jogadores, morre)\n\t}\n\n\tprintFila(jogadores, pos)\n\t\n}\n",
             "lines": "59"
         }
     ]
