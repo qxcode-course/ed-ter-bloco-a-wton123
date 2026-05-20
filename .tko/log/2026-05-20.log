@@ -1,0 +1,33 @@
+2026-05-20 13:31:32, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-20 13:31:47, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100
+2026-05-20 13:31:47, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 13:37:09, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 13:53:27, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 13:58:51, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:05:48, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:07:56, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:0, size:158
+2026-05-20 14:07:55, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:07:56, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:14:01, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100, size:157
+2026-05-20 14:14:03, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-20 14:14:37, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-20 14:14:39, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-20 14:15:57, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-20 14:14:00, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:14:00, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:14:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:14:39, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-20 14:16:33, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-05-20 14:16:35, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-20 14:16:36, EXEC, v:1, k:ed@pintura, mode:FULL, size:57, fail:COMP
+2026-05-20 14:16:33, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-20 14:16:33, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-20 14:19:14, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-20 14:23:30, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-20 14:30:42, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-20 14:26:57, MOVE, v:1, k:ed@pintura, mode:EDIT

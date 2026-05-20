@@ -1,4 +1,4 @@
-package main
+            package main
 
 import (
 	"bufio"
@@ -112,7 +112,6 @@ func (ll *LList)PopBack()   {
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
  	ll := NewLList()
-
 	for {
 		fmt.Print("$")
 		if !scanner.Scan() {
