@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
+	"errors"
 )
 
 type Deque struct {
@@ -14,33 +16,78 @@ type Deque struct {
 	capacity int
 }
 func (d *Deque)resize(newCap int){
-
+	n := make([]int, newCap*2)
+	
+	for i := 0 ; i < d.size ;i++{
+		n[i] = d.data[(d.front + i) % d.capacity]
+		
+	}
+	d.front = 0
+	d.capacity = d.capacity*2
+		d.data = n
+	
 }   // dobra o tamanho do caso ele chege no máximo de sua capacidade
 func (d *Deque)  PushBack(v int)  {
-
+	if d.size == d.capacity{
+		d.resize(d.capacity)
+	}
+    l := (d.front+d.size)%d.capacity  
+	d.size++
+	d.data[l] = v
+	
 }    // insere valor no fim
 func (d *Deque)   PushFront(v int) {
-
+	if d.size == d.capacity{
+		d.resize(d.capacity)
+	}
+	l := (d.front - 1 + d.capacity)%d.capacity  
+	
+	d.data[l] = v
+	d.front = l
+	d.size++
 }    // insere valor no início
-func (d *Deque)  PopBack()      {
-
+func (d *Deque)  PopBack()  error    {
+	if d.size == 0{
+	
+		return errors.New("fail: buffer vazio")
+	}
+	d.size--
+	return nil
 }      // remove valor do fim
-func (d *Deque)  PopFront()     {
-
+func (d *Deque)  PopFront()  error   {
+	if d.size == 0{
+	
+		return errors.New("fail: buffer vazio")
+	}
+	d.data[d.front] = 0
+	d.front++
+	d.size--
+	return nil
 }      // remove valor do início
 func (d *Deque)  Front() (int, error){
-
+	if d.size == 0{
+		return 0 ,errors.New("fail: deque vazio")
+	}//
+	valor := d.data[d.front]
+	return valor, nil
 } // retorna o valor do início
 func (d *Deque)   Back() (int, error) {
+	valor := d.data[(d.front + d.size - 1) % d.capacity]
+	if d.size == 0{
+		return valor ,errors.New("fail: deque vazio")
+	}//
+	
+	return valor, nil
+		
 	
 } // retorna o valor do fim
-// retorna o valor do fim
-// retorna o valor do fim
-func (d *Deque)   Clear()    {
 
+func (d *Deque)   Clear()    {
+	d.size = 0
+	d.front = 0
 }          // limpa todos os elementos
 func (d *Deque)   Len() int  {
-
+	return d.size
 }          // retorna o número de elementos
   // representação no formato [1, 2, 3]
 func (b *Deque) String() string {
@@ -97,39 +144,39 @@ func main() {
 		case "debug":
 			fmt.Println(buf.Debug())
 		case "size":
-			// fmt.Println(buf.Len())
+			 fmt.Println(buf.Len())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	buf.PushBack(num)
-			// }
+			 for _, v := range args[1:] {
+			 	num, _ := strconv.Atoi(v)
+			 	buf.PushBack(num)
+			 }
 		case "push_front":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	buf.PushFront(num)
-			// }
+			 for _, v := range args[1:] {
+			 	num, _ := strconv.Atoi(v)
+			 	buf.PushFront(num)
+			 }
 		case "pop_back":
-			// if err := buf.PopBack(); err != nil {
-			// 	fmt.Println(err)
-			// }
+			 if err := buf.PopBack(); err != nil {
+				fmt.Println(err)
+			 }
 		case "pop_front":
-			// if err := buf.PopFront(); err != nil {
-			// 	fmt.Println(err)
-			// }
+			 if err := buf.PopFront(); err != nil {
+			 	fmt.Println(err)
+			 }
 		case "front":
-			// if val, err := buf.Front(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			 if val, err := buf.Front(); err != nil {
+			 	fmt.Println(err)
+			 } else {
+			 	fmt.Println(val)
+			}
 		case "back":
-			// if val, err := buf.Back(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			 if val, err := buf.Back(); err != nil {
+			 	fmt.Println(err)
+			 } else {
+			 	fmt.Println(val)
+			 }
 		case "clear":
-			// buf.Clear()
+			 buf.Clear()
 		case "end":
 			return
 		default:
