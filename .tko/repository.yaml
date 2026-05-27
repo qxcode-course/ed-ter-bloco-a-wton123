@@ -20,6 +20,7 @@ sources:
   quests: null
 expanded:
 - ed@rec
+- ed@tree
 - ed@backtrack
 - ed@vector
 - ed@linear
@@ -27,10 +28,10 @@ expanded:
 - ed@list
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fila_enc
-selected_index: 61
+selected: ed@chaves
+selected_index: 63

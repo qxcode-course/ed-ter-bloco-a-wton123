@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_13-49-41",
+            "content": "@@ -37,8 +37,6 @@\n ) %7B%0A\n-%09%0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-27_13-53-41",
+            "content": "@@ -20,446 +20,25 @@\n t (%0A\n-%09%22bufio%22%0A%09//%22fmt%22%0A%09%22os%22%0A%09//%22strings%22%0A%09//%22strconv%22%0A)%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%09_ = scanner%0A%09QQ := NewQueue%5BT%5D()%0A%09QQ.Dequeue(%22A%22)%0A%09QQ.Dequeue(%22B%22)%0A%09QQ.Dequeue(%22C%22)%0A%09QQ.Dequeue(%22D%22)%0A%09QQ.Dequeue(%22E%22)%0A%09QQ.Dequeue(%22F%22)%0A%09QQ.Dequeue(%22G%22)%0A%09QQ.Dequeue(%22H%22)%0A%09QQ.Dequeue(%22I%22)%0A%09QQ.Dequeue(%22J%22)%0A%09QQ.Dequeue(%22K%22)%0A%09QQ.Dequeue(%22L%22)%0A%09QQ.Dequeue(%22M%22)%0A%09QQ.Dequeue(%22N%22)%0A%09QQ.Dequeue(%22O%22)%0A%09QQ.Dequeue(%22P%22)%0A%0A%09for QQ.size == 1%7B%0A%0A%09%7D%0A\n+)%0A%0Afunc main() %7B%0A%09\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-05-27_14-06-23",
+            "content": "@@ -72,173 +72,8 @@\n %22%0A)%0A\n-func (q *Queue%5BT%5D)partida(g1 int, g2 int)%7B%0A%09t1 := q.IsEmpty()%0A%09q.Dequeue()%0A%09t2 := q.IsEmpty()%0A%09q.Dequeue()%0A%09if g1 %3E g2 %7B%0A%09%09q.Enqueue(t1)%0A%09%7Delse%7B%0A%09%09q.Enqueue(t2)%0A%09%7D%0A%7D\n %0Afun\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_14-10-31",
+            "content": "@@ -116,28 +116,27 @@\n )%7B%0A%09\n-var t1 , t2 T%0A%09t1 = \n+t1 := q.IsEmpty()%0A%09\n q.De\n@@ -147,18 +147,32 @@\n e()%0A%09t2 \n+:\n = \n+q.IsEmpty()%0A%09\n q.Dequeu\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-27_14-20-11",
+            "content": "@@ -310,20 +310,17 @@\n eue%5B\n-rune\n+T\n %5D()%0A%09QQ.\n Eque\n@@ -311,25 +311,26 @@\n ue%5BT%5D()%0A%09QQ.\n-E\n+De\n queue(%22A%22)%0A%09\n@@ -328,25 +328,26 @@\n ue(%22A%22)%0A%09QQ.\n-E\n+De\n queue(%22B%22)%0A%09\n@@ -345,25 +345,26 @@\n ue(%22B%22)%0A%09QQ.\n-E\n+De\n queue(%22C%22)%0A%09\n@@ -362,25 +362,26 @@\n ue(%22C%22)%0A%09QQ.\n-E\n+De\n queue(%22D%22)%0A%09\n@@ -379,25 +379,26 @@\n ue(%22D%22)%0A%09QQ.\n-E\n+De\n queue(%22E%22)%0A%09\n@@ -396,25 +396,26 @@\n ue(%22E%22)%0A%09QQ.\n-E\n+De\n queue(%22F%22)%0A%09\n@@ -413,25 +413,26 @@\n ue(%22F%22)%0A%09QQ.\n-E\n+De\n queue(%22G%22)%0A%09\n@@ -430,25 +430,26 @@\n ue(%22G%22)%0A%09QQ.\n-E\n+De\n queue(%22H%22)%0A%09\n@@ -447,25 +447,26 @@\n ue(%22H%22)%0A%09QQ.\n-E\n+De\n queue(%22I%22)%0A%09\n@@ -464,25 +464,26 @@\n ue(%22I%22)%0A%09QQ.\n-E\n+De\n queue(%22J%22)%0A%09\n@@ -481,25 +481,26 @@\n ue(%22J%22)%0A%09QQ.\n-E\n+De\n queue(%22K%22)%0A%09\n@@ -498,25 +498,26 @@\n ue(%22K%22)%0A%09QQ.\n-E\n+De\n queue(%22L%22)%0A%09\n@@ -515,25 +515,26 @@\n ue(%22L%22)%0A%09QQ.\n-E\n+De\n queue(%22M%22)%0A%09\n@@ -532,25 +532,26 @@\n ue(%22M%22)%0A%09QQ.\n-E\n+De\n queue(%22N%22)%0A%09\n@@ -549,25 +549,26 @@\n ue(%22N%22)%0A%09QQ.\n-E\n+De\n queue(%22O%22)%0A%09\n@@ -570,17 +570,18 @@\n O%22)%0A%09QQ.\n-E\n+De\n queue(%22P\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-27_14-25-39",
+            "content": "@@ -306,22 +306,20 @@\n ewQueue%5B\n-string\n+rune\n %5D()%0A%09QQ.\n@@ -315,25 +315,24 @@\n une%5D()%0A%09QQ.E\n-n\n queue(%22A%22)%0A%09\n@@ -331,25 +331,24 @@\n e(%22A%22)%0A%09QQ.E\n-n\n queue(%22B%22)%0A%09\n@@ -347,25 +347,24 @@\n e(%22B%22)%0A%09QQ.E\n-n\n queue(%22C%22)%0A%09\n@@ -363,25 +363,24 @@\n e(%22C%22)%0A%09QQ.E\n-n\n queue(%22D%22)%0A%09\n@@ -379,25 +379,24 @@\n e(%22D%22)%0A%09QQ.E\n-n\n queue(%22E%22)%0A%09\n@@ -395,25 +395,24 @@\n e(%22E%22)%0A%09QQ.E\n-n\n queue(%22F%22)%0A%09\n@@ -411,25 +411,24 @@\n e(%22F%22)%0A%09QQ.E\n-n\n queue(%22G%22)%0A%09\n@@ -427,25 +427,24 @@\n e(%22G%22)%0A%09QQ.E\n-n\n queue(%22H%22)%0A%09\n@@ -443,25 +443,24 @@\n e(%22H%22)%0A%09QQ.E\n-n\n queue(%22I%22)%0A%09\n@@ -459,25 +459,24 @@\n e(%22I%22)%0A%09QQ.E\n-n\n queue(%22J%22)%0A%09\n@@ -475,25 +475,24 @@\n e(%22J%22)%0A%09QQ.E\n-n\n queue(%22K%22)%0A%09\n@@ -491,25 +491,24 @@\n e(%22K%22)%0A%09QQ.E\n-n\n queue(%22L%22)%0A%09\n@@ -507,25 +507,24 @@\n e(%22L%22)%0A%09QQ.E\n-n\n queue(%22M%22)%0A%09\n@@ -523,25 +523,24 @@\n e(%22M%22)%0A%09QQ.E\n-n\n queue(%22N%22)%0A%09\n@@ -539,25 +539,24 @@\n e(%22N%22)%0A%09QQ.E\n-n\n queue(%22O%22)%0A%09\n@@ -559,17 +559,16 @@\n %22)%0A%09QQ.E\n-n\n queue(%22P\n@@ -584,17 +584,18 @@\n QQ.size \n-%3E\n+==\n  1%7B%0A%0A%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-27_14-28-15",
+            "content": "@@ -598,15 +598,15 @@\n for \n-len(QQ)\n+QQ.size\n  %3E 1\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-27_14-29-24",
+            "content": "@@ -26,16 +26,18 @@\n bufio%22%0A%09\n+//\n %22fmt%22%0A%09%22\n@@ -41,16 +41,18 @@\n %0A%09%22os%22%0A%09\n+//\n %22strings\n@@ -598,185 +598,21 @@\n for \n-i := 0; i %3E 15 ; i++%7B%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09line := scanner.Text()%0A%09%09fmt.Println(%22$%22 + line)%0A%09%09args := strings.Fields(line)%0A%09%09if len(args) == 0 %7B%0A%09%09%09continue%0A%09%09%7D\n+len(QQ) %3E 1%7B%0A\n %0A%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-27_14-32-33",
+            "content": "@@ -46,24 +46,26 @@\n %09%22strings%22%0A%09\n+//\n %22strconv%22%0A)%0A\n@@ -604,9 +604,9 @@\n ; i \n-%3C\n+%3E\n  15 \n@@ -772,100 +772,8 @@\n %09%09%7D%0A\n-%09%09%0A%09%09%0A%09%09r1, _ := strconv.Atoi(args%5B0%5D)%0A%09%09r2, _ := strconv.Atoi(args%5B1%5D)%0A%09%09QQ.partida(r1,r2)%0A\n %09%7D%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-27_14-42-04",
+            "content": "@@ -677,10 +677,8 @@\n )%0A%09%09\n-//\n fmt.\n@@ -862,23 +862,10 @@\n r2)%0A\n-%0A\n %09%7D%0A\n-%09QQ.String()\n %0A%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-27_14-43-02",
+            "content": "@@ -865,28 +865,16 @@\n 2)%0A%0A%09%7D%0A%09\n-fmt.Println(\n QQ.Strin\n@@ -874,12 +874,13 @@\n Q.String\n+(\n )%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-27_14-44-11",
+            "content": "@@ -886,14 +886,12 @@\n Q.String\n-()\n )%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-27_14-44-16",
+            "content": "@@ -868,32 +868,8 @@\n %0A%09%7D%0A\n-%09campeao := QQ.String()%0A\n %09fmt\n@@ -881,15 +881,19 @@\n tln(\n-campeao\n+QQ.String()\n )%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-27_14-47-39",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\nfunc (q *Queue[T])partida(g1 int, g2 int){\n\tvar t1 , t2 T\n\tt1 = q.Dequeue()\n\tt2 = q.Dequeue()\n\tif g1 > g2 {\n\t\tq.Enqueue(t1)\n\t}else{\n\t\tq.Enqueue(t2)\n\t}\n}\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\t_ = scanner\n\tQQ := NewQueue[string]()\n\tQQ.Enqueue(\"A\")\n\tQQ.Enqueue(\"B\")\n\tQQ.Enqueue(\"C\")\n\tQQ.Enqueue(\"D\")\n\tQQ.Enqueue(\"E\")\n\tQQ.Enqueue(\"F\")\n\tQQ.Enqueue(\"G\")\n\tQQ.Enqueue(\"H\")\n\tQQ.Enqueue(\"I\")\n\tQQ.Enqueue(\"J\")\n\tQQ.Enqueue(\"K\")\n\tQQ.Enqueue(\"L\")\n\tQQ.Enqueue(\"M\")\n\tQQ.Enqueue(\"N\")\n\tQQ.Enqueue(\"O\")\n\tQQ.Enqueue(\"P\")\n\n\tfor i := 0; i < 15 ; i++{\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\t//fmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\t\n\t\t\n\t\tr1, _ := strconv.Atoi(args[0])\n\t\tr2, _ := strconv.Atoi(args[1])\n\t\tQQ.partida(r1,r2)\n\n\t}\n\tcampeao := QQ.String()\n\tfmt.Println(campeao)\n}\n",
+            "lines": "60"
+        }
+    ]
+}
