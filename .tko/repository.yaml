@@ -20,17 +20,17 @@ sources:
   quests: null
 expanded:
 - ed@rec
-- ed@linear
+- ed@backtrack
 - ed@vector
+- ed@linear
 - ed@map_set
 - ed@list
-- ed@backtrack
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bufferring
-selected_index: 60
+selected: ed@fila_enc
+selected_index: 61
