@@ -19,9 +19,10 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
-- ed@list
+- ed@tree
 - ed@basic
+- ed@list
+- ed@linear
 flags:
   inbox: all
   panel: skills
@@ -29,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@caminhao
-selected_index: 30
+selected: ed@serial
+selected_index: 34
