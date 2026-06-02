@@ -19,13 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
-- ed@tree
-- ed@backtrack
-- ed@vector
-- ed@linear
-- ed@map_set
-- ed@list
+- ed@basic
 flags:
   inbox: all
   panel: skills
@@ -33,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@chaves
-selected_index: 63
+selected: ed@linear
+selected_index: 13
