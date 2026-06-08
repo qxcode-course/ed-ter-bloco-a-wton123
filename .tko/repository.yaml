@@ -18,11 +18,7 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@tree
-- ed@basic
-- ed@list
-- ed@linear
+expanded: []
 flags:
   inbox: all
   panel: skills
@@ -30,5 +26,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@serial
-selected_index: 34
+selected: ed@lista_d4
+selected_index: 9
