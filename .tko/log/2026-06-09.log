@@ -114,3 +114,16 @@
 2026-06-09 14:35:47, EXEC, v:1, k:ed@soma, mode:FULL, rate:100, size:101
 2026-06-09 14:36:14, MOVE, v:1, k:ed@soma, mode:BACK
 2026-06-09 14:36:45, SELF, v:1, k:ed@soma, self:1, rate:100, study:40, concept:1, refactor:1
+2026-06-09 14:35:47, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-06-09 14:35:47, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-06-09 14:39:06, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-06-09 14:39:08, MOVE, v:1, k:ed@altura, mode:PICK
+2026-06-09 14:39:10, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:108
+2026-06-09 14:39:11, EXEC, v:1, k:ed@altura, mode:FULL, rate:0
+2026-06-09 14:39:06, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-06-09 14:39:06, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-06-09 14:39:06, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-06-09 14:39:11, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-06-09 14:44:44, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:108
+2026-06-09 14:48:35, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-06-09 14:44:43, MOVE, v:1, k:ed@altura, mode:EDIT
