@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_13-40-01",
+            "content": "@@ -157,32 +157,8 @@\n e %7B%0A\n-%09if node == nil %7B%0A%09%09%0A%09%7D%0A\n %09// \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-06-09_13-42-10",
+            "content": "@@ -177,92 +177,42 @@\n %7B%0A%09%09\n-return nil%0A%09%7D%0A%09n = node %0A%09// TODO%0A%09_ = node%0A%09return clone(n.Right)%0A%09return clone(n.)\n+%0A%09%7D%0A%09// TODO%0A%09_ = node%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-09_13-43-55",
+            "content": "@@ -256,20 +256,16 @@\n clone(n.\n-Left\n )%0A%7D%0A%0A// \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-44-11",
+            "content": "@@ -194,47 +194,50 @@\n %0A%09n \n-:\n = \n-Node%7BValue:value%7D%0A%09n.Right =\n+node %0A%09// TODO%0A%09_ = node%0A%09return\n  clone(n\n ode.\n@@ -232,19 +232,16 @@\n  clone(n\n-ode\n .Right)%0A\n@@ -245,24 +245,22 @@\n t)%0A%09\n-n.Left =\n+return\n  clone(n\n ode.\n@@ -259,49 +259,15 @@\n ne(n\n-ode\n .Left)%0A\n-%09// TODO%0A%09_ = node%0A%09return nil%0A\n %7D%0A%0A/\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-46-52",
+            "content": "@@ -295,16 +295,18 @@\n return n\n+il\n %0A%7D%0A%0A// -\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-46-53",
+            "content": "@@ -194,16 +194,32 @@\n %0A%09n := N\n+ode%7BValue:value%7D\n %0A%09n.Righ\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-47-08",
+            "content": "@@ -1,8 +1,29 @@\n+@@ -1,1596 +1,55 @@%0A-\n package \n@@ -30,18 +30,22 @@\n main\n-%0A%0A\n+%250A%250A\n import (\n %0A%09%22b\n@@ -44,56 +44,102 @@\n rt (\n-%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0A\n+%250A%2509%2522bufio%2522%250A%2509%2522fmt%2522%250A%2509%2522os%2522%250A%2509%2522strconv%2522%250A%2509%2522strings%2522%250A)%250A%250A\n type\n@@ -151,19 +151,25 @@\n  struct \n-%7B%0A%09\n+%257B%250A%2509\n Value in\n@@ -169,18 +169,22 @@\n alue int\n-%0A%09\n+%250A%2509\n Left  *N\n@@ -186,18 +186,22 @@\n t  *Node\n-%0A%09\n+%250A%2509\n Right *N\n@@ -203,20 +203,28 @@\n ht *Node\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n func Clo\n@@ -244,19 +244,25 @@\n ) *Node \n-%7B%0A%09\n+%257B%250A%2509\n if node \n@@ -268,35 +268,53 @@\n  == nil \n-%7B%0A%09%09return nil%0A%09%7D%0A%09\n+%257B%250A%2509%2509return nil%250A%2509%257D%250A%2509\n n := Nod\n@@ -314,18 +314,22 @@\n  := Node\n-%0A%09\n+%250A%2509\n n.Right \n@@ -326,25 +326,25 @@\n 09n.Right = \n-C\n+c\n lone(node.Ri\n@@ -347,18 +347,22 @@\n e.Right)\n-%0A%09\n+%250A%2509\n n.Left =\n@@ -362,17 +362,17 @@\n .Left = \n-C\n+c\n lone(nod\n@@ -382,27 +382,35 @@\n eft)\n-%0A%09\n+%250A%2509\n // TODO\n-%0A%09\n+%250A%2509\n _ = node\n %0A%09re\n@@ -405,26 +405,30 @@\n _ = node\n-%0A%09\n+%250A%2509\n return n\n %0A%7D%0A%0A// -\n@@ -419,20 +419,28 @@\n return n\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n // -----\n@@ -517,17 +517,19 @@\n --------\n-%0A\n+%250A\n func BSh\n@@ -559,19 +559,25 @@\n string) \n-%7B%0A%09\n+%257B%250A%2509\n if node \n@@ -596,34 +596,38 @@\n ode.Left != nil \n-%7C%7C\n+%257C%257C\n  node.Right != n\n@@ -630,20 +630,28 @@\n != nil) \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n BShow(no\n@@ -671,17 +671,31 @@\n ory+\n-%22l%22)%0A%09%7D%0A%09\n+%2522l%2522)%250A%2509%257D%250A%2509\n for \n@@ -708,9 +708,11 @@\n ; i \n-%3C\n+%253C\n  len\n@@ -728,20 +728,28 @@\n -1; i++ \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n if histo\n@@ -754,11 +754,15 @@\n tory\n-%5Bi%5D\n+%255Bi%255D\n  != \n@@ -772,51 +772,95 @@\n tory\n-%5Bi+1%5D %7B%0A%09%09%09fmt.Print(%22%E2%94%82   %22)%0A%09%09%7D else %7B%0A%09%09%09\n+%255Bi+1%255D %257B%250A%2509%2509%2509fmt.Print(%2522%25E2%2594%2582   %2522)%250A%2509%2509%257D else %257B%250A%2509%2509%2509\n fmt.\n@@ -869,45 +869,79 @@\n int(\n-%22\n+%2522\n     \n-%22)%0A%09%09%7D%0A%09%7D%0A%09if history != %22%22 %7B%0A%09%09\n+%2522)%250A%2509%2509%257D%250A%2509%257D%250A%2509if history != %2522%2522 %257B%250A%2509%2509\n if h\n@@ -946,17 +946,19 @@\n  history\n-%5B\n+%255B\n len(hist\n@@ -967,17 +967,19 @@\n y)-1\n-%5D\n+%255D\n  == 'l' \n %7B%0A%09%09\n@@ -978,120 +978,266 @@\n 'l' \n-%7B%0A%09%09%09fmt.Print(%22%E2%95%AD%E2%94%80%E2%94%80%E2%94%80%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Print(%22%E2%95%B0%E2%94%80%E2%94%80%E2%94%80%22)%0A%09%09%7D%0A%09%7D%0A%09if node == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%09return%0A%09%7D%0A%09\n+%257B%250A%2509%2509%2509fmt.Print(%2522%25E2%2595%25AD%25E2%2594%2580%25E2%2594%2580%25E2%2594%2580%2522)%250A%2509%2509%257D else %257B%250A%2509%2509%2509fmt.Print(%2522%25E2%2595%25B0%25E2%2594%2580%25E2%2594%2580%25E2%2594%2580%2522)%250A%2509%2509%257D%250A%2509%257D%250A%2509if node == nil %257B%250A%2509%2509fmt.Println(%2522#%2522)%250A%2509%2509return%250A%2509%257D%250A%2509\n fmt.\n@@ -1255,18 +1255,22 @@\n e.Value)\n-%0A%09\n+%250A%2509\n if node.\n@@ -1285,10 +1285,14 @@\n nil \n-%7C%7C\n+%257C%257C\n  nod\n@@ -1306,20 +1306,28 @@\n  != nil \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n BShow(no\n@@ -1348,19 +1348,37 @@\n ory+\n-%22r%22)%0A%09%7D%0A%7D%0A%0A\n+%2522r%2522)%250A%2509%257D%250A%257D%250A%250A\n func\n@@ -1396,10 +1396,14 @@\n ts *\n-%5B%5D\n+%255B%255D\n stri\n@@ -1412,19 +1412,25 @@\n ) *Node \n-%7B%0A%09\n+%257B%250A%2509\n elem := \n@@ -1441,13 +1441,21 @@\n rts)\n-%5B0%5D%0A%09\n+%255B0%255D%250A%2509\n *par\n@@ -1471,48 +1471,78 @@\n rts)\n-%5B1:%5D%0A%09if elem == %22#%22 %7B%0A%09%09return nil%0A%09%7D%0A%09\n+%255B1:%255D%250A%2509if elem == %2522#%2522 %257B%250A%2509%2509return nil%250A%2509%257D%250A%2509\n valu\n@@ -1567,18 +1567,22 @@\n oi(elem)\n-%0A%09\n+%250A%2509\n node := \n@@ -1586,17 +1586,19 @@\n := &Node\n-%7B\n+%257B\n Value: v\n@@ -1605,11 +1605,17 @@\n alue\n-%7D%0A%09\n+%257D%250A%2509\n node\n@@ -1635,18 +1635,22 @@\n e(parts)\n-%0A%09\n+%250A%2509\n node.Rig\n@@ -1667,18 +1667,22 @@\n e(parts)\n-%0A%09\n+%250A%2509\n return n\n@@ -1688,12 +1688,20 @@\n node\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n func\n@@ -1712,11 +1712,17 @@\n n() \n-%7B%0A%09\n+%257B%250A%2509\n scan\n@@ -1754,18 +1754,22 @@\n s.Stdin)\n-%0A%09\n+%250A%2509\n scanner.\n@@ -1774,18 +1774,22 @@\n r.Scan()\n-%0A%09\n+%250A%2509\n parts :=\n@@ -1823,14 +1823,22 @@\n (), \n-%22 %22)%0A%09\n+%2522 %2522)%250A%2509\n root\n@@ -1855,18 +1855,22 @@\n (&parts)\n-%0A%09\n+%250A%2509\n fmt.Prin\n@@ -1873,17 +1873,19 @@\n Println(\n-%22\n+%2522\n original\n@@ -1885,20 +1885,26 @@\n riginal:\n-%22)%0A%09\n+%2522)%250A%2509\n BShow(ro\n@@ -1903,26 +1903,30 @@\n BShow(root, \n-%22%22\n+%2522%2522\n ) // Chama a\n@@ -1933,10 +1933,20 @@\n  fun\n-%C3%A7%C3%A3\n+%25C3%25A7%25C3%25A3\n o de\n@@ -1957,9 +1957,14 @@\n ress\n-%C3%A3\n+%25C3%25A3\n o fo\n@@ -1970,18 +1970,22 @@\n ormatada\n-%0A%09\n+%250A%2509\n newRoot \n@@ -2014,16 +2014,25 @@\n a a \n-%C3%A1rvore%0A%09\n+%25C3%25A1rvore%250A%2509\n root\n@@ -2078,9 +2078,14 @@\n do n\n-%C3%B3\n+%25C3%25B3\n  rai\n@@ -2094,18 +2094,22 @@\n original\n-%0A%09\n+%250A%2509\n fmt.Prin\n@@ -2116,19 +2116,27 @@\n tln(\n-%22\n+%2522\n clone:\n-%22)%0A%09\n+%2522)%250A%2509\n BSho\n@@ -2150,10 +2150,14 @@\n ot, \n-%22%22\n+%2522%2522\n ) //\n@@ -2192,9 +2192,14 @@\n r a \n-%C3%A1\n+%25C3%25A1\n rvor\n@@ -2213,7 +2213,86 @@\n tida\n-%0A%7D\n+%250A%257D%0A+@@ -194,19 +194,16 @@%250A %25250A%252509n := N%250A-ode%250A %25250A%252509n.Righ%0A %250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-09_13-48-24",
+            "content": "@@ -197,26 +197,12 @@\n  := \n-&\n Node\n-%7BValue:value%7D\n %0A%09n.\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-48-56",
+            "content": "@@ -131,18 +131,8 @@\n unc \n-(c *Nopde)\n Clon\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-49-13",
+            "content": "@@ -133,16 +133,17 @@\n c (c *No\n+p\n de)Clone\n@@ -305,17 +305,16 @@\n %09return \n-&\n n%0A%7D%0A%0A// \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-50-09",
+            "content": "@@ -214,21 +214,16 @@\n e%7BValue:\n-node.\n value%7D%0A%09\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-53-38",
+            "content": "@@ -127,16 +127,25 @@\n %7D%0A%0Afunc \n+(c *Node)\n Clone(no\n@@ -202,16 +202,28 @@\n %7D%0A%09n := \n+&Node%7BValue:\n node.val\n@@ -224,16 +224,17 @@\n de.value\n+%7D\n %0A%09n.Righ\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-55-18",
+            "content": "@@ -201,26 +201,10 @@\n node\n-%0A%09n.Value = node.V\n+.v\n alue\n@@ -287,16 +287,17 @@\n %09return \n+&\n n%0A%7D%0A%0A// \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-09_13-56-35",
+            "content": "@@ -191,22 +191,18 @@\n %0A%09%7D%0A\n-%0A\n %09n := \n-&N\n+n\n ode\n-%7B%7D\n %0A%09n.\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-09_14-00-58",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc Clone(node *Node) *Node {\n\tif node == nil {\n\t\treturn nil\n\t}\n\n\tn := &Node{}\n\tn.Value = node.Value\n\tn.Right = Clone(node.Right)\n\tn.Left = Clone(node.Left)\n\t// TODO\n\t_ = node\n\treturn n\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tfmt.Println(\"original:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tnewRoot := Clone(root) // Clona a \u00e1rvore\n\troot.Value = 4         // Modifica o valor do n\u00f3 raiz original\n\tfmt.Println(\"clone:\")\n\tBShow(newRoot, \"\") // Chama novamente para mostrar a \u00e1rvore invertida\n}\n",
+            "lines": "84"
+        }
+    ]
+}

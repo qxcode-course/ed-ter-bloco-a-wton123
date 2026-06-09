@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_13-23-47",
+            "content": "@@ -163,38 +163,8 @@\n ode%0A\n-%09if node == nil %7B%0A%09%09return%0A%09%7D%0A\n %09// \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-09_13-30-22",
+            "content": "@@ -131,14 +131,8 @@\n unc \n-(Node)\n Reve\n@@ -193,105 +193,8 @@\n %0A%09%7D%0A\n-%09n := Node%7Bvalue: node.value%7D%0A%09n.Right = node.Right%0A%09node.Right = node.Left%0A%09node.Left = n.Right%0A\n %09// \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-09_13-34-49",
+            "content": "@@ -127,16 +127,22 @@\n %7D%0A%0Afunc \n+(Node)\n Reverse(\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-09_13-35-04",
+            "content": "@@ -131,18 +131,8 @@\n unc \n-(no *Node)\n Reve\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-09_13-35-17",
+            "content": "@@ -128,16 +128,20 @@\n %0A%0Afunc (\n+no *\n Node)Rev\n@@ -309,49 +309,8 @@\n ODO%0A\n-%09Reverse(node.Right)%0A%09Reverse(node.Left)%0A\n %7D%0A%0A/\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-09_13-36-22",
+            "content": "@@ -127,16 +127,22 @@\n %7D%0A%0Afunc \n+(Node)\n Reverse(\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-37-16",
+            "content": "@@ -196,25 +196,25 @@\n %0A%09n := Node%7B\n-V\n+v\n alue: node.v\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-37-41",
+            "content": "@@ -194,13 +194,46 @@\n %09%7D%0A%09\n-%0A%09\n n :\n+= Node%7BValue: node.value%7D%0A%09n.Right \n = no\n@@ -278,16 +278,23 @@\n .Left = \n+n.Right\n %0A%09// TOD\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-38-41",
+            "content": "@@ -249,15 +249,8 @@\n t = \n-n.Right\n %0A%09//\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-38-59",
+            "content": "@@ -246,16 +246,22 @@\n Left = n\n+.Right\n %0A%09// TOD\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-09_13-39-03",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc Reverse(node *Node) {\n\t_ = node\n\tif node == nil {\n\t\treturn\n\t}\n\t\n\tn := node.Right\n\tnode.Right = node.Left\n\tnode.Left = n\n\t// TODO\n\tReverse(node.Right)\n\tReverse(node.Left)\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tReverse(root)   // Inverte a \u00e1rvore\n\tBShow(root, \"\") // Chama novamente para mostrar a \u00e1rvore invertida\n}\n",
+            "lines": "81"
+        }
+    ]
+}
