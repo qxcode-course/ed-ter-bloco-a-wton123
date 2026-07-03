@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-03_20-12-36",
+            "content": "@@ -380,83 +380,8 @@\n  %22%22%0A\n-%09var  str string%0A%09if node == nil%7B%0A%09%09str += %22!%22%0A%09%09return str%0A%09%7D%0A%09return str%0A\n %7D%0A%0A/\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-03_20-18-06",
+            "content": "@@ -443,62 +443,8 @@\n %0A%09%7D%0A\n-%09if node.Value == value%7B%0A%09%09str += %22X%22%0A%09%09return str%0A%09%7D%0A\n %09ret\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-03_20-19-58",
+            "content": "@@ -474,17 +474,17 @@\n str += %22\n-x\n+X\n %22%0A%09%09retu\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-03_20-20-13",
+            "content": "@@ -494,136 +494,8 @@\n str%0A\n-%09%7Delse%7B%0A%09%09str = findPath(node.Left, value)%0A%09%09if str == %22!%22%7B%0A%09%09%09str = findPath(node.Right, value)%0A%09%09%09return str%0A%09%09%7D%0A%09%09return str%0A\n %09%7D%0A%09\n@@ -509,10 +509,8 @@\n str%0A\n-%09%0A\n %7D%0A%0A/\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-03_20-24-13",
+            "content": "@@ -500,25 +500,24 @@\n else%7B%0A%09%09str \n-+\n = findPath(n\n@@ -557,17 +557,16 @@\n %0A%09%09%09str \n-+\n = findPa\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-03_20-25-45",
+            "content": "@@ -500,24 +500,25 @@\n else%7B%0A%09%09str \n++\n = findPath(n\n@@ -558,16 +558,17 @@\n %0A%09%09%09str \n++\n = findPa\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-03_20-27-04",
+            "content": "@@ -390,15 +390,8 @@\n str \n-, str2 \n stri\n@@ -556,17 +556,16 @@\n %7B%0A%09%09%09str\n-2\n  = findP\n@@ -591,27 +591,8 @@\n ue)%0A\n-%09%09%09if str2 == %22!%22%7B%0A\n %09%09%09r\n@@ -604,14 +604,8 @@\n  str\n-2%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-03_20-28-56",
+            "content": "@@ -511,17 +511,16 @@\n %7B%0A%09%09str \n-+\n = findPa\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-03_20-29-34",
+            "content": "@@ -545,21 +545,8 @@\n ue)%0A\n-%09%09str += %22l%22%0A\n %09%09if\n@@ -622,27 +622,8 @@\n %0A%09%09%09\n-%09str += %22r%22%0A%09%09%09    \n retu\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-03_20-31-30",
+            "content": "@@ -511,16 +511,17 @@\n %7B%0A%09%09str \n++\n = findPa\n@@ -635,17 +635,16 @@\n %0A%09%09%09%09str\n-2\n  += %22r%22%0A\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-03_20-31-48",
+            "content": "@@ -557,21 +557,8 @@\n %22l%22%0A\n-%09%09str2 = str%0A\n %09%09if\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-03_20-32-17",
+            "content": "@@ -632,17 +632,17 @@\n if str2 \n-!\n+=\n = %22!%22%7B%0A%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-03_20-33-14",
+            "content": "@@ -486,16 +486,26 @@\n = %22x%22%0A%09%09\n+return str\n %0A%09%7Delse%7B\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-03_20-34-36",
+            "content": "@@ -423,16 +423,17 @@\n %7B%0A%09%09str \n++\n = %22!%22%0A%09%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-03_20-36-48",
+            "content": "@@ -489,44 +489,14 @@\n %22%0A%09%09\n-return str%0A%09%7D%0A%09if node.Value != valu\n+%0A%09%7Dels\n e%7B%0A%09\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-03_20-40-04",
+            "content": "@@ -565,48 +565,18 @@\n )%0A%09%09\n-if \n str \n-!= %22!%22%7B%0A%09%09%09%0A%09%09%7D%0A%09%09str = %22l%22 + str\n++= %22l%22\n %0A%09%09s\n@@ -670,20 +670,16 @@\n %09str\n- \n+2 +\n = %22r%22\n- + str\n %0A%09%09%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-07-03_20-45-13",
+            "content": "@@ -498,19 +498,39 @@\n n str%0A%09%7D\n-els\n+%0A%09if node.Value != valu\n e%7B%0A%09%09str\n@@ -757,22 +757,8 @@\n %0A%09%7D%0A\n-    str = %22!%22%0A\n %09ret\n@@ -764,17 +764,16 @@\n turn str\n- \n %0A%09%0A%7D%0A%0A//\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-03_20-53-54",
+            "content": "@@ -559,16 +559,23 @@\n %22!%22%7B%0A%09%09%09\n+%0A%09%09%7D%0A%09%09\n str = %22l\n@@ -586,29 +586,8 @@\n str%0A\n-%09%09%09return str%0A%09%09%7D%0A%09%09%0A\n %09%09st\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-03_20-55-39",
+            "content": "@@ -592,20 +592,48 @@\n  str%0A%09%09%7D\n-else\n+%0A%09%09%0A%09%09str2 = str%0A%09%09if str == %22!%22\n %7B%0A%09%09%09str\n@@ -735,38 +735,8 @@\n %09%09%7D%0A\n-%09%09%0A%09%09str2 = str%0A%09%09%0A%09%09%09%0A%09%09%09%0A%09%09%0A\n %09%09re\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-07-03_20-57-06",
+            "content": "@@ -602,22 +602,8 @@\n se%7B%0A\n-%09%09%09str2 = str%0A\n %09%09%09s\n@@ -708,16 +708,26 @@\n %09%7D%0A%09%09%0A%09%09\n+str2 = str\n %0A%09%09%0A%09%09%09%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-03_20-57-37",
+            "content": "@@ -676,17 +676,16 @@\n %0A%09%09%09%09str\n-2\n  = %22r%22 +\n@@ -684,25 +684,24 @@\n  = %22r%22 + str\n-2\n %0A%09%09%09    retu\n@@ -723,16 +723,30 @@\n %7D%0A%09%09%0A%09%09%0A\n+%09%09%0A%09%09%09%0A%09%09%09%0A%09%09%0A\n %09%09return\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-03_20-59-31",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// retorne o caminho at\u00e9 o n\u00f3 ou ! se n\u00e3o existir\n// voc\u00ea pode fazer recursivo ou interativo\n// tamb\u00e9m pode criar fun\u00e7\u00f5es auxiliares se achar necess\u00e1rio\nfunc findPath(node *Node, value int) string {\n\t// TODO\n\t// ACT\n\t// _, _ = node, value\n\t// return \"\"\n\tvar  str , str2 string\n\tif node == nil{\n\t\tstr = \"!\"\n\t\treturn str\n\t}\n\tif node.Value == value{\n\t\tstr += \"x\"\n\t\treturn str\n\t}else{\n\t\tstr = findPath(node.Left, value)\n\t\tif str != \"!\"{\n\t\t\tstr = \"l\" + str\n\t\t\treturn str\n\t\t}else{\n\t\t\tstr2 = str\n\t\t\tstr2 = findPath(node.Right, value)\n\t\t\tif str2 != \"!\"{\n\t\t\t\tstr2 = \"r\" + str2\n\t\t\t    return str2\n\t\t\t}\n\t\t}\n\t\t\n\t\t\n\t\treturn str\n\t}\n    str = \"!\"\n\treturn str \n\t\n}\n\n// ----------------------------------------------------------------------------------\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(\"Caminho:\", findPath(root, value))\n}\n",
+            "lines": "108"
+        }
+    ]
+}
