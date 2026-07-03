@@ -18,10 +18,11 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@tree
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
@@ -30,5 +31,5 @@ audit:
 audit_enabled: true
 audit_interval_seconds: null
 lang: go
-selected: ed@tree
-selected_index: 7
+selected: ed@compare
+selected_index: 14
