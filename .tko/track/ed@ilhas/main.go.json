@@ -67,8 +67,13 @@
         },
         {
             "label": "2026-07-04_21-13-12",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\nfunc calcilhas(grid [][]byte, i, j int){\n\tif i < 0 || j < 0 || i >= len(grid) || j >= len(grid[0]){\n\t\treturn \n\t}\n\tif grid[i][j] == '0'{\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0'\n\tcalcilhas(grid, i+1 ,j )\n\tcalcilhas(grid, i ,j+1 )\n\tcalcilhas(grid, i-1 ,j )\n\tcalcilhas(grid, i ,j-1 )\n\t\n\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\t//\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\tn := 0\n\tfor i := 0; i < len(grid); i++{\n\t\tfor j := 0; j < len(grid); j++{\n\t\t\tif grid[i][j] == '1'{\n\t\t\t\t\t\tcalcilhas(grid,i,j)\n\t\t\t\t\t\tn++\n\t\t\t}\n\t\t\n\n\t}\n\t}\n\treturn n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -311,16 +311,19 @@\n  ,j-1 )%0A\n+%09%0A%0A\n %0A%7D%0A%0A// N\n",
             "lines": "61"
+        },
+        {
+            "label": "2026-07-04_21-35-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\nfunc calcilhas(grid [][]byte, i, j int){\n\tif i < 0 || j < 0 || i >= len(grid) || j >= len(grid[0]){\n\t\treturn \n\t}\n\tif grid[i][j] == '0'{\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0'\n\tcalcilhas(grid, i+1 ,j )\n\tcalcilhas(grid, i ,j+1 )\n\tcalcilhas(grid, i-1 ,j )\n\tcalcilhas(grid, i ,j-1 )\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\t//\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\tn := 0\n\tfor i := 0; i < len(grid); i++{\n\t\tfor j := 0; j < len(grid); j++{\n\t\t\tif grid[i][j] == '1'{\n\t\t\t\t\t\tcalcilhas(grid,i,j)\n\t\t\t\t\t\tn++\n\t\t\t}\n\t\t\n\n\t}\n\t}\n\treturn n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "59"
         }
     ]
 }

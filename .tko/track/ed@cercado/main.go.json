@@ -2,8 +2,98 @@
     "patches": [
         {
             "label": "2026-07-04_21-26-24",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\t_ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "content": "@@ -45,282 +45,8 @@\n %0A)%0A%0A\n-func calcilhas(grid %5B%5D%5B%5Dbyte, i, j int)%7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(grid) %7C%7C j %3E= len(grid%5B0%5D)%7B%0A%09%09return %0A%09%7D%0A%09if grid%5Bi%5D%5Bj%5D == '0'%7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bi%5D%5Bj%5D = '0'%0A%09calcilhas(grid, i+1 ,j )%0A%09calcilhas(grid, i ,j+1 )%0A%09calcilhas(grid, i-1 ,j )%0A%09calcilhas(grid, i ,j-1 )%0A%0A%7D%0A\n // N\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-07-04_21-36-03",
+            "content": "@@ -392,42 +392,17 @@\n  %7B%0A%09\n-if len(board) == 0 %7B%0A%09%09return 0%0A%09%7D\n+_ = board\n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-04_21-36-49",
+            "content": "@@ -414,24 +414,25 @@\n  %7B%0A%09%09return \n+0\n %0A%09%7D%0A%7D%0A%0A// N%C3%83\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-04_21-37-14",
+            "content": "@@ -60,24 +60,16 @@\n has(grid\n-, visita\n  %5B%5D%5B%5Dbyt\n@@ -228,16 +228,9 @@\n rid,\n-visita ,\n+ \n i+1 \n@@ -246,31 +246,24 @@\n cilhas(grid,\n-visita,\n  i ,j+1 )%0A%09c\n@@ -276,23 +276,16 @@\n as(grid,\n-visita,\n  i-1 ,j \n@@ -302,23 +302,16 @@\n as(grid,\n-visita,\n  i ,j-1 \n@@ -426,224 +426,8 @@\n %0A%09%7D%0A\n-%09n := len(board)%0A%09m := len(board%5B0%5D)%0A%09visita := make(%5B%5D%5B%5Dbool, n)%0A%09for i := 0; i %3C n ;i++%7B%0A%09%09visita%5Bi%5D = make(%5B%5Dbool, m)%0A%09%7D%0A%0A%09for i := 0; i %3C n ; i++%7B%0A%09%09if board%5Bi%5D%5B0%5D == '0'%7B%0A%09%09%09calcilhas(board, visita,i ,0)%0A%09%09%7D%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-04_21-55-28",
+            "content": "@@ -60,25 +60,16 @@\n has(grid\n- %5B%5D%5B%5Dbyte\n , visita\n@@ -660,17 +660,16 @@\n , visita\n- \n ,i ,0)%0A%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-04_21-55-57",
+            "content": "@@ -56,20 +56,19 @@\n lcilhas(\n-boar\n+gri\n d %5B%5D%5B%5Dby\n@@ -130,20 +130,19 @@\n  %3E= len(\n-boar\n+gri\n d) %7C%7C j \n@@ -144,28 +144,27 @@\n %7C%7C j %3E= len(\n-boar\n+gri\n d%5B0%5D)%7B%0A%09%09ret\n@@ -171,28 +171,27 @@\n urn %0A%09%7D%0A%09if \n-boar\n+gri\n d%5Bi%5D%5Bj%5D == '\n@@ -190,17 +190,17 @@\n %5Bj%5D == '\n-x\n+0\n '%7B%0A%09%09ret\n@@ -208,22 +208,20 @@\n rn%0A%09%7D%0A%0A%09\n-visita\n+grid\n %5Bi%5D%5Bj%5D =\n@@ -225,14 +225,11 @@\n %5D = \n-true%0A%09\n+'0'\n %0A%09ca\n@@ -228,36 +228,35 @@\n  '0'%0A%09calcilhas(\n-boar\n+gri\n d,visita ,i+1 ,j\n@@ -261,36 +261,35 @@\n ,j )%0A%09calcilhas(\n-boar\n+gri\n d,visita, i ,j+1\n@@ -294,36 +294,35 @@\n +1 )%0A%09calcilhas(\n-boar\n+gri\n d,visita, i-1 ,j\n@@ -335,20 +335,19 @@\n lcilhas(\n-boar\n+gri\n d,visita\n@@ -635,25 +635,25 @@\n d%5Bi%5D%5B0%5D == '\n-o\n+0\n '%7B%0A%09%09%09calcil\n@@ -685,71 +685,8 @@\n %09%09%7D%0A\n-%09%09if board%5Bi%5D%5Bm%5D == 'o'%7B%0A%09%09%09calcilhas(board, visita ,i ,m)%0A%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-04_22-02-01",
+            "content": "@@ -232,16 +232,17 @@\n  = true%0A\n+%09\n %0A%09calcil\n@@ -754,165 +754,9 @@\n ,i ,\n-n)%0A%09%09%7D%0A%09%7D%0A%0A%09for j := 0; j %3C n ; j++%7B%0A%09%09if board%5Bj%5D%5B0%5D == 'o'%7B%0A%09%09%09calcilhas(board, visita ,0 ,j)%0A%09%09%7D%0A%09%09if board%5Bm%5D%5Bj%5D == 'o'%7B%0A%09%09%09calcilhas(board, visita ,m ,j\n+m\n )%0A%09%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-04_22-04-45",
+            "content": "@@ -84,19 +84,19 @@\n ta %5B%5D%5B%5Db\n-ool\n+yte\n , i, j i\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-04_22-05-30",
+            "content": "@@ -559,20 +559,21 @@\n  := \n-range visita\n+0; i %3C n ;i++\n %7B%0A%09%09\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-04_22-08-05",
+            "content": "@@ -776,17 +776,17 @@\n  0; j %3C \n-m\n+n\n  ; j++%7B%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-04_22-08-56",
+            "content": "@@ -707,18 +707,16 @@\n ard%5Bi%5D%5Bm\n--1\n %5D == 'o'\n@@ -752,11 +752,9 @@\n ,i ,\n-m-1\n+n\n )%0A%09%09\n@@ -776,17 +776,17 @@\n  0; j %3C \n-n\n+m\n  ; j++%7B%0A\n@@ -800,12 +800,12 @@\n ard%5B\n-0%5D%5Bj\n+j%5D%5B0\n %5D ==\n@@ -859,19 +859,17 @@\n f board%5B\n-n-1\n+m\n %5D%5Bj%5D == \n@@ -905,11 +905,9 @@\n ta ,\n-n-1\n+m\n  ,j)\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-04_22-11-09",
+            "content": "@@ -925,121 +925,8 @@\n %7D%0A%09%7D\n-%0A%0A%09for i := 0; i %3C n ; i++%7B%0A%09%09for j := 0; j %3C m ; j++%7B%0A%09%09if board%5B0%5D%5Bj%5D == 'o'%7B%0A%09%09%09board%5Bi%5D%5Bj%5D = 'x'%0A%09%09%7D%0A%09%09%0A%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-04_22-13-09",
+            "content": "@@ -1003,25 +1003,8 @@\n  'o'\n- && !visita%5Bi%5D%5Bj%5D\n %7B%0A%09%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-13-54",
+            "content": "@@ -997,17 +997,17 @@\n %5Bj%5D == '\n-O\n+o\n ' && !vi\n@@ -1040,9 +1040,9 @@\n  = '\n-X\n+x\n '%0A%09%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-14-14",
+            "content": "@@ -646,25 +646,25 @@\n d%5Bi%5D%5B0%5D == '\n-O\n+o\n '%7B%0A%09%09%09calcil\n@@ -711,25 +711,25 @@\n i%5D%5Bm-1%5D == '\n-O\n+o\n '%7B%0A%09%09%09calcil\n@@ -802,33 +802,33 @@\n board%5B0%5D%5Bj%5D == '\n-O\n+o\n '%7B%0A%09%09%09calcilhas(\n@@ -875,17 +875,17 @@\n %5Bj%5D == '\n-O\n+o\n '%7B%0A%09%09%09ca\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-14-42",
+            "content": "@@ -194,17 +194,17 @@\n %5Bj%5D == '\n-X\n+x\n '%7B%0A%09%09ret\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-14-54",
+            "content": "@@ -200,24 +200,8 @@\n  'X'\n- %7C%7C visita%5Bi%5D%5Bj%5D\n %7B%0A%09%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-17-17",
+            "content": "@@ -995,33 +995,33 @@\n j++%7B%0A%09%09if board%5B\n-i\n+0\n %5D%5Bj%5D == 'O' && !\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_22-20-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc calcilhas(board [][]byte, visita [][]bool, i, j int){\n\tif i < 0 || j < 0 || i >= len(board) || j >= len(board[0]){\n\t\treturn \n\t}\n\tif board[i][j] == 'X' || visita[i][j]{\n\t\treturn\n\t}\n\n\tvisita[i][j] = true\n\n\tcalcilhas(board,visita ,i+1 ,j )\n\tcalcilhas(board,visita, i ,j+1 )\n\tcalcilhas(board,visita, i-1 ,j )\n\tcalcilhas(board,visita, i ,j-1 )\n\n}\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tif len(board) == 0 {\n\t\treturn \n\t}\n\tn := len(board)\n\tm := len(board[0])\n\tvisita := make([][]bool, n)\n\tfor i := range visita{\n\t\tvisita[i] = make([]bool, m)\n\t}\n\n\tfor i := 0; i < n ; i++{\n\t\tif board[i][0] == 'O'{\n\t\t\tcalcilhas(board, visita ,i ,0)\n\t\t}\n\t\tif board[i][m-1] == 'O'{\n\t\t\tcalcilhas(board, visita ,i ,m-1)\n\t\t}\n\t}\n\n\tfor j := 0; j < n ; j++{\n\t\tif board[0][j] == 'O'{\n\t\t\tcalcilhas(board, visita ,0 ,j)\n\t\t}\n\t\tif board[n-1][j] == 'O'{\n\t\t\tcalcilhas(board, visita ,n-1 ,j)\n\t\t}\n\t}\n\n\tfor i := 0; i < n ; i++{\n\t\tfor j := 0; j < m ; j++{\n\t\tif board[i][j] == 'O' && !visita[i][j]{\n\t\t\tboard[i][j] = 'X'\n\t\t}\n\t\t\n\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "80"
         }
     ]
 }
