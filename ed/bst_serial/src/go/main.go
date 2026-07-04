@@ -13,6 +13,15 @@ type Node struct {
 	Left  *Node
 	Right *Node
 }
+func preorder(n *Node, str *[]string){
+	if n == nil {
+		*str = append(*str, "#")
+		return 
+	}
+	*str = append(*str, strconv.Itoa(n.Value) )
+	preorder(n.Left, str)
+	preorder(n.Right, str)
+}
 
 func insert(node *Node, value int)*Node{
 	if node == nil {
@@ -34,18 +43,22 @@ func insert(node *Node, value int)*Node{
 	
 }
 
-
 func BstInsert(values []int) *Node {
-	// TODO
-	var root *Node
-	
-	if values == nil {
-		return nil
-	}
-	for _, v :=range values{
+	var root *Node 
+	for _, v := range values{
 		root = insert(root, v)
 	}
 	return root
+	
+}
+
+// Dica: crie um vetor compartilhado e vá preenchendo conforme anda na recursão
+// Depois use o strings.Join para gerar o serial
+func Serialize(root *Node) string {
+	str := []string{}
+	preorder(root, &str)
+	return strings.Join(str," ")
+
 }
 
 // -----------------------------------------------------------------------------------
@@ -90,4 +103,5 @@ func main() {
 	}
 	root := BstInsert(values)
 	BShow(root, "") // Chama a função de impressão formatada
+	fmt.Println(Serialize((root)))
 }

@@ -20,6 +20,7 @@ sources:
   quests: null
 expanded:
 - ed@list
+- ed@dfs
 - ed@tree
 flags:
   inbox: all
@@ -32,5 +33,5 @@ audit:
 audit_enabled: true
 audit_interval_seconds: null
 lang: go
-selected: ed@bst_insert
-selected_index: 25
+selected: ed@dfs
+selected_index: 28
