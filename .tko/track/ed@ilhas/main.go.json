@@ -2,8 +2,73 @@
     "patches": [
         {
             "label": "2026-05-25_02-46-47",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\t//\n\t_ := grid\n\treturn 0\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -210,41 +210,17 @@\n //%0A%09\n-if len(grid) == 0 %7B%0A%09%09return 0%0A%09%7D\n+_ := grid\n %0A%09re\n",
             "lines": "31"
+        },
+        {
+            "label": "2026-07-04_20-52-12",
+            "content": "@@ -252,9 +252,9 @@\n urn \n-1\n+0\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-04_20-52-26",
+            "content": "@@ -244,96 +244,8 @@\n %0A%09%7D%0A\n-%09n := 0%0A%09for i := 0; i %3C len(grid); i++%7B%0A%09%09for j := 0; j %3C len(grid); j++%7B%0A%09%09%09n++%0A%09%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-04_20-55-19",
+            "content": "@@ -336,17 +336,17 @@\n %09return \n-n\n+1\n %0A%7D%0A%0A// N\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_20-55-34",
+            "content": "@@ -322,48 +322,11 @@\n %0A%09%09%09\n-if grid%5Bi%5D%5Bj%5D == '0'%7B%0A%09%09%09%09%09%09n++%0A%09%09%09%7D%0A%09%09%0A\n+n++\n %0A%09%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_20-56-47",
+            "content": "@@ -340,9 +340,9 @@\n == '\n-1\n+0\n '%7B%0A%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-04_20-56-58",
+            "content": "@@ -43,276 +43,8 @@\n s%22%0A)\n-%0Afunc calcilhas(grid %5B%5D%5B%5Dbyte, i, j int)%7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E len(grid) %7C%7C j %3E len(grid)%7B%0A%09%09return %0A%09%7D%0A%09if grid%5Bi%5D%5Bj%5D == '0'%7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bi%5D%5Bj%5D = '0'%0A%09calcilhas(grid, i+1 ,j )%0A%09calcilhas(grid, i ,j+1 )%0A%09calcilhas(grid, i ,j )%0A%09calcilhas(grid, i ,j )%0A%09%0A%0A%0A%7D\n %0A%0A//\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-04_21-11-08",
+            "content": "@@ -272,18 +272,16 @@\n (grid, i\n--1\n  ,j )%0A%09c\n@@ -303,10 +303,8 @@\n i ,j\n--1\n  )%0A%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-04_21-11-19",
+            "content": "@@ -616,34 +616,8 @@\n 1'%7B%0A\n-%09%09%09%09%09%09calcilhas(grid,i,j)%0A\n %09%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-04_21-12-04",
+            "content": "@@ -115,19 +115,16 @@\n len(grid\n-%5B0%5D\n ) %7C%7C j %3E\n@@ -136,11 +136,8 @@\n grid\n-%5B0%5D\n )%7B%0A%09\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_21-12-32",
+            "content": "@@ -135,16 +135,19 @@\n len(grid\n+%5B0%5D\n )%7B%0A%09%09ret\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_21-12-39",
+            "content": "@@ -115,16 +115,19 @@\n len(grid\n+%5B0%5D\n ) %7C%7C j %3E\n@@ -135,19 +135,16 @@\n len(grid\n-%5B0%5D\n )%7B%0A%09%09ret\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_21-12-50",
+            "content": "@@ -106,17 +106,16 @@\n 0 %7C%7C i %3E\n-=\n  len(gri\n@@ -123,17 +123,16 @@\n ) %7C%7C j %3E\n-=\n  len(gri\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_21-13-12",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\nfunc calcilhas(grid [][]byte, i, j int){\n\tif i < 0 || j < 0 || i >= len(grid) || j >= len(grid[0]){\n\t\treturn \n\t}\n\tif grid[i][j] == '0'{\n\t\treturn\n\t}\n\n\tgrid[i][j] = '0'\n\tcalcilhas(grid, i+1 ,j )\n\tcalcilhas(grid, i ,j+1 )\n\tcalcilhas(grid, i-1 ,j )\n\tcalcilhas(grid, i ,j-1 )\n\t\n\n\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\t//\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\tn := 0\n\tfor i := 0; i < len(grid); i++{\n\t\tfor j := 0; j < len(grid); j++{\n\t\t\tif grid[i][j] == '1'{\n\t\t\t\t\t\tcalcilhas(grid,i,j)\n\t\t\t\t\t\tn++\n\t\t\t}\n\t\t\n\n\t}\n\t}\n\treturn n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "61"
         }
     ]
 }

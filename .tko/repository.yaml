@@ -19,9 +19,9 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@dfs
 - ed@tree
+- ed@dfs
+- ed@list
 flags:
   inbox: all
   panel: skills
@@ -33,5 +33,5 @@ audit:
 audit_enabled: true
 audit_interval_seconds: null
 lang: go
-selected: ed@dfs
-selected_index: 28
+selected: ed@cercado
+selected_index: 31
