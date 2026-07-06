@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_18-23-32",
+            "content": "@@ -65,335 +65,8 @@\n s%22%0A)\n-%0Afunc calcilhas(image %5B%5D%5B%5Dint, i, j, co, nvc int)%7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(image) %7C%7C j %3E= len(image%5B0%5D)%7B%0A%09%09return %0A%09%7D%0A%09if image%5Bi%5D%5Bj%5D != co %7B%0A%09%09return%0A%09%7D%0A%0A%09image%5Bi%5D%5Bj%5D = nvc%0A%0A%09calcilhas(image, i+1 ,j , co, nvc)%0A%09calcilhas(image, i ,j+1, co, nvc )%0A%09calcilhas(image, i-1 ,j , co, nvc)%0A%09calcilhas(image, i ,j-1 ,co, nvc)%0A%0A%7D\n %0A%0Afu\n@@ -119,16 +119,17 @@\n %0A%09//%0A%09_ \n+:\n = matrix\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-05_18-26-20",
+            "content": "@@ -96,25 +96,21 @@\n nt, \n-mm %5B%5D%5B%5Dint, i, j,\n+i, j, co, nvc\n  int\n@@ -264,20 +264,16 @@\n age,\n- mm,\n  i+1 ,j \n )%0A%09c\n@@ -268,16 +268,25 @@\n  i+1 ,j \n+, co, nvc\n )%0A%09calci\n@@ -300,18 +300,25 @@\n age,\n-mm,\n  i ,j+1\n+, co, nvc \n )%0A%09c\n@@ -336,18 +336,25 @@\n age,\n-mm,\n  i-1 ,j\n+ , co, nvc\n )%0A%09c\n@@ -372,18 +372,24 @@\n age,\n-mm,\n  i ,j-1\n+ ,co, nvc\n )%0A%0A%7D\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-05_18-29-30",
+            "content": "@@ -117,16 +117,88 @@\n  int)%7B%0A%09\n+if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(image) %7C%7C j %3E= len(image%5B0%5D)%7B%0A%09%09return %0A%09%7D\n %0A%09if ima\n@@ -226,17 +226,8 @@\n turn\n- mm%5Bi%5D%5Bj%5D\n %0A%09%7D%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-05_18-30-05",
+            "content": "@@ -112,24 +112,22 @@\n i, j\n+,\n  int)\n-int\n %7B%0A%09%0A%09if \n mm%5Bi\n@@ -122,18 +122,21 @@\n %7B%0A%09%0A%09if \n-mm\n+image\n %5Bi%5D%5Bj%5D !\n@@ -137,17 +137,18 @@\n %5D%5Bj%5D != \n-0\n+co\n  %7B%0A%09%09ret\n@@ -179,17 +179,19 @@\n i%5D%5Bj%5D = \n-i\n+nvc\n %0A%0A%09calci\n@@ -302,32 +302,16 @@\n i ,j-1)%0A\n-%09return mm%5Bi%5D%5Bj%5D\n %0A%7D%0A%0Afunc\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_18-32-06",
+            "content": "@@ -77,22 +77,21 @@\n lcilhas(\n+i\n ma\n-trix\n+ge\n  %5B%5D%5B%5Dint\n@@ -165,318 +165,229 @@\n %0A%09%7D%0A\n-%09n := len(matrix)%0A%09m := len(matrix%5B0%5D)%0A%09maior := 0%0A%0A%0A%09%0A%0A%09return mm%5Bi%5D%5Bj%5D%0A%7D%0A%0Afunc longestIncreasingPath(matrix %5B%5D%5B%5Dint) int %7B%0A%09//%0A%09if len(matrix) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%09n := len(matrix)%0A%09m := len(matrix%5B0%5D)%0A%09mm := make(%5B%5D%5B%5Dint,n )%0A%0A%09for i := range mm %7B%0A%09%09mm%5Bi%5D = make(%5B%5Dint, m)%0A%09%7D%0A%09calcilhas(matrix, mm, i+1 ,j )\n+%0A%09image%5Bi%5D%5Bj%5D = i%0A%0A%09calcilhas(image, mm, i+1 ,j )%0A%09calcilhas(image,mm, i ,j+1)%0A%09calcilhas(image,mm, i-1 ,j)%0A%09calcilhas(image,mm, i ,j-1)%0A%09return mm%5Bi%5D%5Bj%5D%0A%7D%0A%0Afunc longestIncreasingPath(matrix %5B%5D%5B%5Dint) int %7B%0A%09//%0A%09_ = matrix\n %0A%09re\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-06_02-47-05",
+            "content": "@@ -446,79 +446,8 @@\n %09%7D%0A%09\n-r := 0%0A%09for i := 0 ; i %3C n ; i++%7B%0A%09%09for j := 0 ; j %3C m ; j++%7B%0A%09%09%09ta := \n calc\n@@ -469,60 +469,24 @@\n m, i\n++1\n  ,j )%0A\n-%09%09%09if ta %3E r%7B%0A%09%09%09%09r = ta%0A%09%09%09%7D%0A%09%7D%0A%09%7D%0A%09%0A\n %09return \n r%0A%7D%0A\n@@ -481,17 +481,17 @@\n %09return \n-r\n+0\n %0A%7D%0A%0A// N\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-06_02-50-12",
+            "content": "@@ -217,289 +217,8 @@\n = 0%0A\n-%09dx := %5B%5Dint%7B-1, 1,0,0%7D%0A%09dy := %5B%5Dint%7B0,0,1,-1%7D%0A%09for w := 0 ;w %3C 4; w++%7B%0A%09%09ni := i + dx%5Bw%5D%0A%09%09nj := j + dy%5Bw%5D%0A%09%09if ni %3E= 0 && ni %3C n && nj %3E= 0 && nj %3C m && matrix%5Bni%5D%5Bnj%5D %3E matrix%5Bi%5D%5Bj%5D%7B%0A%09%09%09tam := 1 + calcilhas(matrix, mm, ni ,nj )%0A%09%09%09if tam %3E maior %7B%0A%09%09%09%09maior = tam%0A%09%09%09%7D%0A%09%09%7D%09%0A%09%7D %0A\n %0A%0A%09%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-06_02-58-30",
+            "content": "@@ -254,19 +254,19 @@\n int%7B0,0,\n--\n 1,\n+-\n 1%7D%0A%09for \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-06_02-58-46",
+            "content": "@@ -201,17 +201,16 @@\n rix%5B0%5D)%0A\n-%0A\n %09maior :\n@@ -215,11 +215,9 @@\n  := \n-1%0A%09\n+0\n %0A%09dx\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-06_02-59-24",
+            "content": "@@ -324,17 +324,16 @@\n + dy%5Bw%5D%0A\n-%0A\n %09%09if ni \n@@ -511,20 +511,23 @@\n return m\n-aior\n+m%5Bi%5D%5Bj%5D\n %0A%7D%0A%0Afunc\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-06_03-00-14",
+            "content": "@@ -506,25 +506,8 @@\n %0A%0A%09%0A\n-%09mm%5Bi%5D%5Bj%5D = maior\n %0A%09re\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-06_03-00-58",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\nfunc calcilhas(matrix [][]int, mm [][]int, i, j int)int{\n\t\n\tif mm[i][j] != 0 {\n\t\treturn mm[i][j]\n\t}\n\tn := len(matrix)\n\tm := len(matrix[0])\n\n\tmaior := 1\n\t\n\tdx := []int{-1, 1,0,0}\n\tdy := []int{0,0,-1,1}\n\tfor w := 0 ;w < 4; w++{\n\t\tni := i + dx[w]\n\t\tnj := j + dy[w]\n\n\t\tif ni >= 0 && ni < n && nj >= 0 && nj < m && matrix[ni][nj] > matrix[i][j]{\n\t\t\ttam := 1 + calcilhas(matrix, mm, ni ,nj )\n\t\t\tif tam > maior {\n\t\t\t\tmaior = tam\n\t\t\t}\n\t\t}\t\n\t} \n\n\n\t\n\tmm[i][j] = maior\n\treturn maior\n}\n\nfunc longestIncreasingPath(matrix [][]int) int {\n\t//\n\tif len(matrix) == 0 {\n\t\treturn 0\n\t}\n\tn := len(matrix)\n\tm := len(matrix[0])\n\tmm := make([][]int,n )\n\n\tfor i := range mm {\n\t\tmm[i] = make([]int, m)\n\t}\n\tr := 0\n\tfor i := 0 ; i < n ; i++{\n\t\tfor j := 0 ; j < m ; j++{\n\t\t\tta := calcilhas(matrix, mm, i ,j )\n\t\t\tif ta > r{\n\t\t\t\tr = ta\n\t\t\t}\n\t}\n\t}\n\t\n\treturn r\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\tmatrix := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tif !scanner.Scan() {\n\t\t\treturn\n\t\t}\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc && j < len(tokens); j++ {\n\t\t\tv, _ := strconv.Atoi(tokens[j])\n\t\t\trow[j] = v\n\t\t}\n\t\tmatrix[i] = row\n\t}\n\n\tfmt.Println(longestIncreasingPath(matrix))\n}\n",
+            "lines": "94"
+        }
+    ]
+}

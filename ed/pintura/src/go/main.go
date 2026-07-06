@@ -8,13 +8,33 @@ import (
 	"strings"
 )
 
+func calcilhas(image [][]int, i, j, co, nvc int){
+	if i < 0 || j < 0 || i >= len(image) || j >= len(image[0]){
+		return 
+	}
+	if image[i][j] != co {
+		return
+	}
+
+	image[i][j] = nvc
+
+	calcilhas(image, i+1 ,j , co, nvc)
+	calcilhas(image, i ,j+1, co, nvc )
+	calcilhas(image, i-1 ,j , co, nvc)
+	calcilhas(image, i ,j-1 ,co, nvc)
+
+}
 // Não modifique a assinatura da função floodFill
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 	//
-	if image[sr][sc] == 
-	_ := image
-	
-	return 0
+	co := image[sr][sc]
+	//if image[sr][sc] == 
+	//_ := image
+	if co == color{
+		return image
+	}
+	calcilhas(image, sr ,sc ,co, color)
+	return image
 }
 
 // Não modifique a função main

@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-05-20_14-16-36",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\t//\n\t_ := image\n\treturn 0\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "content": "@@ -188,30 +188,8 @@\n %09//%0A\n-%09if image%5Bsr%5D%5Bsc%5D == %0A\n %09_ :\n@@ -200,10 +200,8 @@\n age%0A\n-%09%0A\n %09ret\n",
             "lines": "57"
+        },
+        {
+            "label": "2026-07-05_18-02-54",
+            "content": "@@ -67,331 +67,8 @@\n %0A)%0A%0A\n-func calcilhas(image %5B%5D%5B%5Dint, i, j, co, nvc int)%7B%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= len(image) %7C%7C j %3E= len(image%5B0%5D)%7B%0A%09%09return %0A%09%7D%0A%09if image%5Bi%5D%5Bj%5D != co %7B%0A%09%09return%0A%09%7D%0A%0A%09image%5Bi%5D%5Bj%5D = nvc%0A%0A%09calcilhas(grid, i+1 ,j , co, nvc)%0A%09calcilhas(grid, i ,j+1, co, nvc )%0A%09calcilhas(grid, i-1 ,j , co, nvc)%0A%09calcilhas(grid, i ,j-1 ,co, nvc)%0A%0A%7D%0A\n // N\n@@ -189,31 +189,8 @@\n //%0A%09\n-co := image%5Bsr%5D%5Bsc%5D%0A%09//\n if i\n@@ -207,18 +207,16 @@\n c%5D == %0A%09\n-//\n _ := ima\n@@ -223,33 +223,17 @@\n ge%0A%09\n-if co == color%7B\n %0A\n-%09\n %09return \n imag\n@@ -232,30 +232,9 @@\n urn \n-image%0A%09%7D%0A%09return image\n+0\n %0A%7D%0A%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-05_18-19-32",
+            "content": "@@ -255,21 +255,20 @@\n lcilhas(\n-image\n+grid\n , i+1 ,j\n@@ -286,29 +286,28 @@\n %0A%09calcilhas(\n-image\n+grid\n , i ,j+1, co\n@@ -325,21 +325,20 @@\n lcilhas(\n-image\n+grid\n , i-1 ,j\n@@ -360,21 +360,20 @@\n lcilhas(\n-image\n+grid\n , i ,j-1\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-05_18-20-02",
+            "content": "@@ -609,47 +609,8 @@\n %0A%09%7D%0A\n-%09calcilhas(image, sc ,sr-1 ,co, color)%0A\n %09ret\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-05_18-21-18",
+            "content": "@@ -628,13 +628,15 @@\n e, s\n-r ,sc\n+c ,sr-1\n  ,co\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-05_18-21-48",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc calcilhas(image [][]int, i, j, co, nvc int){\n\tif i < 0 || j < 0 || i >= len(image) || j >= len(image[0]){\n\t\treturn \n\t}\n\tif image[i][j] != co {\n\t\treturn\n\t}\n\n\timage[i][j] = nvc\n\n\tcalcilhas(image, i+1 ,j , co, nvc)\n\tcalcilhas(image, i ,j+1, co, nvc )\n\tcalcilhas(image, i-1 ,j , co, nvc)\n\tcalcilhas(image, i ,j-1 ,co, nvc)\n\n}\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\t//\n\tco := image[sr][sc]\n\t//if image[sr][sc] == \n\t//_ := image\n\tif co == color{\n\t\treturn image\n\t}\n\tcalcilhas(image, sr ,sc ,co, color)\n\treturn image\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "79"
         }
     ]
 }
