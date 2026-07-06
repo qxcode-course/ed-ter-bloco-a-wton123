@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-05-20_14-14-37",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\t_, _ = grid, word\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "content": "@@ -186,78 +186,8 @@\n ord%0A\n-%09n := len(grid)%0A%09M := len(grid%5B0%5D)%0A%0A%09var dfs func(int, int, int)bool %0A\n %09ret\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-07-06_20-49-04",
+            "content": "@@ -42,25 +42,8 @@\n os%22%0A\n-%09%22text/template%22%0A\n )%0A%0A/\n@@ -199,17 +199,17 @@\n (grid)%0A%09\n-m\n+M\n  := len(\n@@ -255,363 +255,8 @@\n ool \n-%0A%0A%09dfs = func(l,c,idx int)bool%7B%0A%09%09if idx == len(word)%7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%09if l %3C 0 %7C%7C l %3E= n %7C%7C c %3C 0 %7C%7C c %3E= m %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09if grid%5Bl%5D%5Bc%5D != word%5Bidx%5D%7B%0A%09%09%09return false%0A%09%09%7D%0A%09%09tem := grid%5Bl%5D%5Bc%5D%0A%09%09grid%5Bl%5D%5Bc%5D = '#'%0A%0A%09%09ok := dfs(l-1,c,idx+1) %7C%7C%0A%09%09dfs(l+1,c,idx+1) %7C%7C%0A%09%09dfs(l,c-1,idx+1) %7C%7C%0A%09%09dfs(l,c+1,idx+1)%0A%09%09%0A%09%09grid%5Bl%5D%5Bc%5D = tem%0A%09%09return  ok%0A%09%7D\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-06_21-00-47",
+            "content": "@@ -39,18 +39,16 @@\n %0A%09%22os%22%0A%09\n-//\n %22text/te\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-06_21-01-14",
+            "content": "@@ -630,154 +630,8 @@\n %0A%09%7D%0A\n-%09for l := 0 ; l %3C n ; l++%7B%0A%09%09for c := 0 ; c %3C n ; c++%7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == word%5B0%5D%7B%0A%09%09%09%09if dfs(l,c,0)%7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%09%0A%09%09%09%7D%0A%09    %7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-06_21-05-48",
+            "content": "@@ -672,17 +672,17 @@\n 0 ; c %3C \n-m\n+n\n  ; c++%7B%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-07-06_21-06-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t//\"text/template\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\t_, _ = grid, word\n\tn := len(grid)\n\tm := len(grid[0])\n\n\tvar dfs func(int, int, int)bool \n\n\tdfs = func(l,c,idx int)bool{\n\t\tif idx == len(word){\n\t\t\treturn true\n\t\t}\n\n\t\tif l < 0 || l >= n || c < 0 || c >= m {\n\t\t\treturn false\n\t\t}\n\t\tif grid[l][c] != word[idx]{\n\t\t\treturn false\n\t\t}\n\t\ttem := grid[l][c]\n\t\tgrid[l][c] = '#'\n\n\t\tok := dfs(l-1,c,idx+1) ||\n\t\tdfs(l+1,c,idx+1) ||\n\t\tdfs(l,c-1,idx+1) ||\n\t\tdfs(l,c+1,idx+1)\n\t\t\n\t\tgrid[l][c] = tem\n\t\treturn  ok\n\t}\n\tfor l := 0 ; l < n ; l++{\n\t\tfor c := 0 ; c < m ; c++{\n\t\t\tif grid[l][c] == word[0]{\n\t\t\t\tif dfs(l,c,0){\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t\t\n\t\t\t}\n\t    }\n\t}\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "67"
         }
     ]
 }

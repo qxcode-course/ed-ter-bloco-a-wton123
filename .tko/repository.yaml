@@ -19,15 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
-- ed@dfs
-- ed@map_set
-- ed@vector
 - ed@list
-- ed@basic
-- ed@backtrack
-- ed@bfs
+- ed@map_set
+- ed@rec
+- ed@vector
 - ed@tree
+- ed@basic
+- ed@dfs
+- ed@bfs
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
