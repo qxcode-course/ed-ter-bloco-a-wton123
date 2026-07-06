@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_19-49-41",
+            "content": "@@ -1,36 +1,48 @@\n-package main%0Aimport %22fmt%22%0A%0A\n+@@ -23,355 +23,53 @@%0A mt%2522%250A%0A-%250A%0A \n func \n+%0A-\n back\n@@ -55,18 +55,22 @@\n ng(nums \n-%5B%5D\n+%255B%255D\n int, idx\n@@ -99,18 +99,22 @@\n int)bool\n-%7B%0A\n+%257B%250A\n     if i\n@@ -133,25 +133,35 @@\n ms) \n-%7C%7C\n+%257C%257C\n  somaa \n-%3E\n+%253E\n  alvo\n-%7B%0A\n+%257B%250A\n     \n@@ -176,23 +176,29 @@\n rn false\n-%0A\n+%250A\n     \n-%7D%0A\n+%257D%250A\n     if b\n@@ -232,18 +232,22 @@\n aa,alvo)\n-%7B%0A\n+%257B%250A\n         \n@@ -257,23 +257,29 @@\n urn true\n-%0A\n+%250A\n     \n-%7D%0A\n+%257D%250A\n     retu\n@@ -285,19 +285,25 @@\n urn true\n-%0A%7D%0A\n+%250A%257D%250A\n func mai\n@@ -306,18 +306,22 @@\n  main() \n-%7B%0A\n+%257B%250A\n     var \n@@ -330,17 +330,19 @@\n , m int \n-%0A\n+%250A\n     fmt.\n@@ -352,17 +352,19 @@\n n(&n,&m)\n-%0A\n+%250A\n     nums\n@@ -376,18 +376,24 @@\n ake(\n-%5B%5D\n+%255B%255D\n int, n)\n-%0A\n+%250A\n     \n@@ -405,101 +405,100 @@\n  := \n-0 ; i %3C n ; i++%7B%0A        fmt.Scan(&nums%5Bi%5D)%0A    %7D%0A    fmt.Println(backtracking(nums, 0, 0, m))%0A%7D\n+%250A    fmt.Println(backtracking()%0A+main() %257B%250A    fmt.Println(%2522Hello, World!%2522%0A )%250A%257D%250A\n %0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-07-06_20-21-52",
+            "content": "@@ -157,22 +157,18 @@\n   %7D%0A    \n-return\n+if\n  backtra\n@@ -196,20 +196,59 @@\n aa,alvo)\n+%7B\n %0A   \n+     return true%0A    %7D%0A    return true\n %0A%7D%0Afunc \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-06_20-23-41",
+            "content": "@@ -157,56 +157,8 @@\n   %7D%0A\n-    if soma == alvo %7B%0A        return true%0A    %7D%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-06_20-24-27",
+            "content": "@@ -164,17 +164,16 @@\n  if soma\n-a\n  == alvo\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-07-06_20-24-46",
+            "content": "@@ -92,62 +92,8 @@\n %0A   \n-%0A    if somaa == alvo %7B%0A        return true%0A    %7D%0A    \n  if \n@@ -149,24 +149,73 @@\n false%0A    %7D%0A\n+    if somaa == alvo %7B%0A        return true%0A    %7D%0A\n     return b\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-07-06_20-25-14",
+            "content": "@@ -163,16 +163,31 @@\n n(nums) \n+%7C%7C somaa %3E alvo\n %7B%0A      \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-06_20-25-42",
+            "content": "@@ -237,20 +237,8 @@\n omaa\n- + nums%5Bidx%5D\n ,alv\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-06_20-26-25",
+            "content": "@@ -234,16 +234,27 @@\n 1,somaa \n++ nums%5Bidx%5D\n ,alvo)%0A \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-06_20-28-20",
+            "content": "@@ -238,59 +238,8 @@\n maa \n-+ nums%5Bidx%5D,alvo) %7C%7C backtracking(nums, idx+1,somaa\n ,alv\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-06_20-28-56",
+            "content": "package main\nimport \"fmt\"\n\nfunc backtracking(nums []int, idx int, somaa int, alvo int)bool{\n   \n    if somaa == alvo {\n        return true\n    }\n     if idx == len(nums) {\n        return false\n    }\n    return backtracking(nums, idx+1,somaa + nums[idx],alvo) || backtracking(nums, idx+1,somaa,alvo)\n   \n}\nfunc main() {\n    var n , m int \n    fmt.Scan(&n,&m)\n    nums := make([]int, n)\n    for i := 0 ; i < n ; i++{\n        fmt.Scan(&nums[i])\n    }\n    fmt.Println(backtracking(nums, 0, 0, m))\n}\n",
+            "lines": "23"
+        }
+    ]
+}

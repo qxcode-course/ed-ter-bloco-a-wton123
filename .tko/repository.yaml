@@ -19,10 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@bfs
-- ed@backtrack
+- ed@rec
 - ed@dfs
+- ed@map_set
+- ed@vector
+- ed@list
+- ed@basic
+- ed@backtrack
+- ed@bfs
 - ed@tree
 flags:
   inbox: all
@@ -32,8 +36,6 @@ flags:
 audit:
   enabled: true
   interval_seconds: null
-audit_enabled: true
-audit_interval_seconds: null
 lang: go
-selected: ed@rotten
-selected_index: 43
+selected: ed@wordsearch
+selected_index: 63
